@@ -1,0 +1,33 @@
+# Exported from 3D Builder
+
+newmtl 118_0
+Kd 1.000000 1.000000 1.000000
+map_Kd KartTexture.png
+
+newmtl 102_0
+Kd 1.000000 1.000000 1.000000
+map_Kd KartTexture2.png
+
+newmtl 104_0
+Kd 1.000000 1.000000 1.000000
+map_Kd KartTexture3.png
+
+newmtl 106_0
+Kd 1.000000 1.000000 1.000000
+map_Kd KartTexture4.png
+
+newmtl 110_0
+Kd 1.000000 1.000000 1.000000
+map_Kd KartTexture5.png
+
+newmtl 112_0
+Kd 1.000000 1.000000 1.000000
+map_Kd KartTexture6.png
+
+newmtl 116_0
+Kd 1.000000 1.000000 1.000000
+map_Kd KartTexture7.png
+
+newmtl 120_0
+Kd 1.000000 1.000000 1.000000
+map_Kd KartTexture8.png

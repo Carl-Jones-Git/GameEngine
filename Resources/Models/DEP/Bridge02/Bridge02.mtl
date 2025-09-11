@@ -1,0 +1,16 @@
+# Exported from 3D Builder
+
+newmtl Green_0_0
+Kd 0.129412 0.733333 0.298039
+
+newmtl Default_0_0_0
+Kd 0.737255 0.737255 0.737255
+
+newmtl Mat_0
+Kd 1.000000 1.000000 1.000000
+map_Kd asphalt.jpg
+
+
+newmtl Mat_1
+Kd 1.000000 1.000000 1.000000
+map_Kd newsprnt.jpg
