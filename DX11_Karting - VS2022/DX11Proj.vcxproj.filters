@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core Types">
+      <UniqueIdentifier>{e33420ad-2969-4c6e-b4d1-affe42be6ea2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{d43c93de-892e-4d32-957d-433ddc7c05be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App Source Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="App Structures">
+      <UniqueIdentifier>{25bdbf89-997b-4794-b7a2-4dd326433a24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Windows Source Files">
+      <UniqueIdentifier>{bc183fd8-3dbf-4dbf-af23-3a430a21626b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IMGUI">
+      <UniqueIdentifier>{f1c6fd68-ab23-41b4-9948-4f14aeed6db2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TinyXML">
+      <UniqueIdentifier>{f8227e44-3f1e-4b6a-9648-6aa544407011}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\targetver.h">
+      <Filter>Windows Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\TinyXML\tinyxml2.h">
+      <Filter>TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\CBufferStructures.h">
+      <Filter>App Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\VertexStructures.h">
+      <Filter>App Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\AIKart.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\Animation.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\BaseModel.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\BlurUtility.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\Box.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\Camera.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\DynamicCube.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\Effect.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\FirstPersonCamera.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\Flare.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\Grid.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\Includes.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\Kart.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\LookAtCamera.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\Material.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\Menu.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\Mesh.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\Model.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\NetMgr.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\ParticleSystem.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\PhysXKarting.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\PhysXVehicleController.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\PhysXVehicleUtils.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\PlayerKart.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\Quad.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\ShadowMap.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\ShadowVolume.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\SkinnedModel.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\SkinUtility.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\System.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\Terrain.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\Texture.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\Triangle.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\Utils.h">
+      <Filter>App Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\CGDClock.h">
+      <Filter>Core Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\CGDConsole.h">
+      <Filter>Core Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\Source\GUMemory.h">
+      <Filter>Core Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Scene.h">
+      <Filter>Windows Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\IMGUI\imconfig.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\IMGUI\imgui.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\IMGUI\imgui_impl_dx11.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\IMGUI\imgui_impl_win32.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\IMGUI\imgui_internal.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\IMGUI\imstb_rectpack.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\IMGUI\imstb_textedit.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resources\Libs\IMGUI\imstb_truetype.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\main.cpp">
+      <Filter>Windows Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\TinyXML\tinyxml2.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\AIKart.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\Animation.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\BaseModel.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\BlurUtility.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\Box.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\Camera.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\DynamicCube.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\Effect.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\FirstPersonCamera.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\Flare.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\Grid.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\Kart.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\Material.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\Menu.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\Mesh.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\Model.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\NetMgr.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\ParticleSystem.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\PhysXKarting.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\PhysXVehicleController.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\PhysXVehicleUtils.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\PlayerKart.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\Quad.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\ShadowMap.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\ShadowVolume.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\SkinnedModel.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\SkinUtility.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\System.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\Terrain.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\Texture.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\Triangle.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\Utils.cpp">
+      <Filter>App Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\CGDClock.cpp">
+      <Filter>Core Types</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\CGDConsole.cpp">
+      <Filter>Core Types</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\Source\GUMemory.cpp">
+      <Filter>Core Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Scene.cpp">
+      <Filter>Windows Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\IMGUI\imgui.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\IMGUI\imgui_demo.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\IMGUI\imgui_draw.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\IMGUI\imgui_impl_dx11.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\IMGUI\imgui_impl_win32.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\IMGUI\imgui_tables.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resources\Libs\IMGUI\imgui_widgets.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DX11Proj.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\Resources\Shaders\hlsl\basic_colour_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\basic_colour_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\basic_lighting_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\basic_shadow_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\basic_shadow_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\basic_skin_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\basic_texture_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\basic_texture_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\convolve_u_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\convolve_v_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\copy_depth_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\copy_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\dirt_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\emissive_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\fire_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\fire_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\flare_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\flare_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\grass_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\grass_shadow_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\grass_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\ocean_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\ocean_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\per_pixel_lighting_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\per_pixel_lighting_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\planarShadow_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\pointlight_shadow_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\pointlight_shadow_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\reflection_map_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\reflection_map_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\screen_quad_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\shadow_map_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\skin_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\skin_rad_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\skinning_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\sky_box_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\sky_box_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\texture_space_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\tree_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Resources\Shaders\hlsl\tree_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

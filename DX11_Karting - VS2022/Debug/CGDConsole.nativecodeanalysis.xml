@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\packages\directxtk_desktop_win10.2020.11.12.1\include\</FILEPATH>
+      <FILENAME>WICTextureLoader.h</FILENAME>
+      <LINE>163</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'DirectX::WIC_LOADER_FLAGS' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>DirectX::|</FUNCTION>
+    <DECORATED>??UDirectX@@YA?AW4WIC_LOADER_FLAGS@0@W410@0@Z</DECORATED>
+    <FUNCLINE>163</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+      <FILENAME>CGDConsole.cpp</FILENAME>
+      <LINE>79</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>6031</DEFECTCODE>
+    <DESCRIPTION>Return value ignored: 'getchar'.</DESCRIPTION>
+    <FUNCTION>CGDConsole::{dtor}</FUNCTION>
+    <DECORATED>??1CGDConsole@@QAE@XZ</DECORATED>
+    <FUNCLINE>70</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

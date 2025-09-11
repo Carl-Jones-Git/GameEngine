@@ -1,0 +1,2403 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26812",
+          "message": {
+            "text": "The enum type 'DirectX::WIC_LOADER_FLAGS' is unscoped. Prefer 'enum class' over 'enum' (Enum.3)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/directxtk_desktop_win10.2020.11.12.1/include/WICTextureLoader.h"
+                },
+                "region": {
+                  "startLine": 163,
+                  "startColumn": 5,
+                  "endLine": 163,
+                  "endColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??UDirectX@@YA?AW4WIC_LOADER_FLAGS@0@W410@0@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6031",
+          "message": {
+            "text": "Return value ignored: 'getchar'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/Resources/Libs/Source/CGDConsole.cpp"
+                },
+                "region": {
+                  "startLine": 79,
+                  "startColumn": 3,
+                  "endLine": 79,
+                  "endColumn": 10
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??1CGDConsole@@QAE@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.29.30153.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x0045D1C0 -il C:\\Users\\Carl\\AppData\\Local\\Temp\\_CL_cc63d614ast -typedil -f ..\\Resources\\Libs\\Source\\CGDConsole.cpp -Ze -D_MSC_EXTENSIONS -Zp8 -Gs -pc \\:/ -D_MSC_VER=1929 -D_MSC_FULL_VER=192930153 -D_MSC_BUILD=0 -D_WIN32 -D_M_IX86=600 -D_M_IX86_FP=2 -GR -D_CPPRTTI -I C:\\Users\\Carl\\OneDrive - University of South Wales\\UWP\\DX11_CS3S664_Karting - VS2019V4\\packages\\directxtk_desktop_win10.2020.11.12.1\\include -I C:\\Users\\Carl\\OneDrive - University of South Wales\\UWP\\DX11_CS3S664_Karting - VS2019V4\\packages\\NVIDIA.PhysX.4.1.229882250\\installed\\x86-windows\\include -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DHAS_DIRECTXTK -DCODE_ANALYSIS -D_XM_NO_INTRINSICS_ -D__GU_DEBUG_MEMORY__ -DWIN32 -D_DEBUG -D_WINDOWS -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -Zc:wchar_t -Zc:forScope -std:c++17 -FoDebug\\CGDConsole.obj -FdDebug\\vc142.pdb -external:W 3 -Gd -analyze:projectdirectory C:\\Users\\Carl\\OneDrive - University of South Wales\\UWP\\DX11_CS3S664_Karting - VS2019V4 -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\Rule Sets\\NativeRecommendedRules.ruleset -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Users\\Carl\\OneDrive - University of South Wales\\UWP\\Resources\\Libs\\ -I C:\\Users\\Carl\\OneDrive - University of South Wales\\UWP\\Resources\\Libs\\Source -I C:\\Users\\Carl\\OneDrive - University of South Wales\\UWP\\DX11_CS3S664_Karting - VS2019V4\\Libs\\TinyXML -I C:\\Users\\Carl\\OneDrive - University of South Wales\\UWP\\DX11_CS3S664_Karting - VS2019V4\\Source -I C:\\Users\\Carl\\OneDrive - University of South Wales\\UWP\\DX11_CS3S664_Karting - VS2019V4\\Libs\\IMGUI -I C:\\Users\\Carl\\OneDrive - University of South Wales\\UWP\\DX11_CS3S664_Karting - VS2019V4\\Libs -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\UnitTest\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -I C:\\Users\\Carl\\OneDrive - University of South Wales\\UWP\\DX11_CS3S664_Karting - VS2019V4\\packages\\NVIDIA.PhysX.4.1.229882250\\installed\\x86-windows\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\atlmfc\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\UnitTest\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\UnitTest\\include -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\um -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\shared -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\winrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\cppwinrt -external:I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -external:I C:\\Users\\Carl\\OneDrive - University of South Wales\\UWP\\DX11_CS3S664_Karting - VS2019V4\\packages\\NVIDIA.PhysX.4.1.229882250\\installed\\x86-windows\\include -I C:\\Users\\Carl\\OneDrive - University of South Wales\\UWP\\DX11_CS3S664_Karting - VS2019V4\\packages\\NVIDIA.PhysX.4.1.229882250\\installed\\x86-windows\\include",
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/netmgr.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "f70ad71506ec6c19f06f4f414e39c27e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/netmgr.h"
+          },
+          "hashes": {
+            "md5": "f17798addb077336b35ab83c91e0d77e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/directxtk_desktop_win10.2020.11.12.1/include/WICTextureLoader.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "5721cc4c29aaf032e34b03d9ac0fbb3e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/foundation/PxVec3.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "0beae0223bdfaec2720c441bf66145f2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/foundation/PxQuat.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "a758f0b6fe9fda50ab73ae504912f19e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/foundation/PxPlane.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "7351571b72863d967472e3aa5076c5d4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/foundation/PxVec4.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "7608ffca3b5070343689ad7466b0d6bd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/foundation/PxVec2.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "7b1defb8035fa70e9aafd57769066903"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/common/PxRenderBuffer.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "8388541edd740c471963441a050dab78"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/common/PxSerialFramework.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "9ee65503e05ae8f53b182ff813152709"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/common/PxBase.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "7ea4d191fa11aafe33e5c532de6871a4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/geometry/PxGeometry.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "8707305319beed07f9907db7d9356957"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/geometry/PxConvexMeshGeometry.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "364624cb5018343453357fad9ed2b948"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/geometry/PxTriangleMeshGeometry.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "2d49d167be545ec1d65b72ba5b408507"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/geometry/PxGeometryHelpers.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "a006c36192316b63a200bc0426df190e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/PxQueryReport.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "c3c843ebd4c670b92ca03537d5ca9c50"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/geometry/PxHeightFieldFlag.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "b8b6c9e23e1a10b4784b97599f41025f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/geometry/PxHeightFieldDesc.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "b32fdc14c00d5135ad72b307fa7b3c13"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/geometry/PxSimpleTriangleMesh.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "cfac811f39b1e5a25c78eeccb5774c25"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/geometry/PxTriangleMesh.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "18469cf0ac1e6e58b0cb9077b226d13a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/PxActor.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "5def9ad418e5a78837ba00666d12cdee"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/PxArticulationBase.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "4430d0e8883206a900f687a6f9808a17"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/PxConstraintDesc.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "315456cd84ad97ed32c68e14d91189ee"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/solver/PxSolverDefs.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "f61349c55a8ac39c20dfe27c3b337e03"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/PxArticulationReducedCoordinate.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "3e98813abb09c3f2831bae75970685b7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/PxShape.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "485a9faa4f239c4aa7b28d6277522e3e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/PxRigidBody.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "2cf7bd71d9ee3fb2fd78f3fa0b368805"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/PxFiltering.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "2aca9678779f4507733f3f8ebba421af"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/PxQueryFiltering.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "809b84d6f69231fb90840f919e8b406a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/PxConstraint.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "8e38dfa8be0c124df7e5f3ff9ba21497"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/PxContact.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "3e3369f36b8ef66e4db9935e5928d96c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/PxDeletionListener.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "12dbe3af4eba24dd79851be4ee4f5bf0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/PxLockedData.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "9fa61631c385d9b4cc27e9d96eafdfda"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/PxMaterial.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "ec71037e8b0a34dcb6066b41119fa09f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/PxRigidDynamic.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "c60487aacc0ceed6d30a020c3e79137d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/PxSceneDesc.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "18d423eb87e546339c333f463ac65f4c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/PxSimulationStatistics.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "73916b6d9425fcd49808a3d3e72e0282"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/pvd/PxPvdSceneClient.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "7ff3757ab6a430c5637ebe89c9bf3e9a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/PxScene.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "38a89a0b07cafaa4f3c95c1028c734fd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/PxSimulationEventCallback.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "f6ffcbef18fa89cd7d4d865ce60c875c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/characterkinematic/PxExtended.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "1e240f68ac463b00ec44716629aaccb2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/characterkinematic/PxController.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "c29acf6dfda48536c8a3a330d6fdf153"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/characterkinematic/PxCapsuleController.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "d1ae7b8ae62aae14747d950ba36c2772"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/characterkinematic/PxControllerBehavior.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "306c2910703b1fc159d8b76c377b1a0f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/characterkinematic/PxControllerManager.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "d3d419f08a15676e36f3cf20316fb9c8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/cooking/PxConvexMeshDesc.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "ed89336820153f205e63bf55afe40626"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/cooking/PxBVH33MidphaseDesc.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "bda7958efd6820b5a92176f7f3522caa"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/cooking/PxMidphaseDesc.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "b541d649f36354fda108959b449659aa"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/cooking/PxCooking.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "52a942c891a0263998ec94e9bd5f2f7a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/extensions/PxJoint.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "3ce2601bc40b6a568eb1cd3ae9cce33a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/extensions/PxDistanceJoint.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "0a9ce2b6e9a74ae6becdc3958164ccf2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/extensions/PxPrismaticJoint.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "0debb5a0d4d0cf84c4ab2300c9b534b2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/extensions/PxRevoluteJoint.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "1e70dfd5998dd08667ce25f268c7089a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/extensions/PxSphericalJoint.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "1b5fc4a6c9d323cf911960eac057ffba"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/extensions/PxD6Joint.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "7be4452d96968c34c0bdd039fe4dfc49"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/extensions/PxMassProperties.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "4c0db9570f5fc418d5bef0be47a88444"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/vehicle/PxVehicleComponents.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "881763833e9566b465f59156d6debb7f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/vehicle/PxVehicleWheels.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "3c96e6badebea5ded62075e59ec09dae"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/vehicle/PxVehicleDrive.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "aab615617ae93b2a072ea8bc4437e5cc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/vehicle/PxVehicleDriveTank.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "161b30c631661621a4bd5f242506b8ff"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/vehicle/PxVehicleTireFriction.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "8d0c79dccf92c7843eeee29382b49514"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/vehicle/PxVehicleUtilTelemetry.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "d0ee3e83c9692c76a9544e4c343ff80b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/vehicle/PxVehicleNoDrive.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "1bbd4d8602332830e68ec2631479e304"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/foundation/PxProfiler.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "17ec398aabcf3ae18484537926023030"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/pvd/PxPvd.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "727ec90c8eb419293470dde34ae36ebc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/Resources/Libs/Assimp/include/assimp/mesh.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "45a279c0ca6de6dcdfc813a19d6e90e4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/Resources/Libs/Assimp/include/assimp/light.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "1a212570e8d0ba37e7f4d6eb14bcd9a9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/Resources/Libs/Assimp/include/assimp/material.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "591e060857d692f6de5169eab723fd0f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/Resources/Libs/Assimp/include/assimp/material.inl"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "22dc21421723e7dcbe00a50143e9bf06"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/Resources/Libs/Assimp/include/assimp/anim.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "7edc4de2cd0c53d8a02fbc05625028da"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/Resources/Libs/Source/Model.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "8d927f3e7abd2d4b14bf1efdf044bc6b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/NVIDIA.PhysX.4.1.229882250/installed/x86-windows/include/common/PxCoreUtilityTypes.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "2256733f07b43cbd4fdcd59beee1ec7b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/includes.h"
+          },
+          "hashes": {
+            "md5": "b2815715f9d8d47c9b0c3f98e64b7529"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/source/targetver.h"
+          },
+          "hashes": {
+            "md5": "05f2aff48de1b7f920e0fa15051a207f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/cgdclock.h"
+          },
+          "hashes": {
+            "md5": "6d538fac887d1a5f1fb7fa8b7e83947d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/cgdconsole.h"
+          },
+          "hashes": {
+            "md5": "313f83af5495d19948758d2bd352de54"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/directxtk_desktop_win10.2020.11.12.1/include/ddstextureloader.h"
+          },
+          "hashes": {
+            "md5": "eab8f2f0b8db06f691a462327dddc3f9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/model.h"
+          },
+          "hashes": {
+            "md5": "f3b4e0468604ad5227319623126c1355"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/cbufferstructures.h"
+          },
+          "hashes": {
+            "md5": "09c9f8dd727280ac878500d729342cb6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/vertexstructures.h"
+          },
+          "hashes": {
+            "md5": "aa7b5a38d041bbbc0473578758dcfe40"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/basemodel.h"
+          },
+          "hashes": {
+            "md5": "fc2eae60efdf2f1f15013830c34c0ecb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/effect.h"
+          },
+          "hashes": {
+            "md5": "46517af7a41bcd0383296bcc7367b8f5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/utils.h"
+          },
+          "hashes": {
+            "md5": "ff479b52199aeb0c7c3652384084f827"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/material.h"
+          },
+          "hashes": {
+            "md5": "682ab73f5c197a2c996e6b5703ff19ff"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/texture.h"
+          },
+          "hashes": {
+            "md5": "d6e11c75fe714fa9a80baa9b866d7728"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxphysicsapi.h"
+          },
+          "hashes": {
+            "md5": "f95409ef0a6bd5950316f197f53733e6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/px.h"
+          },
+          "hashes": {
+            "md5": "3ac21d863d438a14fa70de28e692751d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxsimpletypes.h"
+          },
+          "hashes": {
+            "md5": "70ca44a4c7e558b6b2ab5544672baa89"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxpreprocessor.h"
+          },
+          "hashes": {
+            "md5": "72907081fa8f04f84a17f592004996c3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxallocatorcallback.h"
+          },
+          "hashes": {
+            "md5": "632dedc50765d73b0afecb82f63d4380"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxassert.h"
+          },
+          "hashes": {
+            "md5": "ff7af5a96f01dc90034206cf5eddb71d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxfoundationconfig.h"
+          },
+          "hashes": {
+            "md5": "765e04deace8ba01df0375d91533500d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxbitanddata.h"
+          },
+          "hashes": {
+            "md5": "66dca23514cc6e7bf8e35fc54d3521c4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxbounds3.h"
+          },
+          "hashes": {
+            "md5": "e46afe73a848e7c69fe06b6e26f7fa5e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxtransform.h"
+          },
+          "hashes": {
+            "md5": "1b7ecf1e4ab356df2009268e60b23596"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxmath.h"
+          },
+          "hashes": {
+            "md5": "3fa4e87394b1bf488e14c82c6b864906"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxintrinsics.h"
+          },
+          "hashes": {
+            "md5": "6078c54a86c77cd6e31a7b77bb6d306f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/windows/pxwindowsintrinsics.h"
+          },
+          "hashes": {
+            "md5": "fd9ce8c46d298cc435fe2f8be2b004cb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxsharedassert.h"
+          },
+          "hashes": {
+            "md5": "cfd8372cc924b32aef40730102d55dda"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxmat33.h"
+          },
+          "hashes": {
+            "md5": "b6ebed27b9158a6c051ace76a571e757"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxerrorcallback.h"
+          },
+          "hashes": {
+            "md5": "cc5a3fc29cf3cbd8207a3cbb8c7d9dd7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxerrors.h"
+          },
+          "hashes": {
+            "md5": "751f3142bf0f7b730a7d307215521a63"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxflags.h"
+          },
+          "hashes": {
+            "md5": "4bfab222819f6a681732376d1a147597"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxio.h"
+          },
+          "hashes": {
+            "md5": "2f19deb05cb4356e45aa812a3f1629ab"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxmat44.h"
+          },
+          "hashes": {
+            "md5": "d702a4f9711249c44867564ecc8a375d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxmathutils.h"
+          },
+          "hashes": {
+            "md5": "33d4015380a78adb19fa20fff2405fa5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxstrideiterator.h"
+          },
+          "hashes": {
+            "md5": "f1f8e1b680c316aebe09782bb4c0fbe9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxunioncast.h"
+          },
+          "hashes": {
+            "md5": "3a4a735bec52406a9967a784fc291099"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/foundation/pxmemory.h"
+          },
+          "hashes": {
+            "md5": "a58a5cda09120b5882c65089a0b29899"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/common/pxphysxcommonconfig.h"
+          },
+          "hashes": {
+            "md5": "d799493e68928f3c66d4be78fbf8c400"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/common/pxcollection.h"
+          },
+          "hashes": {
+            "md5": "01b327ab630224851c49b5dd521cb0a0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/common/pxtypeinfo.h"
+          },
+          "hashes": {
+            "md5": "124aa564f61f514fa206bdec4e868a92"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/common/pxtolerancesscale.h"
+          },
+          "hashes": {
+            "md5": "d804b1a87e8f3840528f0e950ea8b584"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/common/pxstringtable.h"
+          },
+          "hashes": {
+            "md5": "dc2a63209b041aa26badc81040ea0d07"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/common/pxserializer.h"
+          },
+          "hashes": {
+            "md5": "87c19756334b13d3fbf6ff3fdda8d251"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxfoundation.h"
+          },
+          "hashes": {
+            "md5": "8810080de7096668d7ae576e8349ffcc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/common/pxmetadata.h"
+          },
+          "hashes": {
+            "md5": "c53227dd505eeafe21f701c7d6efd50a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/common/pxmetadataflags.h"
+          },
+          "hashes": {
+            "md5": "0596df5df8dc4f68a0ee26b98d5b1c70"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/common/pxphysicsinsertioncallback.h"
+          },
+          "hashes": {
+            "md5": "5242f9e3c230ef45dbc9f595ebe615a0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/task/pxtask.h"
+          },
+          "hashes": {
+            "md5": "6696c9dffbd62b33268b054d5e131739"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/task/pxtaskdefine.h"
+          },
+          "hashes": {
+            "md5": "88193f60f79bff8450e2205fd703d2b3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/task/pxtaskmanager.h"
+          },
+          "hashes": {
+            "md5": "57bbca4ff70fa113fe0bad01b75b7f1a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/task/pxcpudispatcher.h"
+          },
+          "hashes": {
+            "md5": "6b10f4bb3fe2308c84c72f498d29e1ba"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/geometry/pxboxgeometry.h"
+          },
+          "hashes": {
+            "md5": "998b081ceb4bf67b051af73ddce79139"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/geometry/pxbvhstructure.h"
+          },
+          "hashes": {
+            "md5": "207c4a8c4823425735a37afc7ee5bc2b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/geometry/pxcapsulegeometry.h"
+          },
+          "hashes": {
+            "md5": "cf47f06c965dea2cd8f84a7d87a12c47"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/geometry/pxconvexmesh.h"
+          },
+          "hashes": {
+            "md5": "6c55ae7ced979572e76ce36539372e93"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/geometry/pxmeshscale.h"
+          },
+          "hashes": {
+            "md5": "08548aa4561164ba92e097ec1a86fb55"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/geometry/pxspheregeometry.h"
+          },
+          "hashes": {
+            "md5": "90bf9d84b88280aa6cbddaf92828a543"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/geometry/pxplanegeometry.h"
+          },
+          "hashes": {
+            "md5": "b1696f67ef1acbba19e60403d267ea55"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/geometry/pxheightfieldgeometry.h"
+          },
+          "hashes": {
+            "md5": "682ed8366656a8dcf04f103657ff2308"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/geometry/pxgeometryquery.h"
+          },
+          "hashes": {
+            "md5": "c69d95037094565eb43e4ac671a60dd7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxphysxconfig.h"
+          },
+          "hashes": {
+            "md5": "07737dc310cf80fdbf1cb8efcb085d82"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/geometry/pxheightfield.h"
+          },
+          "hashes": {
+            "md5": "e7a33cabfca91269ae3cbbb0c19619a0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/geometry/pxheightfieldsample.h"
+          },
+          "hashes": {
+            "md5": "a4bb9d6ea5a909e40ecff08b2031d063"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/geometry/pxmeshquery.h"
+          },
+          "hashes": {
+            "md5": "30104364fbeac76cefb9c9bb741abeed"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/geometry/pxtriangle.h"
+          },
+          "hashes": {
+            "md5": "8ff140d711f36629ae70d92329d0d8e2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxclient.h"
+          },
+          "hashes": {
+            "md5": "1ff060cff000ad0df26b8d39ce2892e1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxaggregate.h"
+          },
+          "hashes": {
+            "md5": "2e70eddd229a2281f81e0521e6721ae9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxarticulation.h"
+          },
+          "hashes": {
+            "md5": "a02d10f284c242b96b356643d4a12b5f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/geomutils/gucontactpoint.h"
+          },
+          "hashes": {
+            "md5": "bd63440584185a43b2a5306de9e866cb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxarticulationjoint.h"
+          },
+          "hashes": {
+            "md5": "a7bf84bca431c8000aeace7bf9c2fcfd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxarticulationjointreducedcoordinate.h"
+          },
+          "hashes": {
+            "md5": "3af66b90256c908b1b15e71f23d7e1d4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxarticulationlink.h"
+          },
+          "hashes": {
+            "md5": "867f8ae9af365c5ecf6c100d2141fabe"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxrigidactor.h"
+          },
+          "hashes": {
+            "md5": "2e4b88379e2ebd15cc9fa15793c4a8c2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxforcemode.h"
+          },
+          "hashes": {
+            "md5": "c7c2d169f9d576b75434eab3a62d4710"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxbatchquery.h"
+          },
+          "hashes": {
+            "md5": "b358c0b5df28c1fc25db0dcbd2b287cf"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxbatchquerydesc.h"
+          },
+          "hashes": {
+            "md5": "56d653ef96537ecc388ac6859d4a855f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxcontactmodifycallback.h"
+          },
+          "hashes": {
+            "md5": "7c6a94d4a6df73cecec352c89f1ea0df"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxphysics.h"
+          },
+          "hashes": {
+            "md5": "192182200eb9eb637bd39bbf7b2240a7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxphysicsversion.h"
+          },
+          "hashes": {
+            "md5": "c45d03afb4126dcaf23b6ed85eaae2e3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxrigidstatic.h"
+          },
+          "hashes": {
+            "md5": "fa393351dc039c6d7c3c21d978ce9af8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxvisualizationparameter.h"
+          },
+          "hashes": {
+            "md5": "0c45e213313adae2ebed9023a0e76470"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxbroadphase.h"
+          },
+          "hashes": {
+            "md5": "3deb21f1817bbcb3a01fd8caa9dcc744"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxscenelock.h"
+          },
+          "hashes": {
+            "md5": "b7d15a08f08b08457456911cea13f14b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pxpruningstructure.h"
+          },
+          "hashes": {
+            "md5": "a42450c9349512cf49a33f7a3dae4007"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/characterkinematic/pxboxcontroller.h"
+          },
+          "hashes": {
+            "md5": "0ce38f19f5839403b78a929b10d6a0cd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/characterkinematic/pxcontrollerobstacles.h"
+          },
+          "hashes": {
+            "md5": "6f50695ec6c010a9aa9f4d6b914a0d12"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/cooking/pxc.h"
+          },
+          "hashes": {
+            "md5": "8a50e4a5279444c9f87cbec032fb93e0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/cooking/pxtrianglemeshdesc.h"
+          },
+          "hashes": {
+            "md5": "dd6ef110dc0d8a4af741b3bd41a5f121"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/cooking/pxbvh34midphasedesc.h"
+          },
+          "hashes": {
+            "md5": "cf238613aead42e18cd7597d222e4d0f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/cooking/pxbvhstructuredesc.h"
+          },
+          "hashes": {
+            "md5": "c3420748216d5f2b81dbaa4aaa772aa4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxdefaultstreams.h"
+          },
+          "hashes": {
+            "md5": "4d2e6931ab0524a3a5787920edb4efba"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxextensionsapi.h"
+          },
+          "hashes": {
+            "md5": "a40c5bfe8e4ae19d81ec956d1020b0a4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxdefaultallocator.h"
+          },
+          "hashes": {
+            "md5": "248ee54a8ecbe878fd74982b4ea7ff6e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxconstraintext.h"
+          },
+          "hashes": {
+            "md5": "c634cb9fee4a7c096c34ec454238c46f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxcontactjoint.h"
+          },
+          "hashes": {
+            "md5": "91f792ff42b00a9d28c9d8f074ad1335"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxfixedjoint.h"
+          },
+          "hashes": {
+            "md5": "004f4e80e7b938ce7575fedbd12f4431"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxjointlimit.h"
+          },
+          "hashes": {
+            "md5": "21cedf332c4ee785892beaa53153bb93"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxdefaultsimulationfiltershader.h"
+          },
+          "hashes": {
+            "md5": "2ce8ff88bedf6cd59945c1a131fce96e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxdefaulterrorcallback.h"
+          },
+          "hashes": {
+            "md5": "c0dc9f774247a8224036a2913f07a3b2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxrigidactorext.h"
+          },
+          "hashes": {
+            "md5": "05bbc943c064e4bd83087cd150b790bf"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxrigidbodyext.h"
+          },
+          "hashes": {
+            "md5": "7d2df63bbc36cb3cad4ab375ed159d39"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxshapeext.h"
+          },
+          "hashes": {
+            "md5": "e87b6419767f1e2a2743505e7dab92ae"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxtrianglemeshext.h"
+          },
+          "hashes": {
+            "md5": "147d22196d79a71941caa61b6abfea0d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxserialization.h"
+          },
+          "hashes": {
+            "md5": "ab0c259e95534f86cb6924584457b99c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxdefaultcpudispatcher.h"
+          },
+          "hashes": {
+            "md5": "bff6239f64be112f28b5dc647aa83aa5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxsmoothnormals.h"
+          },
+          "hashes": {
+            "md5": "baf0f8d44e08254dbb3f1294563edbac"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxsimplefactory.h"
+          },
+          "hashes": {
+            "md5": "5a789297e0195bbc7bd0160d89bdd0a9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxstringtableext.h"
+          },
+          "hashes": {
+            "md5": "eccaf736001bb851bccd5f301b365543"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxbroadphaseext.h"
+          },
+          "hashes": {
+            "md5": "bd24816eab9717cca084d6e655c8d07f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxscenequeryext.h"
+          },
+          "hashes": {
+            "md5": "c40deda258e3509e0e9fe3296650497d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxconvexmeshext.h"
+          },
+          "hashes": {
+            "md5": "6772495a0c45a3796aad77c2fed09a1f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxbinaryconverter.h"
+          },
+          "hashes": {
+            "md5": "21f5ad8ee653b6d39f423fd7b9ae848b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxrepxserializer.h"
+          },
+          "hashes": {
+            "md5": "2c06ef1e439f0a641da0bbea06b0ad97"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/extensions/pxrepxsimpletype.h"
+          },
+          "hashes": {
+            "md5": "b7d223865b21f5d3f2f190f28bea7f52"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/vehicle/pxvehiclesdk.h"
+          },
+          "hashes": {
+            "md5": "fa843dcf9bd0f03ed236c578eb4fde92"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/vehicle/pxvehicleshaders.h"
+          },
+          "hashes": {
+            "md5": "a31221eb63a2400e25c13e8b9528db97"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/vehicle/pxvehicledrive4w.h"
+          },
+          "hashes": {
+            "md5": "aa7d2d812ab855d0b998852e5f238ac4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/vehicle/pxvehicleupdate.h"
+          },
+          "hashes": {
+            "md5": "f32f5e87a52476f72f9bbde7eda59dff"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/vehicle/pxvehicleutil.h"
+          },
+          "hashes": {
+            "md5": "8031dd1c7f2b6e37a0c2757a8a3c7c24"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/vehicle/pxvehicleutilcontrol.h"
+          },
+          "hashes": {
+            "md5": "1f93691fba6c97eff4a5a409ffabd232"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/vehicle/pxvehicledrivenw.h"
+          },
+          "hashes": {
+            "md5": "4ff8bdd2d2e4f2b918355221f4211151"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/vehicle/pxvehicleutilsetup.h"
+          },
+          "hashes": {
+            "md5": "0230843162f523cde8bd1a79fbc374d4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/packages/nvidia.physx.4.1.229882250/installed/x86-windows/include/pvd/pxpvdtransport.h"
+          },
+          "hashes": {
+            "md5": "8458c0b270ad7dabeae196e271db7f7b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/importer.hpp"
+          },
+          "hashes": {
+            "md5": "ee5ae5cdcea1272d5f683888a319ae9e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/types.h"
+          },
+          "hashes": {
+            "md5": "6ff421eaea7d9c08f30717504105eaf3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/defs.h"
+          },
+          "hashes": {
+            "md5": "5efa65ad31dabb6d1d2a7df51e88be7b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/vector3.h"
+          },
+          "hashes": {
+            "md5": "b00444e66742a68b0cb62a3e08217775"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/compiler/pushpack1.h"
+          },
+          "hashes": {
+            "md5": "9c8d19b6f86623a388d235bfd0853235"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/compiler/poppack1.h"
+          },
+          "hashes": {
+            "md5": "4968d955f4cf233630f582b4172affb7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/vector2.h"
+          },
+          "hashes": {
+            "md5": "ffb0bff831f5151bcc6d37717f31a8f3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/color4.h"
+          },
+          "hashes": {
+            "md5": "c87afa5743daa4eb84cf969a0c054739"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/matrix3x3.h"
+          },
+          "hashes": {
+            "md5": "dd86dee739c45f6947cf0973c7ae3ed6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/matrix4x4.h"
+          },
+          "hashes": {
+            "md5": "58fe6152a4466da3a10493e5c26e1fb8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/quaternion.h"
+          },
+          "hashes": {
+            "md5": "cb5b0d6befbfb6d52e75bc6e041cae5f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/vector2.inl"
+          },
+          "hashes": {
+            "md5": "713131bc23e7e0e002d6e700ecf11ea1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/vector3.inl"
+          },
+          "hashes": {
+            "md5": "a1e6c60c91ab437a1c1aabbaaba78393"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/color4.inl"
+          },
+          "hashes": {
+            "md5": "0154c4ccd86f1dd6aeb3489b576cc601"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/quaternion.inl"
+          },
+          "hashes": {
+            "md5": "398bd2f1151343662b83658b7a3a938d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/matrix3x3.inl"
+          },
+          "hashes": {
+            "md5": "d944c1ca3079b6cb190d7f3eb071f5e1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/matrix4x4.inl"
+          },
+          "hashes": {
+            "md5": "5c0f0d4b63c9b7af00b59d4250973bc9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/config.h"
+          },
+          "hashes": {
+            "md5": "961775827d750eb8bd7e4a818190fbbb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/scene.h"
+          },
+          "hashes": {
+            "md5": "82f6744c1c16166ead263390335ae65a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/texture.h"
+          },
+          "hashes": {
+            "md5": "12b22e81ad019e4efe30b55064df619e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/camera.h"
+          },
+          "hashes": {
+            "md5": "0189cf89e1cbe71dd34de96451cbe4dc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/assimp/include/assimp/postprocess.h"
+          },
+          "hashes": {
+            "md5": "a3ef0ab04d83f22f525e6f8104aca302"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/mesh.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "fbbd2f5b0b32d6069cecc917dbde3b58"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/mesh.h"
+          },
+          "hashes": {
+            "md5": "c89110e1cd8380003d07a8be6f8d7f68"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/Resources/Libs/FmodStudio/inc/fmod.hpp"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "fa2065a3eebba74ab5caccc722d2de0e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/Resources/Libs/Source/PhysXVehicleController.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "09a30feb7265bb18452153344534b54b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/Resources/Libs/Source/PlayerKart.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "7d594a9b532b632661aff656345afc42"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/DX11_CS3S664_Karting - VS2019V4/packages/directxtk_desktop_win10.2020.11.12.1/include/Model.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "7d0e985fc37477bb0b12cb85f41096de"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/Resources/Libs/Source/Menu.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "f64d10b9fb4a842af13d16e77fc86f1b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/Resources/Libs/Source/Menu.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "39843e61d675c29461bbba4ac627d5aa"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/kart.h"
+          },
+          "hashes": {
+            "md5": "a74b4af21ea2cd9fb5e29fea3b5abf1a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/terrain.h"
+          },
+          "hashes": {
+            "md5": "8f374f6a26bd53770448a1e00c863060"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/fmodstudio/inc/fmod_common.h"
+          },
+          "hashes": {
+            "md5": "8112db031d6f7e5e9c46335e6c16d9fb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/fmodstudio/inc/fmod_codec.h"
+          },
+          "hashes": {
+            "md5": "25862a51325883526f6481aca87604ad"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/fmodstudio/inc/fmod_dsp.h"
+          },
+          "hashes": {
+            "md5": "3d5d7b5cf8e7fe7fb3e991229b907643"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/fmodstudio/inc/fmod_dsp_effects.h"
+          },
+          "hashes": {
+            "md5": "58de3bf4d6e5d4cba4df341a326b5756"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/fmodstudio/inc/fmod_output.h"
+          },
+          "hashes": {
+            "md5": "ca42e60a5c98a838164f89cdbb436b79"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/fmodstudio/inc/fmod.h"
+          },
+          "hashes": {
+            "md5": "fea97d942f94d060d07eaa6c5a83fc69"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/physxvehicleutils.h"
+          },
+          "hashes": {
+            "md5": "c93846a2a600eaabd8ff28333de4ccec"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/quad.h"
+          },
+          "hashes": {
+            "md5": "363d6955a8439554a503b14649ed5d62"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/lookatcamera.h"
+          },
+          "hashes": {
+            "md5": "1969f8e1ed8f85ee3171672648a06af7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/camera.h"
+          },
+          "hashes": {
+            "md5": "b88bcf019254ebbe7ff29f66c31184e4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/libs/imgui/imgui_impl_dx11.h"
+          },
+          "hashes": {
+            "md5": "c9f500b9371c4d5f9e1c52a28e74a9c8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/libs/imgui/imgui.h"
+          },
+          "hashes": {
+            "md5": "13994a4ec4ed7607d2270276716ff2fc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/libs/imgui/imconfig.h"
+          },
+          "hashes": {
+            "md5": "d590791d81fc7b2d931b13eb5cf9a4d4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/system.h"
+          },
+          "hashes": {
+            "md5": "65cd4bb63a3af6b47664ab7a9a132443"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/dx11_cs3s664_karting - vs2019v4/libs/imgui/imgui_impl_win32.h"
+          },
+          "hashes": {
+            "md5": "3cfedd26dc2da348651c215d8d15d585"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/Resources/Libs/Source/Material.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "42a5130a445270c7c4fba6c996c10340"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/kart.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "9aceb3839ba62d15df0e03476a3f033a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/Resources/Libs/Source/GUMemory.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "31ad8a4e4ed668398adf4f9fbcc630a7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/Resources/Libs/Source/GUMemory.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "8c8b54b5f9d47034c500116ee92d2208"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/Resources/Libs/Source/Grid.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "6ce0bc75226db512aad7f09c4f0e19bd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/grid.h"
+          },
+          "hashes": {
+            "md5": "2087cb4f8e4c66a44ba86910a01dc45f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/Resources/Libs/Source/Flare.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "10790bb4c9e18cf30b8e07fdf6bb96e6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/flare.h"
+          },
+          "hashes": {
+            "md5": "909dcb3a298e6b38fcaece64e2e3a0a0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/firstpersoncamera.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "065e9ab560d56974b53dee622f980f3b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/firstpersoncamera.h"
+          },
+          "hashes": {
+            "md5": "8cfe9201904677bfd774858dcb0fbb4e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/carl/onedrive - university of south wales/uwp/resources/libs/source/effect.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "c99555920269d928285eb0170e2b4eb4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/Resources/Libs/Source/DynamicCube.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "4bf953f4db30b4fc885a671349c44946"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/Resources/Libs/Source/DynamicCube.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "9a762ec9ef53248653bcfc0214e74b7a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/Users/Carl/OneDrive - University of South Wales/UWP/Resources/Libs/Source/CGDConsole.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "11f9988d5a60043bbf08ef8fa3935332"
+          }
+        }
+      ]
+    }
+  ]
+}

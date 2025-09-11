@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Debug\DX11Proj.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\basic_colour_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\basic_colour_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\basic_lighting_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\basic_shadow_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\basic_shadow_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\basic_skin_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\basic_texture_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\basic_texture_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\convolve_u_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\convolve_v_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\copy_depth_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\copy_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\dirt_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\emissive_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\fire_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\fire_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\flare_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\flare_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\grass_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\grass_shadow_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\grass_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\ocean_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\ocean_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\per_pixel_lighting_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\per_pixel_lighting_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\planarShadow_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\pointlight_shadow_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\pointlight_shadow_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\reflection_map_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\reflection_map_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\screen_quad_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\shadow_map_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\skinning_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\skin_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\skin_rad_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\sky_box_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\sky_box_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\texture_space_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\tree_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Shaders\cso\tree_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Resources\Textures\BrightonKarting5.dds</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Debug\asphalt.dds</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Debug\BrightonKarting5.dds</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Resources\Textures\tree.dds</FullPath>
+    </ContentFile>
+  </ContentFiles>
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

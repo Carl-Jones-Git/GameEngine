@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Libs\TinyXML\</FILEPATH>
+      <FILENAME>tinyxml2.h</FILENAME>
+      <LINE>1164</LINE>
+      <COLUMN>15</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'tinyxml2::XMLError' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>tinyxml2::XMLAttribute::IntValue</FUNCTION>
+    <DECORATED>?IntValue@XMLAttribute@tinyxml2@@QBEHXZ</DECORATED>
+    <FUNCLINE>1162</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Libs\TinyXML\</FILEPATH>
+      <FILENAME>tinyxml2.h</FILENAME>
+      <LINE>1677</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'tinyxml2::XMLElement::ElementClosingType' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>tinyxml2::XMLElement::ClosingType</FUNCTION>
+    <DECORATED>?ClosingType@XMLElement@tinyxml2@@QBE?AW4ElementClosingType@12@XZ</DECORATED>
+    <FUNCLINE>1676</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Libs\TinyXML\</FILEPATH>
+      <FILENAME>tinyxml2.h</FILENAME>
+      <LINE>1792</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'tinyxml2::Whitespace' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>tinyxml2::XMLDocument::WhitespaceMode</FUNCTION>
+    <DECORATED>?WhitespaceMode@XMLDocument@tinyxml2@@QBE?AW4Whitespace@2@XZ</DECORATED>
+    <FUNCLINE>1791</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Libs\TinyXML\</FILEPATH>
+      <FILENAME>tinyxml2.cpp</FILENAME>
+      <LINE>458</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26819</DEFECTCODE>
+    <DESCRIPTION>Unannotated fallthrough between switch labels (es.78).</DESCRIPTION>
+    <FUNCTION>tinyxml2::XMLUtil::ConvertUTF32ToUTF8</FUNCTION>
+    <DECORATED>?ConvertUTF32ToUTF8@XMLUtil@tinyxml2@@SAXKPADPAH@Z</DECORATED>
+    <FUNCLINE>425</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Libs\TinyXML\</FILEPATH>
+      <FILENAME>tinyxml2.cpp</FILENAME>
+      <LINE>463</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26819</DEFECTCODE>
+    <DESCRIPTION>Unannotated fallthrough between switch labels (es.78).</DESCRIPTION>
+    <FUNCTION>tinyxml2::XMLUtil::ConvertUTF32ToUTF8</FUNCTION>
+    <DECORATED>?ConvertUTF32ToUTF8@XMLUtil@tinyxml2@@SAXKPADPAH@Z</DECORATED>
+    <FUNCLINE>425</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Libs\TinyXML\</FILEPATH>
+      <FILENAME>tinyxml2.cpp</FILENAME>
+      <LINE>468</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26819</DEFECTCODE>
+    <DESCRIPTION>Unannotated fallthrough between switch labels (es.78).</DESCRIPTION>
+    <FUNCTION>tinyxml2::XMLUtil::ConvertUTF32ToUTF8</FUNCTION>
+    <DECORATED>?ConvertUTF32ToUTF8@XMLUtil@tinyxml2@@SAXKPADPAH@Z</DECORATED>
+    <FUNCLINE>425</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Libs\TinyXML\</FILEPATH>
+      <FILENAME>tinyxml2.cpp</FILENAME>
+      <LINE>1219</LINE>
+      <COLUMN>46</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'tinyxml2::StrPair::Mode' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>tinyxml2::XMLText::ParseDeep</FUNCTION>
+    <DECORATED>?ParseDeep@XMLText@tinyxml2@@MAEPADPADPAVStrPair@2@PAH@Z</DECORATED>
+    <FUNCLINE>1209</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Libs\TinyXML\</FILEPATH>
+      <FILENAME>tinyxml2.cpp</FILENAME>
+      <LINE>2504</LINE>
+      <COLUMN>47</COLUMN>
+    </SFA>
+    <DEFECTCODE>33010</DEFECTCODE>
+    <DESCRIPTION>Unchecked lower bound for enum errorID used as index..</DESCRIPTION>
+    <FUNCTION>tinyxml2::XMLDocument::ErrorIDToName</FUNCTION>
+    <DECORATED>?ErrorIDToName@XMLDocument@tinyxml2@@SAPBDW4XMLError@2@@Z</DECORATED>
+    <FUNCLINE>2501</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Libs\TinyXML\</FILEPATH>
+      <FILENAME>tinyxml2.h</FILENAME>
+      <LINE>209</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'tinyxml2::DynArray&lt;char,20&gt;::_pool' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>tinyxml2::DynArray&lt;char,20&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$DynArray@D$0BE@@tinyxml2@@QAE@XZ</DECORATED>
+    <FUNCLINE>209</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>tinyxml2::DynArray&lt;char,20&gt;::_pool</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Libs\TinyXML\</FILEPATH>
+      <FILENAME>tinyxml2.h</FILENAME>
+      <LINE>209</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'tinyxml2::DynArray&lt;char const *,10&gt;::_pool' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>tinyxml2::DynArray&lt;char const *,10&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$DynArray@PBD$09@tinyxml2@@QAE@XZ</DECORATED>
+    <FUNCLINE>209</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>tinyxml2::DynArray&lt;char const *,10&gt;::_pool</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Libs\TinyXML\</FILEPATH>
+      <FILENAME>tinyxml2.h</FILENAME>
+      <LINE>209</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'tinyxml2::DynArray&lt;tinyxml2::XMLNode *,10&gt;::_pool' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>tinyxml2::DynArray&lt;tinyxml2::XMLNode *,10&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$DynArray@PAVXMLNode@tinyxml2@@$09@tinyxml2@@QAE@XZ</DECORATED>
+    <FUNCLINE>209</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>tinyxml2::DynArray&lt;tinyxml2::XMLNode *,10&gt;::_pool</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Libs\TinyXML\</FILEPATH>
+      <FILENAME>tinyxml2.h</FILENAME>
+      <LINE>209</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'tinyxml2::DynArray&lt;tinyxml2::MemPoolT&lt;52&gt;::Block *,10&gt;::_pool' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>tinyxml2::DynArray&lt;tinyxml2::MemPoolT&lt;52&gt;::Block *,10&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$DynArray@PAUBlock@?$MemPoolT@$0DE@@tinyxml2@@$09@tinyxml2@@QAE@XZ</DECORATED>
+    <FUNCLINE>209</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>tinyxml2::DynArray&lt;tinyxml2::MemPoolT&lt;52&gt;::Block *,10&gt;::_pool</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Libs\TinyXML\</FILEPATH>
+      <FILENAME>tinyxml2.h</FILENAME>
+      <LINE>209</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'tinyxml2::DynArray&lt;tinyxml2::MemPoolT&lt;56&gt;::Block *,10&gt;::_pool' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>tinyxml2::DynArray&lt;tinyxml2::MemPoolT&lt;56&gt;::Block *,10&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$DynArray@PAUBlock@?$MemPoolT@$0DI@@tinyxml2@@$09@tinyxml2@@QAE@XZ</DECORATED>
+    <FUNCLINE>209</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>tinyxml2::DynArray&lt;tinyxml2::MemPoolT&lt;56&gt;::Block *,10&gt;::_pool</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Libs\TinyXML\</FILEPATH>
+      <FILENAME>tinyxml2.h</FILENAME>
+      <LINE>209</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'tinyxml2::DynArray&lt;tinyxml2::MemPoolT&lt;40&gt;::Block *,10&gt;::_pool' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>tinyxml2::DynArray&lt;tinyxml2::MemPoolT&lt;40&gt;::Block *,10&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$DynArray@PAUBlock@?$MemPoolT@$0CI@@tinyxml2@@$09@tinyxml2@@QAE@XZ</DECORATED>
+    <FUNCLINE>209</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>tinyxml2::DynArray&lt;tinyxml2::MemPoolT&lt;40&gt;::Block *,10&gt;::_pool</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Libs\TinyXML\</FILEPATH>
+      <FILENAME>tinyxml2.h</FILENAME>
+      <LINE>209</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'tinyxml2::DynArray&lt;tinyxml2::MemPoolT&lt;60&gt;::Block *,10&gt;::_pool' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>tinyxml2::DynArray&lt;tinyxml2::MemPoolT&lt;60&gt;::Block *,10&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$DynArray@PAUBlock@?$MemPoolT@$0DM@@tinyxml2@@$09@tinyxml2@@QAE@XZ</DECORATED>
+    <FUNCLINE>209</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>tinyxml2::DynArray&lt;tinyxml2::MemPoolT&lt;60&gt;::Block *,10&gt;::_pool</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\packages\directxtk_desktop_win10.2020.11.12.1\include\</FILEPATH>
+      <FILENAME>WICTextureLoader.h</FILENAME>
+      <LINE>163</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'DirectX::WIC_LOADER_FLAGS' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>DirectX::|</FUNCTION>
+    <DECORATED>??UDirectX@@YA?AW4WIC_LOADER_FLAGS@0@W410@0@Z</DECORATED>
+    <FUNCLINE>163</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+      <FILENAME>DynamicCube.cpp</FILENAME>
+      <LINE>45</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>6387</DEFECTCODE>
+    <DESCRIPTION>'renderTargetTexture' could be '0':  this does not adhere to the specification for the function 'ID3D11Device::CreateRenderTargetView'. See line 0 for an earlier location where this can occur</DESCRIPTION>
+    <FUNCTION>DynamicCube::{ctor}</FUNCTION>
+    <DECORATED>??0DynamicCube@@QAE@PAUID3D11Device@@PAUID3D11DeviceContext@@U__vector4@DirectX@@H@Z</DECORATED>
+    <FUNCLINE>4</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>5</LINE>
+        <COLUMN>0</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.h</FILENAME>
+        <LINE>11</LINE>
+        <COLUMN>47</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.h</FILENAME>
+        <LINE>12</LINE>
+        <COLUMN>44</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>7</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>8</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>9</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>10</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>11</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>12</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>15</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>17</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>18</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>19</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>20</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>26</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>22</LINE>
+        <COLUMN>28</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>23</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>24</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>25</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>26</LINE>
+        <COLUMN>24</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>28</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>31</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>32</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'renderTargetTexture' may be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>35</LINE>
+        <COLUMN>31</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>36</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>37</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>38</LINE>
+        <COLUMN>33</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>39</LINE>
+        <COLUMN>34</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>42</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>42</LINE>
+        <COLUMN>19</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'i&lt;6')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>44</LINE>
+        <COLUMN>41</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>45</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'renderTargetTexture' should not be NULL, because this is not consistent with the SAL annotation on 'ID3D11Device::CreateRenderTargetView'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+      <FILENAME>DynamicCube.cpp</FILENAME>
+      <LINE>55</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>6387</DEFECTCODE>
+    <DESCRIPTION>'renderTargetTexture' could be '0':  this does not adhere to the specification for the function 'ID3D11Device::CreateShaderResourceView'. See line 0 for an earlier location where this can occur</DESCRIPTION>
+    <FUNCTION>DynamicCube::{ctor}</FUNCTION>
+    <DECORATED>??0DynamicCube@@QAE@PAUID3D11Device@@PAUID3D11DeviceContext@@U__vector4@DirectX@@H@Z</DECORATED>
+    <FUNCLINE>4</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>5</LINE>
+        <COLUMN>0</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.h</FILENAME>
+        <LINE>11</LINE>
+        <COLUMN>47</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.h</FILENAME>
+        <LINE>12</LINE>
+        <COLUMN>44</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>7</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>8</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>9</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>10</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>11</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>12</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>15</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>17</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>18</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>19</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>20</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>26</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>22</LINE>
+        <COLUMN>28</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>23</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>24</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>25</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>26</LINE>
+        <COLUMN>24</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>28</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>31</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>32</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'renderTargetTexture' may be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>35</LINE>
+        <COLUMN>31</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>36</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>37</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>38</LINE>
+        <COLUMN>33</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>39</LINE>
+        <COLUMN>34</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>42</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>42</LINE>
+        <COLUMN>19</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'i&lt;6')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>44</LINE>
+        <COLUMN>41</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>45</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'renderTargetTexture' is an Input to 'ID3D11Device::CreateRenderTargetView' (declared at c:\program files (x86)\windows kits\10\include\10.0.22621.0\um\d3d11.h:14163)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>42</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>42</LINE>
+        <COLUMN>19</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'i&lt;6')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>44</LINE>
+        <COLUMN>41</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>45</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'renderTargetTexture' is an Input to 'ID3D11Device::CreateRenderTargetView' (declared at c:\program files (x86)\windows kits\10\include\10.0.22621.0\um\d3d11.h:14163)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>42</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>42</LINE>
+        <COLUMN>19</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Continue this loop, (assume 'i&lt;6')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>49</LINE>
+        <COLUMN>33</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>50</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>51</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>52</LINE>
+        <COLUMN>35</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>53</LINE>
+        <COLUMN>29</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>DynamicCube.cpp</FILENAME>
+        <LINE>55</LINE>
+        <COLUMN>4</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'renderTargetTexture' should not be NULL, because this is not consistent with the SAL annotation on 'ID3D11Device::CreateShaderResourceView'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

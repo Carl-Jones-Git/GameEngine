@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\packages\directxtk_desktop_win10.2020.11.12.1\include\</FILEPATH>
+      <FILENAME>WICTextureLoader.h</FILENAME>
+      <LINE>163</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'DirectX::WIC_LOADER_FLAGS' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>DirectX::|</FUNCTION>
+    <DECORATED>??UDirectX@@YA?AW4WIC_LOADER_FLAGS@0@W410@0@Z</DECORATED>
+    <FUNCLINE>163</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+      <FILENAME>GUMemory.h</FILENAME>
+      <LINE>27</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>28251</DEFECTCODE>
+    <DESCRIPTION>Inconsistent annotation for 'new': this instance has no annotations. See c:\users\carl\onedrive - university of south wales\uwp\dx11_cs3s664_karting - vs2019v4\predefined c++ types (compiler internal)(33). The first user-provided annotation on this built-in function is at line c:\program files (x86)\microsoft visual studio\2019\community\vc\tools\msvc\14.29.30133\include\vcruntime_new.h(48). </DESCRIPTION>
+    <FUNCTION>new</FUNCTION>
+    <DECORATED>??2@YAPAXI@Z</DECORATED>
+    <FUNCLINE>27</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+      <FILENAME>GUMemory.h</FILENAME>
+      <LINE>30</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>28251</DEFECTCODE>
+    <DESCRIPTION>Inconsistent annotation for 'new[]': this instance has no annotations. See c:\users\carl\onedrive - university of south wales\uwp\dx11_cs3s664_karting - vs2019v4\predefined c++ types (compiler internal)(58). The first user-provided annotation on this built-in function is at line c:\program files (x86)\microsoft visual studio\2019\community\vc\tools\msvc\14.29.30133\include\vcruntime_new.h(59). </DESCRIPTION>
+    <FUNCTION>new[]</FUNCTION>
+    <DECORATED>??_U@YAPAXI@Z</DECORATED>
+    <FUNCLINE>30</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+      <FILENAME>GUMemory.cpp</FILENAME>
+      <LINE>165</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>28251</DEFECTCODE>
+    <DESCRIPTION>Inconsistent annotation for 'new': this instance has no annotations. See c:\users\carl\onedrive - university of south wales\uwp\dx11_cs3s664_karting - vs2019v4\predefined c++ types (compiler internal)(33). The first user-provided annotation on this built-in function is at line c:\program files (x86)\microsoft visual studio\2019\community\vc\tools\msvc\14.29.30133\include\vcruntime_new.h(48). </DESCRIPTION>
+    <FUNCTION>new</FUNCTION>
+    <DECORATED>??2@YAPAXI@Z</DECORATED>
+    <FUNCLINE>165</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+      <FILENAME>GUMemory.cpp</FILENAME>
+      <LINE>176</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>28251</DEFECTCODE>
+    <DESCRIPTION>Inconsistent annotation for 'new[]': this instance has no annotations. See c:\users\carl\onedrive - university of south wales\uwp\dx11_cs3s664_karting - vs2019v4\predefined c++ types (compiler internal)(58). The first user-provided annotation on this built-in function is at line c:\program files (x86)\microsoft visual studio\2019\community\vc\tools\msvc\14.29.30133\include\vcruntime_new.h(59). </DESCRIPTION>
+    <FUNCTION>new[]</FUNCTION>
+    <DECORATED>??_U@YAPAXI@Z</DECORATED>
+    <FUNCLINE>176</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

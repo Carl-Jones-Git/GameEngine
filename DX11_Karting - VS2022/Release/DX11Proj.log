@@ -1,0 +1,199 @@
+﻿  Resources\Textures\asphalt.jpg
+  Resources\Textures\BrightonKarting5.png
+  Resources\Textures\tree.tif
+  Kart.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(27,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(59,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(65,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(34,54): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(38,64): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(43,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(45,83): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(46,54): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(49,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(53,53): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(61,54): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(68,90): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(68,71): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(68,52): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(71,93): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(71,73): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(71,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(71,187): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(80,81): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(80,63): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(80,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(81,80): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(81,62): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(81,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(82,83): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(82,64): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(82,46): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(83,95): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(83,76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(83,57): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(92,91): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(92,72): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(92,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(92,137): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(93,94): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(98,91): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(98,72): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(98,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(98,212): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(98,195): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(98,177): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(99,81): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(100,93): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(146,19): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(166,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(174,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(182,32): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(186,119): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(186,85): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(186,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(186,208): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(186,186): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(186,165): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(187,119): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(187,85): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(187,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(187,207): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(187,185): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(187,164): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(195,128): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(195,111): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(195,94): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(206,50): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(208,52): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(224,50): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(226,48): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(230,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Scene.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Camera.h(19,8): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\FirstPersonCamera.h(21,196): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(27,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(59,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(65,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\SkinnedModel.h(63,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\SkinnedModel.h(81,63): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(55,43): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(80,43): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(87,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(112,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(387,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(387,135): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(429,53): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(429,93): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(434,51): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(465,148): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(483,63): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(483,101): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(488,119): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(499,54): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(504,86): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(517,60): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(526,100): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(526,228): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(526,240): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(527,100): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(527,228): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(527,240): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(528,86): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(541,61): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(550,188): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(550,271): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(550,283): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(551,188): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(551,272): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(551,284): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(552,174): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(552,260): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(552,272): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(566,78): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(567,54): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(578,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(579,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(580,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(581,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(586,43): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(587,43): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(591,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(595,62): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(608,124): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(650,136): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(650,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(650,88): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(687,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(714,65): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(735,62): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(737,63): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(742,58): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(746,69): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(750,64): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(753,69): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(757,64): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(758,64): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(759,65): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(760,70): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(764,64): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(765,64): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(766,65): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(767,70): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(771,64): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(772,64): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(773,65): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(774,70): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(778,64): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(781,70): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(785,64): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(786,64): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(787,65): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(788,70): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(792,64): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(795,70): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(828,36): warning C4305: '=': truncation from 'double' to 'FLOAT'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(925,11): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(938,26): warning C4244: '=': conversion from 'double' to 'FLOAT', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(966,174): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(966,158): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(966,142): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(980,45): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(981,50): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(982,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1004,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1005,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1007,69): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1007,59): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1007,48): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1008,70): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1008,59): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1008,48): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1009,70): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1009,59): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1009,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1012,36): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1013,48): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1026,19): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1047,19): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1058,84): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1058,66): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1058,43): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1069,27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1070,27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1083,27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1084,27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1096,27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1097,27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1146,130): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1242,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1359,27): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1379,36): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1405,36): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Source\Scene.cpp(1543,22): warning C4305: '+=': truncation from 'double' to 'float'
+  Generating code
+  10 of 3331 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    30 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  DX11Proj.vcxproj -> C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Release\DX11Proj.exe

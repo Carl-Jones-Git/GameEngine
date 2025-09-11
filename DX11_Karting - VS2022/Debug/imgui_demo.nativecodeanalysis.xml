@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Libs\IMGUI\</FILEPATH>
+      <FILENAME>imgui_demo.cpp</FILENAME>
+      <LINE>1435</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'ImGuiKey' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>ShowDemoWindowWidgets::Funcs::MyCallback</FUNCTION>
+    <DECORATED>?MyCallback@Funcs@?BMD@??ShowDemoWindowWidgets@@YAXXZ@SAHPAUImGuiInputTextCallbackData@@@Z</DECORATED>
+    <FUNCLINE>1427</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Libs\IMGUI\</FILEPATH>
+      <FILENAME>imgui_demo.cpp</FILENAME>
+      <LINE>5748</LINE>
+      <COLUMN>121</COLUMN>
+    </SFA>
+    <DEFECTCODE>33010</DEFECTCODE>
+    <DESCRIPTION>Unchecked lower bound for enum key used as index..</DESCRIPTION>
+    <FUNCTION>ShowDemoWindowInputs::funcs::IsLegacyNativeDupe</FUNCTION>
+    <DECORATED>?IsLegacyNativeDupe@funcs@?BA@??ShowDemoWindowInputs@@YAXXZ@SA_NW4ImGuiKey@@@Z</DECORATED>
+    <FUNCLINE>5748</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

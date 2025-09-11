@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\packages\directxtk_desktop_win10.2020.11.12.1\include\</FILEPATH>
+      <FILENAME>WICTextureLoader.h</FILENAME>
+      <LINE>163</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'DirectX::WIC_LOADER_FLAGS' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>DirectX::|</FUNCTION>
+    <DECORATED>??UDirectX@@YA?AW4WIC_LOADER_FLAGS@0@W410@0@Z</DECORATED>
+    <FUNCLINE>163</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\FmodStudio\inc\</FILEPATH>
+      <FILENAME>fmod.hpp</FILENAME>
+      <LINE>36</LINE>
+      <COLUMN>269</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'FMOD_RESULT' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>FMOD::Memory_Initialize</FUNCTION>
+    <DECORATED>?Memory_Initialize@FMOD@@YA?AW4FMOD_RESULT@@PAXHP6GPAXIIPBD@ZP6GPAX0II1@ZP6GX0I1@ZI@Z</DECORATED>
+    <FUNCLINE>36</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\FmodStudio\inc\</FILEPATH>
+      <FILENAME>fmod.hpp</FILENAME>
+      <LINE>38</LINE>
+      <COLUMN>23</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'FMOD_DEBUG_MODE' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>FMOD::Debug_Initialize</FUNCTION>
+    <DECORATED>?Debug_Initialize@FMOD@@YA?AW4FMOD_RESULT@@IW4FMOD_DEBUG_MODE@@P6G?AW42@IPBDH11@Z1@Z</DECORATED>
+    <FUNCLINE>38</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\FmodStudio\inc\</FILEPATH>
+      <FILENAME>fmod.hpp</FILENAME>
+      <LINE>41</LINE>
+      <COLUMN>23</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'FMOD_THREAD_TYPE' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>FMOD::Thread_SetAttributes</FUNCTION>
+    <DECORATED>?Thread_SetAttributes@FMOD@@YA?AW4FMOD_RESULT@@W4FMOD_THREAD_TYPE@@_JHI@Z</DECORATED>
+    <FUNCLINE>41</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+      <FILENAME>Animation.cpp</FILENAME>
+      <LINE>39</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Reading invalid data from 'keyFrames':  the readable size is 'sizeof(KeyFrame)*(unsigned int)N' bytes, but '480' bytes may be read.</DESCRIPTION>
+    <FUNCTION>Animation::{ctor}</FUNCTION>
+    <DECORATED>??0Animation@@QAE@HN@Z</DECORATED>
+    <FUNCLINE>8</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>10</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>12</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>13</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>14</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>16</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>17</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>18</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>20</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>21</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>22</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>24</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>25</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>26</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>28</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>29</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>30</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>33</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>34</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>35</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>36</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>37</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>38</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>39</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid read from 'keyFrames', (outside its readable range)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+      <FILENAME>Animation.cpp</FILENAME>
+      <LINE>12</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6011</DEFECTCODE>
+    <DESCRIPTION>Dereferencing NULL pointer 'keyFrames'. </DESCRIPTION>
+    <FUNCTION>Animation::{ctor}</FUNCTION>
+    <DECORATED>??0Animation@@QAE@HN@Z</DECORATED>
+    <FUNCLINE>8</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>10</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'keyFrames' may be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>12</LINE>
+        <COLUMN>16</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'keyFrames' is dereferenced, but may still be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+      <FILENAME>Animation.cpp</FILENAME>
+      <LINE>16</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>6386</DEFECTCODE>
+    <DESCRIPTION>Buffer overrun while writing to 'keyFrames':  the writable size is 'sizeof(KeyFrame)*(unsigned int)N' bytes, but '192' bytes might be written.</DESCRIPTION>
+    <FUNCTION>Animation::{ctor}</FUNCTION>
+    <DECORATED>??0Animation@@QAE@HN@Z</DECORATED>
+    <FUNCLINE>8</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>10</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>12</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>13</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>14</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\</FILEPATH>
+        <FILENAME>Animation.cpp</FILENAME>
+        <LINE>16</LINE>
+        <COLUMN>16</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid write to 'keyFrames', (outside its writable range)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>
