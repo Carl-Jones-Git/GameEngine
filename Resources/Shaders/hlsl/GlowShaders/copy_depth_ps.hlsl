@@ -1,0 +1,34 @@
+
+// Basic texture copy pixel shader
+
+
+// input fragment - this is the per-fragment packet interpolated by the rasteriser stage
+struct fragmentInputPacket {
+
+	float2				texCoord	: TEXCOORD;
+	float4				posH		: SV_POSITION;
+};
+
+
+struct fragmentOutputPacket {
+
+	float4				fragmentColour : SV_TARGET;
+	float			fragmentDepth : SV_DEPTH;
+};
+
+//
+// Textures
+//
+
+// Assumes texture bound to texture t0 and sampler bound to sampler s0
+Texture2DMS  <float>depthTexture: register(t0);
+SamplerState linearSampler : register(s0);
+
+fragmentOutputPacket main(fragmentInputPacket inputFragment) {
+
+	fragmentOutputPacket outputFragment;
+	float zBufDepth = depthTexture.Load(int4(inputFragment.texCoord.x *1366, inputFragment.texCoord.y *768, 0, 0), 0).r;
+	outputFragment.fragmentColour = float4(0, 0, 0, 0.1);
+	outputFragment.fragmentDepth = zBufDepth;
+	return outputFragment;
+}

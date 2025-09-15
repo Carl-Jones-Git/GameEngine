@@ -1,0 +1,18 @@
+C:\Users\RTR Tech\3D Models\house\t$m$p$$$\house.max
+C:\Users\RTR Tech\3D Models\house\t$m$p$$$\MAXFILES.TXT
+C:\Users\RTR Tech\Documents\3dsmax
+C:\Users\RTR Tech\Pictures\01_walk_feild.jpg
+Z:\GENERALINFO\GraphicsAssets\Texture Archive\Buildings\Headhouse-Sides.jpg
+Z:\GENERALINFO\GraphicsAssets\Texture Archive\Buildings\siding.jpg
+Z:\GENERALINFO\GraphicsAssets\Texture Archive\Buildings\siding_normal.jpg
+Z:\GENERALINFO\GraphicsAssets\Texture Archive\Buildings\siding_bump.jpg
+C:\Users\RTR Tech\Pictures\texture\Thermal & Moisture.Roof Tiles.Spanish.Red.jpg
+C:\Users\RTR Tech\Pictures\texture\Thermal & Moisture.Roof Tiles.Spanish.Red_spec1.jpg
+C:\Users\RTR Tech\Pictures\texture\Thermal & Moisture.Roof Tiles.Spanish.Red_normal.jpg
+C:\Users\RTR Tech\Pictures\texture\uplight.jpg
+C:\Users\RTR Tech\Pictures\aspiring_yellow_feild.jpg
+C:\Users\RTR Tech\Pictures\texture\dry dirt.jpg
+C:\Users\RTR Tech\Pictures\texture\dry dirt spec.jpg
+C:\Users\RTR Tech\Pictures\texture\dry dirt bump.jpg
+C:\Users\RTR Tech\Pictures\texture\dry dirt normal.jpg
+C:\Program Files\Autodesk\3ds Max 9\maps\Ground\GRASS2.JPG

@@ -63,86 +63,80 @@ float finishDist = 10.0f;
 float terrainScale = 2.0;
 bool renderFrame = false;  // Control flag for rendering
 
-// Convert model to PhysX shape - demonstrates physics/rendering integration
-void Scene::toPhysX(shared_ptr<Model> model, XMVECTOR R, XMVECTOR T, PhysXMode type, int instance)
+//Convert Model to PhysX Shape
+void Scene::toPhysX(shared_ptr < Model> model, XMVECTOR R, XMVECTOR T, PhysXMode type, int instance)
 {
 	PxMaterial* material = mPhysics->createMaterial(0.0f, 0.0f, 0.6f);
 	if (type == DRIVEABLE)
 		material = mPhysics->createMaterial(0.6f, 0.4f, 0.6f);
-
-	// Manual memory management with malloc/free
-	PxVec3* verts = (PxVec3*)malloc(sizeof(PxVec3) * model->getNumVert());
-	PxTransform t(PxVec3(0, 0, 0), PxQuat(XMConvertToRadians(0), PxVec3(0, 1, 0)));
-
-	// Transform vertices from model to world space
-	for (int i = 0; i < model->getNumVert(); i++)
+	//Get Vertices
+	if (type == STATIC || type == DRIVEABLE)//Static
 	{
-		XMVECTOR pos = DirectX::XMVector3TransformCoord(
-			XMVectorSet(model->getVertexBufferCPU()[i].pos.x,
-				model->getVertexBufferCPU()[i].pos.y,
-				model->getVertexBufferCPU()[i].pos.z, 1),
-			model->getWorldMatrix());
-		verts[i].x = DirectX::XMVectorGetX(pos);
-		verts[i].y = DirectX::XMVectorGetY(pos) - 0.25;
-		verts[i].z = DirectX::XMVectorGetZ(pos);
-	}
-
-	// Process indices for physics mesh
-	int count = 0;
-	PxU32* indices32 = (PxU32*)malloc(sizeof(PxU32) * model->getNumInd());
-	for (int j = 0; j < model->getNumMeshes(); j++)
-		for (int i = 0; i < model->getIndexCount()[j]; i++) {
-			indices32[count] = (PxU32)model->getIndexBufferCPU()[count] + model->getBaseVertexOffset()[j];
-			count++;
+		PxVec3* verts = (PxVec3*)malloc(sizeof(PxVec3) * model->getNumVert());
+		PxTransform t(PxVec3(0, 0, 0), PxQuat(XMConvertToRadians(0), PxVec3(0, 1, 0)));
+		for (int i = 0; i < model->getNumVert(); i++)
+		{
+			XMVECTOR pos = DirectX::XMVector3TransformCoord(XMVectorSet(model->getVertexBufferCPU()[i].pos.x, model->getVertexBufferCPU()[i].pos.y, model->getVertexBufferCPU()[i].pos.z, 1), model->getWorldMatrix());
+			verts[i].x = DirectX::XMVectorGetX(pos);
+			verts[i].y = DirectX::XMVectorGetY(pos) - 0.25;
+			verts[i].z = DirectX::XMVectorGetZ(pos);
 		}
-
-	// Create PhysX triangle mesh for static objects
-	if (type == STATIC || type == DRIVEABLE)
-	{
-		PxTriangleMesh* triMesh = createTriangleMesh(verts, model->getNumVert(),
-			indices32, model->getNumFaces(),
-			*mPhysics, *gCooking);
+		int count = 0;
+		//Get faces
+		PxU32* indices32 = (PxU32*)malloc(sizeof(PxU32) * model->getNumInd());
+		for (int j = 0; j < model->getNumMeshes(); j++)
+			for (int i = 0; i < model->getIndexCount()[j]; i++) {
+				indices32[count] = (PxU32)model->getIndexBufferCPU()[count] + model->getBaseVertexOffset()[j];
+				count++;
+			}
+		//Create PhysX TriangleMesh
+		PxTriangleMesh* triMesh = createTriangleMesh(verts, model->getNumVert(), indices32, model->getNumFaces(), *mPhysics, *gCooking);
 		PxRigidStatic* r = mPhysics->createRigidStatic(t);
 		PxShape* shape = PxRigidActorExt::createExclusiveShape(*r, PxTriangleMeshGeometry(triMesh), *material);
-
-		// Setup collision filters for game objects
+		//Setup collision filters
 		PxFilterData simFilterData(COLLISION_FLAG_OBSTACLE, COLLISION_FLAG_CHASSIS, 0, 0);
 		shape->setSimulationFilterData(simFilterData);
 
-		if (type == DRIVEABLE)
+		if (type == DRIVEABLE)//make driveable
 		{
 			PxFilterData qryFilterData;
 			setupDrivableSurface(qryFilterData);
 			shape->setQueryFilterData(qryFilterData);
 		}
-
+		//Add the mesh to the PhysX Scene
 		mScene->addActor(*r);
 		free(verts);
 		free(indices32);
 	}
-	else // Dynamic objects use convex meshes
+	else //Dynamic
 	{
-		PxTransform t(PxVec3(DirectX::XMVectorGetX(T), DirectX::XMVectorGetY(T) + 0.09,
-			DirectX::XMVectorGetZ(T)),
-			PxQuat(DirectX::XMVectorGetX(R), DirectX::XMVectorGetY(R),
-				DirectX::XMVectorGetZ(R), DirectX::XMVectorGetW(R)));
+		PxTransform t(PxVec3(DirectX::XMVectorGetX(T), DirectX::XMVectorGetY(T) + 0.09, DirectX::XMVectorGetZ(T)), PxQuat(DirectX::XMVectorGetX(R), DirectX::XMVectorGetY(R), DirectX::XMVectorGetZ(R), DirectX::XMVectorGetW(R)));
+		PxVec3* verts = (PxVec3*)malloc(sizeof(PxVec3) * model->getNumVert());
 
-		// Create PhysX convex mesh for dynamic objects
+		for (int i = 0; i < model->getNumVert(); i++)
+		{
+			XMVECTOR pos = XMVectorSet(model->getVertexBufferCPU()[i].pos.x, model->getVertexBufferCPU()[i].pos.y, model->getVertexBufferCPU()[i].pos.z, 1);
+			verts[i].x = DirectX::XMVectorGetX(pos);
+			verts[i].y = DirectX::XMVectorGetY(pos);
+			verts[i].z = DirectX::XMVectorGetZ(pos);
+		}
+
+		//Create PhysX ConvexMesh
 		PxConvexMesh* convMesh = createConvexMesh(verts, model->getNumVert(), *mPhysics, *gCooking);
 		PxRigidDynamic* r = mPhysics->createRigidDynamic(t);
 		PxShape* shape = PxRigidActorExt::createExclusiveShape(*r, PxConvexMeshGeometry(convMesh), *material);
-
-		// Setup collision filters
-		PxFilterData simFilterData(COLLISION_FLAG_OBSTACLE, COLLISION_FLAG_GROUND |
-			COLLISION_FLAG_CHASSIS | COLLISION_FLAG_OBSTACLE, 0, 0);
+		//Setup collision filters
+		PxFilterData simFilterData(COLLISION_FLAG_OBSTACLE, COLLISION_FLAG_GROUND | COLLISION_FLAG_CHASSIS | COLLISION_FLAG_OBSTACLE, 0, 0);
 		shape->setSimulationFilterData(simFilterData);
-
-		// Store reference to physics object in model instance
+		//Add the mesh to the PhysX Scene
 		model->instances[instance].dynamicPX = r;
+
 		mScene->addActor(*r);
 		free(verts);
 	}
 }
+
+
 
 // Load models from XML - demonstrates external asset configuration
 void Scene::load(string path, shared_ptr<Effect> effect, float mapScale, float LHCoords)
@@ -1400,8 +1394,8 @@ void Scene::renderDynamicObjects(ID3D11DeviceContext* context)
 	context->PSSetShaderResources(6, 1, &cubeDayTextureSRV);
 
 	skyBox->render(context);
-	models[7]->renderInstances(context);
-	models[9]->renderInstances(context);
+	models[7]->renderInstances(context);//ducks
+	models[9]->renderInstances(context);//building
 
 	playerKart->render(context, playerKart->camMode);
 
