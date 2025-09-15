@@ -1,7 +1,0 @@
-<Scene>
-<Model>
-<PathName>../../Resources/Models/sphere.stl</PathName>
-<Data>vec3(0.000, 5.000, 0.000)vec3(0.000000, 0.000000, 0.000000)vec3(10.000000, 10.000000, 10.000000)</Data>
-<PhysX>Dynamic</PhysX>
-</Model>
-</Scene>
