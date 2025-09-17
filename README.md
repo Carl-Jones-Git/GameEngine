@@ -14,7 +14,7 @@ A lightweight, educational game engine built with C++ and DirectX 11, featuring 
 - **Resource Management** - Efficient loading and caching of assets
 - **Scene Graph** - Hierarchical scene organization
 
-### Graphics & Rendering [Watch skin rendering video](https://www.youtube.com/watch?v=Zt6Al5h8oL4)
+### Graphics & Rendering [Watch Graphics Features Video](https://www.youtube.com/watch?v=haYDym8bzO4)
 - **Multiple Light Types** - Point, directional, and spot lights with real-time shadows
 - **Advanced Materials** - PBR-style material system with multiple texture support
 - **3D Model Loading** - Support for complex meshes and materials via Assimp
@@ -81,6 +81,7 @@ The included go-kart racing game demonstrates all engine features in action acro
 - Advanced lighting and atmospheric effects
 - Real-time reflections on kart surfaces and track elements
 - Spatial audio with engine sounds and environmental effects
+- [Watch GamePlay Video](https://www.youtube.com/watch?v=Zt6Al5h8oL4)
 
 ## Dependencies
 
