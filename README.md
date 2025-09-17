@@ -70,7 +70,7 @@ The included go-kart racing game demonstrates all engine features in action acro
 ### Platform Support
 - **PC Version** (`KartingPC/`) - Full-featured desktop implementation
 - **Xbox One Version** (`KartingXBoxOne/`) - Console-optimized build
-<img src="Resources/Textures/Karting XBoxOne.png" alt="Alt text" width="50%" />
+<img src="Resources/Textures/KartingXBoxOne.png" alt="Alt text" width="50%" />
 
 ### Game Features
 - Physics-based kart handling with realistic suspension
