@@ -103,28 +103,6 @@ Project Structure
     ├── Sounds/              # Audio files
     ├── Shaders/             # HLSL shader files
     └── Documentation/       # Additional docs and tutorials
-Design Philosophy
-Direct Public Access Pattern
-Following common practice in game engines and mathematics libraries, many classes in this engine use public member variables accessed directly rather than getter/setter methods. This design choice offers several advantages:
-Performance Benefits:
-
-Eliminates function call overhead for frequently accessed data (critical when processing thousands of objects per frame)
-Enables better compiler optimizations and more predictable memory access patterns
-Reduces cache misses when working with arrays of objects like vertices or particles
-
-Mathematical Clarity:
-
-Allows natural mathematical syntax: vector.x * 2 + vector.y instead of vector.getX() * 2 + vector.getY()
-Makes code more readable when implementing mathematical formulas and algorithms
-Mirrors mathematical notation that students and developers expect
-
-Development Efficiency:
-
-Simplifies debugging by allowing direct inspection and modification of values
-Reduces boilerplate code for simple data containers like Vector3, Color, or Transform classes
-Enables faster prototyping and iteration during development
-
-This approach is used selectively for simple data structures and mathematical types, while complex systems that require validation or coordination still use proper encapsulation.
 Learning Resources
 This engine is designed for educational purposes and includes:
 
@@ -132,7 +110,6 @@ Well-commented source code explaining techniques
 Step-by-step tutorials for key systems
 Performance profiling examples
 Shader development guides
-Examples of when to use public access vs. encapsulation
 
 Controls
 Go-Kart Game
