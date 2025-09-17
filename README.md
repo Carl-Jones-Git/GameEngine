@@ -1,5 +1,9 @@
 # Lightweight Educational Game Engine
 
+![Engine Screenshot](path/to/your/screenshot.png)
+
+*Caption: Real-time rendering with advanced lighting and physics*
+
 A lightweight, educational game engine built with C++ and DirectX 11, featuring a complete go-karting game example. This project demonstrates modern 3D graphics techniques and serves as a learning resource for game engine development.
 
 ## Features
