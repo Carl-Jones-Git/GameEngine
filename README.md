@@ -172,8 +172,8 @@ The following are available on request:
 
 ### Go-Kart Game
 
-- **XBoxOne Controller**
-- **Wheel and Pedals**
+**XBoxOne Controller**
+**Wheel and Pedals**
 
   
 - **Keyboard and Mouse**
