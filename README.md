@@ -171,12 +171,19 @@ The following are available on request:
 ## Controls
 
 ### Go-Kart Game
-- **WASD** - Steering and acceleration
-- **Space** - Handbrake
-- **C** - Change camera view
-- **F1** - Toggle debug interface
-- **ESC** - Pause/Menu
 
+- **XBoxOne Controller**
+- **Wheel and Pedals**
+
+  
+- **Keyboard and Mouse**
+- **ARROW KEYS** - Steering, acceleration and brake
+- **HOME/END** - Engine 150, 200, 270(cc)
+- **PAGE UP/DOWN** - Change camera view
+- **F** - Toggle fly mode use WASD and mouse
+- **I/O** - Move light in and out
+- **ESC** - Menu
+- Close window and press return to exit
 ## Contributing
 
 This is an educational project welcoming contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
