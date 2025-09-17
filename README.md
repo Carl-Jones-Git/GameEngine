@@ -82,7 +82,7 @@ The included go-kart racing game demonstrates all engine features in action acro
 - Advanced lighting and atmospheric effects
 - Real-time reflections on kart surfaces and track elements
 - Spatial audio with engine sounds and environmental effects
-- [Watch GamePlay Video](https://www.youtube.com/watch?v=Zt6Al5h8oL4)
+- [Watch GamePlay Video](https://www.youtube.com/watch?v=UWeHYNR9bro)
 
 ## Dependencies
 
