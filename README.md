@@ -154,7 +154,7 @@ This project uses the following open-source libraries:
     ├── Textures/            # Texture assets
     ├── Sounds/              # Audio files
     ├── Shaders/             # HLSL shader files
-    └── Documentation/       # Additional docs and tutorials
+    └── Documentation/       # Additional docs and tutorials (Private but available on request)
 ```
 
 ## Learning Resources
