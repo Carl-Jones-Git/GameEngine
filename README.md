@@ -1,6 +1,6 @@
 # Lightweight Educational Game Engine
 
-![Engine Screenshot](Resources/Textures/CustomKartingLogo.png)
+![Engine Screenshot](Resources/Textures/ScreenShot.png)
 
 *Caption: Real-time rendering with advanced lighting and physics*
 
