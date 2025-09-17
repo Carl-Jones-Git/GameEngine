@@ -25,7 +25,7 @@ A lightweight, educational game engine built with C++ and DirectX 11, featuring 
   - Shadow volumes for dynamic objects
 - **Foliage Rendering** - Optimized grass and vegetation systems
 - **Subsurface Scattering** - Realistic skin rendering techniques
-- 🎮 [Watch Gameplay Video]([https://youtu.be/your-video-id](https://www.youtube.com/watch?v=Zt6Al5h8oL4)
+- [Watch skin rendering]([https://youtu.be/your-video-id](https://www.youtube.com/watch?v=Zt6Al5h8oL4))
 
 ### Camera Systems
 - **Multiple Camera Types** - First-person, third-person, and cinematic cameras
