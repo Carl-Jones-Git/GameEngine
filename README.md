@@ -14,7 +14,7 @@ A lightweight, educational game engine built with C++ and DirectX 11, featuring 
 - **Scene Graph** - Hierarchical scene asset organization
 
 ### Graphics & Rendering 
-[Watch Graphics Features Video](https://www.youtube.com/watch?v=haYDym8bzO4)
+[Watch Graphics Features Video](https://www.youtube.com/watch?v=haYDym8bzO4) (Low Quality)
 - **Multiple Light Types** - Point, directional, and spot lights with real-time shadows
 - **Advanced Materials** - PBR-style material system with multiple texture support
 - **3D Model Loading** - Support for complex meshes and materials via Assimp
