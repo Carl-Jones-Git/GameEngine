@@ -44,7 +44,6 @@ A lightweight, educational game engine built with C++ and DirectX 11, featuring 
 ### Tools & Utilities
 - **ImGui Integration** - In-engine debugging and tweaking interface
 - **XML Configuration** - Scene and settings management via TinyXML
-- **Hot Reloading** - Real-time asset reloading for rapid iteration
 
 ## Design Philosophy
 
@@ -105,27 +104,28 @@ This project uses the following open-source libraries:
 
 1. **Clone the repository:**
    ```bash
-   git clone --recursive https://github.com/yourusername/your-repo-name.git
+   git clone --recursive https://github.com/Carl-Jones-Git/GameEngine.git
    ```
 
 2. **Open the solution in Visual Studio:**
-   - Navigate to the project directory
-   - Open the `.sln` file with Visual Studio 2019 or later
 
-3. **Restore NuGet packages:**
+   - Navigate to the desired solution folder (KartingPC or KartingXBoxOne)
+   - Open the `.sln` file with Visual Studio 2022 or later
+   - To build for KartingXBoxOne navigate to Includes.h and comment #define PC_BUILD
+
+
+4. **Restore NuGet packages:**
    - Right-click on the solution in Solution Explorer
    - Select "Restore NuGet Packages"
    - Wait for all packages to download and install
 
-4. **Set build configuration:**
+5. **Set build configuration:**
    - Select "Release" or "Debug" configuration
-   - Choose "x64" platform (recommended)
 
-5. **Build the solution:**
+6. **Build the solution:**
    - Press `Ctrl+Shift+B` or go to Build → Build Solution
 
-6. **Run the application:**
-   - Set the desired project (KartingPC or KartingXBoxOne) as startup project
+7. **Run the application:**
    - Press `F5` to run with debugging or `Ctrl+F5` to run without debugging
 
 **Note:** NuGet packages are not included in the repository to keep download size manageable. Visual Studio will automatically download all required dependencies during the restore process.
@@ -152,10 +152,11 @@ This project uses the following open-source libraries:
 
 This engine is designed for educational purposes and includes:
 - Well-commented source code explaining techniques
+- Examples of when to use public access vs. encapsulation
+The following are available on request:
 - Step-by-step tutorials for key systems
 - Performance profiling examples
 - Shader development guides
-- Examples of when to use public access vs. encapsulation
 
 ## Controls
 
