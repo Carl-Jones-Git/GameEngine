@@ -11,7 +11,7 @@ A lightweight, educational game engine built with C++ and DirectX 11, featuring 
 ### Core Engine Systems
 - **DirectX 11 Rendering Pipeline** - Modern graphics API implementation
 - **Component-Based Architecture** - Flexible entity-component system
-- **Resource Management** - Efficient loading and caching of assets
+- **Resource Management** - Efficient loading and of assets
 - **Scene Graph** - Hierarchical scene organization
 
 ### Graphics & Rendering [Watch Graphics Features Video](https://www.youtube.com/watch?v=haYDym8bzO4)
@@ -55,11 +55,6 @@ Following common practice in game engines and mathematics libraries, many classe
 - Enables better compiler optimizations and more predictable memory access patterns
 - Reduces cache misses when working with arrays of objects like vertices or particles
 
-**Mathematical Clarity:**
-- Allows natural mathematical syntax: `vector.x * 2 + vector.y` instead of `vector.getX() * 2 + vector.getY()`
-- Makes code more readable when implementing mathematical formulas and algorithms
-- Mirrors mathematical notation that students and developers expect
-
 **Development Efficiency:**
 - Simplifies debugging by allowing direct inspection and modification of values
 - Reduces boilerplate code for simple data containers like Vector3, Color, or Transform classes
@@ -75,6 +70,7 @@ The included go-kart racing game demonstrates all engine features in action acro
 - **PC Version** (`KartingPC/`) - Full-featured desktop implementation
 - **Xbox One Version** (`KartingXBoxOne/`) - Console-optimized build
 <img src="Resources/Textures/Karting XBoxOne.png" alt="Alt text" width="50%" />
+
 ### Game Features
 - Physics-based kart handling with realistic suspension
 - Dynamic track environments with multiple surface types
@@ -101,19 +97,25 @@ This project uses the following open-source libraries:
 - **RAM**: 4GB minimum, 8GB recommended
 - **Xbox Development**: Xbox One Development Kit for console builds
 
+## Runtime
+1. **Clone the repository:**
+   ```bash
+   git clone --recursive https://github.com/Carl-Jones-Git/GameEngine.git
+   ```
+2. **Run DX11Proj.exe:**
+    - Navigate to the "DX11_Karting - Windows11_Runtime" folder and run DX11Proj.exe
+
 ## Building
 
 1. **Clone the repository:**
    ```bash
    git clone --recursive https://github.com/Carl-Jones-Git/GameEngine.git
    ```
-
+   
 2. **Open the solution in Visual Studio:**
-
    - Navigate to the desired solution folder (KartingPC or KartingXBoxOne)
    - Open the `.sln` file with Visual Studio 2022 or later
    - To build for KartingXBoxOne navigate to Includes.h and comment #define PC_BUILD
-
 
 4. **Restore NuGet packages:**
    - Right-click on the solution in Solution Explorer
@@ -135,8 +137,9 @@ This project uses the following open-source libraries:
 
 ```
 ├── Game/
-│   ├── KartingPC/           # Go-kart game implementation (PC)
-│   └── KartingXBoxOne/      # Go-kart game implementation (Xbox One)
+│   ├── KartingPC/               # Go-kart game implementation (PC)
+|   ├── KartingWindows11Runtime/ # Go-kart game runtime (PC)
+│   └── KartingXBoxOne/          # Go-kart game implementation (Xbox One)
 └── Resources/
     ├── Libs/
     │   ├── Source/          # Core engine source code
@@ -168,10 +171,6 @@ The following are available on request:
 - **C** - Change camera view
 - **F1** - Toggle debug interface
 - **ESC** - Pause/Menu
-
-## Screenshots
-
-[Add screenshots of your engine and game in action]
 
 ## Contributing
 
