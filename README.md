@@ -173,10 +173,11 @@ The following are available on request:
 ### Go-Kart Game
 
 **XBoxOne Controller**
+
 **Wheel and Pedals**
 
   
-- **Keyboard and Mouse**
+**Keyboard and Mouse**
 - **ARROW KEYS** - Steering, acceleration and brake
 - **HOME/END** - Engine 150, 200, 270(cc)
 - **PAGE UP/DOWN** - Change camera view
