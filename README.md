@@ -10,9 +10,8 @@ A lightweight, educational game engine built with C++ and DirectX 11, featuring 
 
 ### Core Engine Systems
 - **DirectX 11 Rendering Pipeline** - Modern graphics API implementation
-- **Component-Based Architecture** - Flexible entity-component system
 - **Resource Management** - Efficient loading and of assets
-- **Scene Graph** - Hierarchical scene organization
+- **Scene Graph** - Hierarchical scene asset organization
 
 ### Graphics & Rendering 
 [Watch Graphics Features Video](https://www.youtube.com/watch?v=haYDym8bzO4)
