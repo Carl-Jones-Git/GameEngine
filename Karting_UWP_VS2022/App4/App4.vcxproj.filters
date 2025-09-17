@@ -1,0 +1,676 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>e9577118-4088-4820-9b28-d66091543670</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>edb31020-6048-4b4e-b300-b1f7aa96d848</UniqueIdentifier>
+      <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
+    </Filter>
+    <Filter Include="Content">
+      <UniqueIdentifier>acf06653-013a-4bad-981f-55bbc0545a3a</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="Common\DirectXHelper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\StepTimer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\DeviceResources.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClCompile Include="Common\DeviceResources.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{d055a2a3-9df2-4f6b-890d-8ee885eaeebc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TinyXML">
+      <UniqueIdentifier>{c2ee6d5f-fb3c-44a8-b6a5-02b3f78f529c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IMGUI">
+      <UniqueIdentifier>{e120daff-f6d2-4132-b965-b831f4051ad7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.cpp" />
+    <ClCompile Include="App4Main.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Common\MoveLookController.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Content\TextRenderer.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="Content\Scene.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="Content\LightArray.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\BaseModel.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\CGDConsole.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\Effect.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\Material.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\Texture.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\Utils.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\Model.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\Grid.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\Terrain.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\PhysXKarting.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\PhysXVehicleController.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\PhysXVehicleUtils.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\Kart.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\AIKart.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\PlayerKart.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\TinyXML\tinyxml2.cpp">
+      <Filter>TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\Camera.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\FirstPersonCamera.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\Box.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\Flare.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\ShadowMap.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\Quad.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\IMGUI_UWP\imgui.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\IMGUI_UWP\imgui_demo.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\IMGUI_UWP\imgui_draw.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\IMGUI_UWP\imgui_impl_dx11.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\IMGUI_UWP\imgui_tables.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\IMGUI_UWP\imgui_widgets.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\Menu.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\Source\NetMgr.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Resources\Libs\IMGUI_UWP\imgui_impl_uwp.cpp">
+      <Filter>IMGUI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App.h" />
+    <ClInclude Include="App4Main.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Content\LookAtCamera.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\MoveLookController.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Content\TextRenderer.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="Content\Scene.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="Content\LightArray.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\BaseModel.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\CGDConsole.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\CBufferStructures.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\Material.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\Texture.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\Utils.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\Effect.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\Model.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\Includes.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\VertexStructures.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\Grid.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\Terrain.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\PhysXKarting.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\PhysXVehicleController.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\PhysXVehicleUtils.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\Kart.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\AIKart.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\PlayerKart.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\TinyXML\tinyxml2.h">
+      <Filter>TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\Camera.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\FirstPersonCamera.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\Box.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\Flare.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\ShadowMap.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\Quad.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\IMGUI_UWP\imconfig.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\IMGUI_UWP\imgui.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\IMGUI_UWP\imgui_impl_dx11.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\IMGUI_UWP\imgui_internal.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\IMGUI_UWP\imstb_rectpack.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\IMGUI_UWP\imstb_textedit.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\IMGUI_UWP\imstb_truetype.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\Menu.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\Source\NetMgr.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Resources\Libs\IMGUI_UWP\imgui_impl_uwp.h">
+      <Filter>IMGUI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\flag.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Textures\grassenvmap1024.dds">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Textures\grass.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Textures\grassAlpha.tif">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Textures\heightmap2.bmp">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Textures\normalmap.bmp">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Textures\grass1.bmp">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Textures\Dragon_Nor_mirror2.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Textures\GreenDragon.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Textures\Waves.dds">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Textures\GroundNormalMap.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Textures\Dragon_ground_color.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Textures\Dragon_Nor.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Textures\Dragon_Bump_Col2.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Textures\RedDragon.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Textures\castle.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Textures\Fire.tif">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Textures\heightmap.bmp">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Kart\BlackStripe.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Kart\BlueCamo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Kart\BlueStripe.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Kart\GoodYearEagle.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Kart\GreenCamo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Kart\GreenStripe.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Kart\GreyCamo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Kart\PurpleCamo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Kart\PurpleStripe.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Kart\RedCamo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Kart\RedStripe.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Kart\WhiteStripe.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Kart\YellowCamo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Kart\YellowStripe.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Castle\Castle.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Levels\noise.bmp">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Levels\Terrain01.bmp">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Textures\BrightonKarting5.bmp">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Textures\grassAlpha.tif">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Textures\Seamless_Asphalt_Texture_NORMAL.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Textures\asphalt.dds">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Textures\grass_texture.dds">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Textures\grassenvmap1024.dds" />
+    <Image Include="Assets\Resources\Textures\nightenvmap1024.dds" />
+    <Image Include="Assets\Resources\Textures\flares\corona.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Textures\flares\divine.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Textures\flares\extendring.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Levels\arrow.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Levels\Fence.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Levels\metal_road_barrier3.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Barrier2\texture_0_4182610456910466637.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Bridge03\asphalt.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Bridge03\granite.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Bridge03\newsprnt.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Cow\texture_0_6195987693227547908.dds" />
+    <Image Include="Assets\Resources\Models\Cow\texture_0_6195987693227547908.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Duck\Duck.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Duck\DuckBright.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Duck\texture_0_6195987693227547908.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Home\texture_0_6195987693227547908.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\Home\texture_0_6195987693227547908_BLACK.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\PortaCabin\Seamless asphalt tarmac road tar texture ver 2.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\PortaCabin\tarmacTexture.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\PortaCabin\texture_0_4182610456910466637.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\PortaCabin\texture_0_4182610456910466637_BLACK.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\PortaCabin\walnut.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\WatchTower\All_Wood_A.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Models\WatchTower\All_Wood_C.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Textures\Intro02.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Resources\Textures\Garage04.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App4_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Assets\Models\sphere.3ds">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\Models\Dragon_Baked_Actions_fbx_7_4_binary.fbxX">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\Models\castle.3DS">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="assimp-vc140-mt.dll">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\Resources\Models\Castle\Castle.mtl">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\Resources\Models\Kart\FaringTexture2.mtl">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\Resources\Models\Kart\KartLowPoly.mtl">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\Resources\Models\Kart\KartLowPolyWC.mtl">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="..\..\Resources\Libs\FmodStudio\lib\x64\fmod.dll">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Assets\Resources\Models\Driver\GTR_Driver3Smooth.mtl" />
+    <None Include="Assets\Resources\Models\Driver\GTR_Driver3SmoothFeet.mtl" />
+    <None Include="Assets\Resources\Models\Driver\GTR_Driver3SmoothHands.mtl" />
+    <None Include="Assets\Resources\Models\Driver\GTR_Driver3SmoothHead.mtl" />
+    <None Include="Assets\Resources\Models\Driver\GTR_Driver3SmoothLegs.mtl" />
+    <None Include="Assets\Resources\Levels\Fence02_RH.mtl" />
+    <None Include="Assets\Resources\Levels\Fence03_RH_X2.mtl" />
+    <None Include="Assets\Resources\Levels\RacingLine_RH_X2.mtl" />
+    <None Include="Assets\Resources\Models\Barrier2\Barrier.mtl" />
+    <None Include="Assets\Resources\Models\Barrier2\Barrier.obj.3mf" />
+    <None Include="Assets\Resources\Models\Barrier2\Barrier2.mtl" />
+    <None Include="Assets\Resources\Models\Bridge03\Bridge03.mtl" />
+    <None Include="Assets\Resources\Models\Bridge03\Sphere.mtl" />
+    <None Include="Assets\Resources\Models\Cow\Cow.mtl" />
+    <None Include="Assets\Resources\Models\Cow\Cow2.mtl" />
+    <None Include="Assets\Resources\Models\Duck\Duck.mtl" />
+    <None Include="Assets\Resources\Models\Home\Home.mtl" />
+    <None Include="Assets\Resources\Models\PortaCabin\PortaCabin.mtl" />
+    <None Include="Assets\Resources\Models\WatchTower\Tower_A.3ds" />
+    <None Include="Assets\Resources\Models\WatchTower\Tower_B_.3ds" />
+    <None Include="Assets\Resources\Models\WatchTower\Tower_B_.mtl" />
+    <None Include="..\..\..\..\..\..\dlls\copydlls.bat" />
+    <None Include="..\..\..\..\..\..\dlls\MMDevAPI.dll" />
+    <None Include="..\..\..\..\..\..\dlls\MrmCoreR.dll" />
+    <None Include="..\..\..\..\..\..\dlls\msacm32.dll" />
+    <None Include="..\..\..\..\..\..\dlls\msasn1.dll" />
+    <None Include="..\..\..\..\..\..\dlls\msctf.dll" />
+    <None Include="..\..\..\..\..\..\dlls\msvcp_win.dll" />
+    <None Include="..\..\..\..\..\..\dlls\msvcp140.dll" />
+    <None Include="..\..\..\..\..\..\dlls\msvcrt.dll" />
+    <None Include="..\..\..\..\..\..\dlls\mswsock.dll" />
+    <None Include="..\..\..\..\..\..\dlls\vcruntime140.dll" />
+    <None Include="..\..\..\..\..\..\dlls\vcruntime140_1.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Shaders\hlsl\reflection_map_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\hlsl\reflection_map_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\hlsl\skinning_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\hlsl\ocean_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\hlsl\ocean_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\hlsl\fire_gs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\hlsl\fire_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\hlsl\fire_update_gs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\hlsl\fire_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\hlsl\pointlight_shadow_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\hlsl\pointlight_shadow_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Shaders\hlsl\shadow_map_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\Resources\Shaders\hlsl\per_pixel_lighting_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\Resources\Shaders\hlsl\per_pixel_lighting_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\Resources\Shaders\hlsl\grass_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\Resources\Shaders\hlsl\grass_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\Resources\Shaders\hlsl\sky_box_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\Resources\Shaders\hlsl\sky_box_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\Resources\Shaders\hlsl\flare_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\Resources\Shaders\hlsl\flare_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\Resources\Shaders\hlsl\basic_texture_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\Resources\Shaders\hlsl\basic_texture_vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\Resources\Shaders\hlsl\planarShadow_ps.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Resources\Models\Castle\Castle.obj">
+      <Filter>Assets</Filter>
+    </Media>
+    <Media Include="Assets\Resources\Models\Kart\FaringTexture2.obj">
+      <Filter>Assets</Filter>
+    </Media>
+    <Media Include="Assets\Resources\Models\Kart\KartLowPoly.obj">
+      <Filter>Assets</Filter>
+    </Media>
+    <Media Include="Assets\Resources\Models\Kart\KartLowPolyWC.obj">
+      <Filter>Assets</Filter>
+    </Media>
+    <Media Include="Assets\Resources\Sounds\fart.wav" />
+    <Media Include="Assets\Resources\Sounds\Two Stroke Revving.mp3" />
+    <Media Include="Assets\Resources\Sounds\Two Stroke Revving1.mp3" />
+    <Media Include="Assets\Resources\Sounds\Two Stroke Revving2.mp3" />
+    <Media Include="Assets\Resources\Sounds\Two Stroke Revving3.mp3" />
+    <Media Include="Assets\Resources\Sounds\Two Stroke Revving4.mp3" />
+    <Media Include="Assets\Resources\Models\Driver\GTR_Driver3Smooth.obj" />
+    <Media Include="Assets\Resources\Models\Driver\GTR_Driver3SmoothFeet.obj" />
+    <Media Include="Assets\Resources\Models\Driver\GTR_Driver3SmoothHands.obj" />
+    <Media Include="Assets\Resources\Models\Driver\GTR_Driver3SmoothHead.obj" />
+    <Media Include="Assets\Resources\Models\Driver\GTR_Driver3SmoothLegs.obj" />
+    <Media Include="Assets\Resources\Levels\Fence02_RH_X2.obj" />
+    <Media Include="Assets\Resources\Levels\Fence03_RH_X2.obj" />
+    <Media Include="Assets\Resources\Levels\Fence04_RH_X2.obj" />
+    <Media Include="Assets\Resources\Levels\RacingLine_RH_X2.obj" />
+    <Media Include="Assets\Resources\Models\PortaCabin\PortaCabin.obj" />
+    <Media Include="Assets\Resources\Models\WatchTower\Tower_B_.obj" />
+    <Media Include="Assets\Resources\Models\Home\Home.obj" />
+    <Media Include="Assets\Resources\Models\Duck\Duck.obj" />
+    <Media Include="Assets\Resources\Models\Cow\Cow.obj" />
+    <Media Include="Assets\Resources\Models\Cow\Cow2.obj" />
+    <Media Include="Assets\Resources\Models\Bridge03\Bridge03.obj" />
+    <Media Include="Assets\Resources\Models\Bridge03\Sphere.obj" />
+    <Media Include="Assets\Resources\Models\Barrier2\Barrier2.obj" />
+    <Media Include="Assets\Resources\Models\Barrier2\Barrier.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Assets\Resources\Levels\NavSet01.xml" />
+    <Xml Include="Assets\Resources\Levels\Scene01_RH_X2.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Assets\Resources\Levels\metal_road_barrier3.txt" />
+  </ItemGroup>
+</Project>

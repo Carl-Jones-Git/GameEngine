@@ -1,0 +1,377 @@
+﻿  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\basic_texture_ps.cso
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\basic_texture_vs.cso
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\flare_ps.cso
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\flare_vs.hlsl(64,12-60): warning X3206: 'Load': implicit truncation of vector type
+  
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\flare_vs.cso
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_ps.hlsl(167,9-73): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_ps.hlsl(168,9-84): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_ps.hlsl(169,9-84): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_ps.hlsl(189,17-117): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_ps.hlsl(196,17-94): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_ps.hlsl(210,16-94): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_ps.hlsl(311,28-42): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_ps.hlsl(339,13-46): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_ps.hlsl(342,13-76): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_ps.hlsl(364,18-62): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_ps.hlsl(126,13-107): warning X3570: gradient instruction used in a loop with varying iteration, attempting to unroll the loop
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_ps.hlsl(126,13-107): warning X3570: gradient instruction used in a loop with varying iteration, attempting to unroll the loop
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_ps.hlsl(126,13-107): warning X3570: gradient instruction used in a loop with varying iteration, attempting to unroll the loop
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_ps.hlsl(126,13-107): warning X3570: gradient instruction used in a loop with varying iteration, attempting to unroll the loop
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_ps.hlsl(126,13-107): warning X3570: gradient instruction used in a loop with varying iteration, attempting to unroll the loop
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_ps.hlsl(126,13-107): warning X3570: gradient instruction used in a loop with varying iteration, attempting to unroll the loop
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_ps.hlsl(126,13-107): warning X3570: gradient instruction used in a loop with varying iteration, attempting to unroll the loop
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_ps.hlsl(126,13-107): warning X3570: gradient instruction used in a loop with varying iteration, attempting to unroll the loop
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_ps.hlsl(126,13-107): warning X3570: gradient instruction used in a loop with varying iteration, attempting to unroll the loop
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_ps.hlsl(126,13-107): warning X3570: gradient instruction used in a loop with varying iteration, attempting to unroll the loop
+  
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\grass_ps.cso
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_vs.hlsl(89,13-168): warning X3206: 'Load': implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\grass_vs.hlsl(90,13-176): warning X3206: 'Load': implicit truncation of vector type
+  
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\grass_vs.cso
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\per_pixel_lighting_ps.hlsl(234,34-48): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\per_pixel_lighting_ps.hlsl(307,13-46): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\per_pixel_lighting_ps.hlsl(310,13-76): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\per_pixel_lighting_ps.hlsl(317,29-43): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\per_pixel_lighting_ps.hlsl(321,13-58): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\per_pixel_lighting_ps.hlsl(198,14-108): warning X3570: gradient instruction used in a loop with varying iteration, attempting to unroll the loop
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\per_pixel_lighting_ps.hlsl(198,14-108): warning X3570: gradient instruction used in a loop with varying iteration, attempting to unroll the loop
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\per_pixel_lighting_ps.hlsl(198,14-108): warning X3570: gradient instruction used in a loop with varying iteration, attempting to unroll the loop
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\per_pixel_lighting_ps.hlsl(198,14-108): warning X3570: gradient instruction used in a loop with varying iteration, attempting to unroll the loop
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\per_pixel_lighting_ps.hlsl(198,14-108): warning X3570: gradient instruction used in a loop with varying iteration, attempting to unroll the loop
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\per_pixel_lighting_ps.hlsl(198,14-108): warning X3570: gradient instruction used in a loop with varying iteration, attempting to unroll the loop
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\per_pixel_lighting_ps.hlsl(198,14-108): warning X3570: gradient instruction used in a loop with varying iteration, attempting to unroll the loop
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\per_pixel_lighting_ps.hlsl(198,14-108): warning X3570: gradient instruction used in a loop with varying iteration, attempting to unroll the loop
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\per_pixel_lighting_ps.hlsl(198,14-108): warning X3570: gradient instruction used in a loop with varying iteration, attempting to unroll the loop
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\per_pixel_lighting_ps.hlsl(198,14-108): warning X3570: gradient instruction used in a loop with varying iteration, attempting to unroll the loop
+  
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\per_pixel_lighting_ps.cso
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\per_pixel_lighting_vs.hlsl(72,2-68): warning X3206: implicit truncation of vector type
+  
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\per_pixel_lighting_vs.cso
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\planarShadow_ps.cso
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\sky_box_ps.hlsl(68,10-215): warning X3206: implicit truncation of vector type
+  
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\sky_box_ps.cso
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\sky_box_vs.cso
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Shaders\hlsl\fire_gs.hlsl(88,9-61): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Shaders\hlsl\fire_gs.hlsl(92,26-37): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Shaders\hlsl\fire_gs.hlsl(121,2-69): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Shaders\hlsl\fire_gs.hlsl(124,19-30): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Shaders\hlsl\fire_gs.hlsl(128,11): warning X3078: 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\fire_gs.cso
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Shaders\hlsl\fire_ps.hlsl(110,20-64): warning X3206: 'Load': implicit truncation of vector type
+  
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\fire_ps.cso
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Shaders\hlsl\fire_update_gs.hlsl(74,2-45): warning X3206: implicit truncation of vector type
+  
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\fire_update_gs.cso
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\fire_vs.cso
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\ocean_ps.cso
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Shaders\hlsl\ocean_vs.hlsl(158,15-25): warning X3206: implicit truncation of vector type
+  
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\ocean_vs.cso
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Shaders\hlsl\pointlight_shadow_ps.hlsl(94,18-45): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Shaders\hlsl\pointlight_shadow_ps.hlsl(120,12-69): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Shaders\hlsl\pointlight_shadow_ps.hlsl(124,28-42): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Shaders\hlsl\pointlight_shadow_ps.hlsl(127,12-57): warning X3206: implicit truncation of vector type
+  
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\pointlight_shadow_ps.cso
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\pointlight_shadow_vs.cso
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Shaders\hlsl\reflection_map_ps.hlsl(102,23-50): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Shaders\hlsl\reflection_map_ps.hlsl(110,17-75): warning X3206: implicit truncation of vector type
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Shaders\hlsl\reflection_map_ps.hlsl(118,28-42): warning X3206: implicit truncation of vector type
+  
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\reflection_map_ps.cso
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Shaders\hlsl\reflection_map_vs.hlsl(61,23-54): warning X3578: Output value 'main' is not completely initialized
+  
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\reflection_map_vs.cso
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\shadow_map_vs.cso
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Shaders\hlsl\skinning_vs.hlsl(106,12): warning X3078: 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Shaders\hlsl\skinning_vs.hlsl(119,12): warning X3078: 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Shaders\hlsl\skinning_vs.hlsl(135,2-57): warning X3206: implicit truncation of vector type
+  
+  compilation object save succeeded; see C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\skinning_vs.cso
+  pch.cpp
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_dx11.cpp
+  imgui_impl_uwp.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  AIKart.cpp
+  Box.cpp
+  Camera.cpp
+  CGDConsole.cpp
+  Effect.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Resources\Libs\Source\AIKart.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\AIKart.cpp(61,28): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\AIKart.cpp(63,65): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\AIKart.cpp(120,19): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\AIKart.cpp(125,36): warning C4244: 'argument': conversion from 'double' to 'const physx::PxReal', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\AIKart.cpp(126,37): warning C4244: 'argument': conversion from 'double' to 'const physx::PxReal', possible loss of data
+  FirstPersonCamera.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Camera.h(41,8): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Resources\Libs\Source\Camera.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Camera.cpp(33,85): warning C4305: 'argument': truncation from 'double' to 'float'
+  Flare.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Resources\Libs\Source\Box.cpp)
+  Grid.cpp
+  Kart.cpp
+  Material.cpp
+  Menu.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Effect.cpp(182,34): warning C4101: 'e': unreferenced local variable
+  Model.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Camera.h(41,8): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Resources\Libs\Source\FirstPersonCamera.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\FirstPersonCamera.h(40,196): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Resources\Libs\Source\FirstPersonCamera.cpp)
+  NetMgr.cpp
+  PhysXKarting.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Resources\Libs\Source\Flare.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Flare.cpp(125,52): warning C4244: 'argument': conversion from 'FLOAT' to 'int', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Flare.cpp(125,35): warning C4244: 'argument': conversion from 'FLOAT' to 'int', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Flare.cpp(149,52): warning C4244: 'argument': conversion from 'FLOAT' to 'int', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Flare.cpp(149,35): warning C4244: 'argument': conversion from 'FLOAT' to 'int', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Resources\Libs\Source\Grid.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Grid.cpp(53,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Grid.cpp(55,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Grid.cpp(58,37): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Grid.cpp(59,37): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Grid.cpp(89,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Grid.cpp(91,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\NetMgr.cpp(76): warning C4172: returning address of local variable or temporary: objData
+  PhysXVehicleController.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Resources\Libs\Source\Kart.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(55,54): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(59,64): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(64,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(66,83): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(67,54): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(70,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(74,53): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(82,54): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(89,90): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(89,71): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(89,52): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(92,93): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(92,73): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(92,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(92,187): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(101,81): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(101,63): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(101,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(102,80): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(102,62): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(102,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(103,83): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(103,64): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(103,46): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(104,95): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(104,76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(104,57): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(113,91): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(113,72): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(113,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(113,137): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(114,94): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(119,91): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(119,72): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(119,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(119,212): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(119,195): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(119,177): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(120,81): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(121,93): warning C4305: 'argument': truncation from 'double' to 'float'
+  PhysXVehicleUtils.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(167,19): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(187,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(195,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(203,32): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(207,119): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(207,85): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(207,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(207,208): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(207,186): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(207,165): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(208,119): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(208,85): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(208,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(208,207): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(208,185): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(208,164): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(216,128): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(216,111): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(216,94): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(227,50): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(229,52): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(245,50): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(247,48): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Kart.cpp(251,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Resources\Libs\Source\Menu.cpp)
+  PlayerKart.cpp
+  Quad.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Camera.h(41,8): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Resources\Libs\Source\Menu.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Menu.cpp(88,75): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Menu.cpp(169,70): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Menu.cpp(170,70): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Menu.cpp(170,97): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Menu.cpp(171,21): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Menu.cpp(175,62): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Menu.cpp(175,84): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Menu.cpp(177,63): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Menu.cpp(177,85): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Menu.cpp(248,47): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Resources\Libs\Source\Model.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Model.cpp(151,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Model.cpp(154,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Model.cpp(203,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Model.cpp(252,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Model.cpp(280,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(142,49): warning C4267: 'argument': conversion from 'size_t' to 'UINT', possible loss of data (compiling source file ..\..\Resources\Libs\Source\Menu.cpp)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2006): message : see reference to function template instantiation 'void std::_Construct_in_place<_Ty,ID3D11Device3,const char,const char,const D3D11_INPUT_ELEMENT_DESC(&)[6],unsigned __int64>(_Ty &,ID3D11Device3 &&,const char &&,const char &&,const D3D11_INPUT_ELEMENT_DESC (&)[6],unsigned __int64 &&) noexcept(false)' being compiled
+          with
+          [
+              _Ty=Effect
+          ] (compiling source file ..\..\Resources\Libs\Source\Menu.cpp)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2725): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<ID3D11Device3,const char,const char,const D3D11_INPUT_ELEMENT_DESC(&)[6],unsigned __int64>(ID3D11Device3 &&,const char &&,const char &&,const D3D11_INPUT_ELEMENT_DESC (&)[6],unsigned __int64 &&)' being compiled
+          with
+          [
+              _Ty=Effect
+          ] (compiling source file ..\..\Resources\Libs\Source\Menu.cpp)
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2726): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<ID3D11Device3,const char,const char,const D3D11_INPUT_ELEMENT_DESC(&)[6],unsigned __int64>(ID3D11Device3 &&,const char &&,const char &&,const D3D11_INPUT_ELEMENT_DESC (&)[6],unsigned __int64 &&)' being compiled
+          with
+          [
+              _Ty=Effect
+          ] (compiling source file ..\..\Resources\Libs\Source\Menu.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Menu.cpp(102): message : see reference to function template instantiation 'std::shared_ptr<Effect> std::make_shared<Effect,ID3D11Device3*,const _Elem*,const _Elem*,const D3D11_INPUT_ELEMENT_DESC(&)[6],size_t>(ID3D11Device3 *&&,const _Elem *&&,const _Elem *&&,const D3D11_INPUT_ELEMENT_DESC (&)[6],size_t &&)' being compiled
+          with
+          [
+              _Elem=char
+          ]
+  ShadowMap.cpp
+  Terrain.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Resources\Libs\Source\PhysXKarting.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\PhysXKarting.cpp(63,43): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\PhysXKarting.cpp(124,78): warning C4244: '=': conversion from 'float' to 'physx::PxI16', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\PhysXKarting.cpp(140,40): warning C4305: 'argument': truncation from 'double' to 'float'
+  Texture.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\PhysXKarting.cpp(242): warning C4715: 'PhysXKarting::initScenePX': not all control paths return a value
+  Utils.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Resources\Libs\Source\PhysXVehicleController.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\PhysXVehicleController.cpp(99,1): warning C4305: 'initializing': truncation from 'double' to 'physx::PxF32'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\PhysXVehicleController.cpp(265,151): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\PhysXVehicleController.cpp(265,109): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\PhysXVehicleController.cpp(266,155): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\PhysXVehicleController.cpp(266,111): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\PhysXVehicleController.cpp(267,155): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\PhysXVehicleController.cpp(267,111): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\PhysXVehicleController.cpp(268,156): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\PhysXVehicleController.cpp(268,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\PhysXVehicleController.cpp(550,27): warning C4244: '=': conversion from 'float' to 'physx::PxU32', possible loss of data
+  tinyxml2.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Resources\Libs\Source\PlayerKart.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Camera.h(41,8): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file ..\..\Resources\Libs\Source\ShadowMap.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data (compiling source file ..\..\Resources\Libs\Source\Terrain.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Terrain.cpp(30,42): warning C4244: 'argument': conversion from 'double' to 'uint32_t', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Terrain.cpp(30,37): warning C4244: 'argument': conversion from 'double' to 'uint32_t', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Terrain.cpp(30,32): warning C4244: 'argument': conversion from 'double' to 'uint32_t', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Terrain.cpp(30,27): warning C4244: 'argument': conversion from 'double' to 'uint32_t', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Terrain.cpp(76,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Terrain.cpp(77,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Terrain.cpp(79,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Terrain.cpp(80,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Terrain.cpp(84,54): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  BaseModel.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  App.cpp
+  DeviceResources.cpp
+  App4Main.cpp
+  MoveLookController.cpp
+  LightArray.cpp
+  TextRenderer.cpp
+  Scene.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\LightArray.cpp(13,64): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\TextRenderer.cpp(50,13): warning C4244: 'initializing': conversion from 'double' to 'unsigned int', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data (compiling source file App4Main.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Camera.h(41,8): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file App4Main.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\FirstPersonCamera.h(40,196): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file App4Main.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data (compiling source file App.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Camera.h(41,8): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file App.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\FirstPersonCamera.h(40,196): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file App.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data (compiling source file Content\Scene.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Camera.h(41,8): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file Content\Scene.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\FirstPersonCamera.h(40,196): warning C4305: 'argument': truncation from 'double' to 'float' (compiling source file Content\Scene.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(104,22): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(137,22): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(162,26): warning C4244: '=': conversion from 'double' to 'FLOAT', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(178,26): warning C4244: '=': conversion from 'double' to 'FLOAT', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(210,110): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(226,62): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(238,63): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(240,27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(241,27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(247,28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(248,28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(255,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(256,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(263,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(264,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(265,76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(265,65): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(265,54): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(266,78): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(266,67): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(266,56): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(267,79): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(267,68): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(267,57): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(360,21): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(360,39): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(362,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(366,26): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(367,21): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(367,39): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(369,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(373,25): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(374,21): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(374,39): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(376,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(380,25): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(381,21): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(381,39): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(383,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(396,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(397,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(399,13): warning C4305: '-=': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(399,33): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(408,78): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(1010,145): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(1016,150): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(1094,136): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(1094,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(1094,88): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(1167,65): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(1194,36): warning C4305: '=': truncation from 'double' to 'FLOAT'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(1213,185): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(1215,53): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(1217,54): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(1245,44): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(1252,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(1277,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Content\Scene.cpp(1425,126): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+BaseModel.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+  LINK : /LTCG specified but no code generation required; remove /LTCG from the link command line to improve linker performance
+  App4.vcxproj -> C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Release\App4\App4.exe
+C:\Program Files (x86)\MSBuild\15.0\.Net\.NetNative\15.0.24211\Microsoft.NetNative.targets(434,7): error MSB3030: Could not copy the file "C:\dlls\msctf.dll" because it was not found.
+C:\Program Files (x86)\MSBuild\15.0\.Net\.NetNative\15.0.24211\Microsoft.NetNative.targets(434,7): error MSB3030: Could not copy the file "C:\dlls\MrmCoreR.dll" because it was not found.
+C:\Program Files (x86)\MSBuild\15.0\.Net\.NetNative\15.0.24211\Microsoft.NetNative.targets(434,7): error MSB3030: Could not copy the file "C:\dlls\msvcrt.dll" because it was not found.
+C:\Program Files (x86)\MSBuild\15.0\.Net\.NetNative\15.0.24211\Microsoft.NetNative.targets(434,7): error MSB3030: Could not copy the file "C:\dlls\MMDevAPI.dll" because it was not found.
+C:\Program Files (x86)\MSBuild\15.0\.Net\.NetNative\15.0.24211\Microsoft.NetNative.targets(434,7): error MSB3030: Could not copy the file "C:\dlls\msvcp_win.dll" because it was not found.
+C:\Program Files (x86)\MSBuild\15.0\.Net\.NetNative\15.0.24211\Microsoft.NetNative.targets(434,7): error MSB3030: Could not copy the file "C:\dlls\msvcp140.dll" because it was not found.
+C:\Program Files (x86)\MSBuild\15.0\.Net\.NetNative\15.0.24211\Microsoft.NetNative.targets(434,7): error MSB3030: Could not copy the file "C:\dlls\msacm32.dll" because it was not found.
+C:\Program Files (x86)\MSBuild\15.0\.Net\.NetNative\15.0.24211\Microsoft.NetNative.targets(434,7): error MSB3030: Could not copy the file "C:\dlls\msasn1.dll" because it was not found.
+C:\Program Files (x86)\MSBuild\15.0\.Net\.NetNative\15.0.24211\Microsoft.NetNative.targets(434,7): error MSB3030: Could not copy the file "C:\dlls\vcruntime140_1.dll" because it was not found.
+C:\Program Files (x86)\MSBuild\15.0\.Net\.NetNative\15.0.24211\Microsoft.NetNative.targets(434,7): error MSB3030: Could not copy the file "C:\dlls\mswsock.dll" because it was not found.
+C:\Program Files (x86)\MSBuild\15.0\.Net\.NetNative\15.0.24211\Microsoft.NetNative.targets(434,7): error MSB3030: Could not copy the file "C:\dlls\vcruntime140.dll" because it was not found.

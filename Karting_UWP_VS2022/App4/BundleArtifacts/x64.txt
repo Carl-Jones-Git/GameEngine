@@ -1,0 +1,2 @@
+MainPackage=C:\Users\Carl\OneDrive - University of South Wales\Teaching 23_24\RTR -Water5\x64\Release\App4\App4_1.0.15.0_x64.msix
+SymbolPackage=C:\Users\Carl\OneDrive - University of South Wales\Teaching 23_24\RTR -Water5\App4\x64\Release\Symbols\App4_1.0.15.0_x64.appxsym

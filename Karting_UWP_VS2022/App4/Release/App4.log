@@ -1,0 +1,3 @@
+﻿C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Shaders\hlsl\basic_texture_ps.hlsl(13,27-37): error X4502: invalid vs_2_0 output semantic 'SV_TARGET'
+  
+  compilation failed; no code produced

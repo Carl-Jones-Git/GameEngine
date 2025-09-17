@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>TRJ225-CDJ</Machine>
+    <WindowsUser>Carl</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|x64</SolutionConfiguration>
+    <PackageArchitecture>x64</PackageArchitecture>
+    <PackageIdentityName>c1237cdd-5795-4e32-b3f5-580a524ffe15</PackageIdentityName>
+    <PackageIdentityPublisher>CN=Carl</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\x64\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
+    <PackageRegistrationPath></PackageRegistrationPath>
+    <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\AppX</LayoutDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\App4.exe">
+      <PackagePath>App4.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\PhysXCooking_64.dll">
+      <PackagePath>PhysXCooking_64.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\PhysXCommon_64.dll">
+      <PackagePath>PhysXCommon_64.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\PhysXFoundation_64.dll">
+      <PackagePath>PhysXFoundation_64.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\PhysX_64.dll">
+      <PackagePath>PhysX_64.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\basic_texture_ps.cso">
+      <PackagePath>basic_texture_ps.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\basic_texture_vs.cso">
+      <PackagePath>basic_texture_vs.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\flare_ps.cso">
+      <PackagePath>flare_ps.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\flare_vs.cso">
+      <PackagePath>flare_vs.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\grass_ps.cso">
+      <PackagePath>grass_ps.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\grass_vs.cso">
+      <PackagePath>grass_vs.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\per_pixel_lighting_ps.cso">
+      <PackagePath>per_pixel_lighting_ps.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\per_pixel_lighting_vs.cso">
+      <PackagePath>per_pixel_lighting_vs.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\planarShadow_ps.cso">
+      <PackagePath>planarShadow_ps.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\sky_box_ps.cso">
+      <PackagePath>sky_box_ps.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\sky_box_vs.cso">
+      <PackagePath>sky_box_vs.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\fire_gs.cso">
+      <PackagePath>fire_gs.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\fire_ps.cso">
+      <PackagePath>fire_ps.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\fire_update_gs.cso">
+      <PackagePath>fire_update_gs.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\fire_vs.cso">
+      <PackagePath>fire_vs.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\ocean_ps.cso">
+      <PackagePath>ocean_ps.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\ocean_vs.cso">
+      <PackagePath>ocean_vs.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\pointlight_shadow_ps.cso">
+      <PackagePath>pointlight_shadow_ps.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\pointlight_shadow_vs.cso">
+      <PackagePath>pointlight_shadow_vs.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\reflection_map_ps.cso">
+      <PackagePath>reflection_map_ps.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\reflection_map_vs.cso">
+      <PackagePath>reflection_map_vs.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\shadow_map_vs.cso">
+      <PackagePath>shadow_map_vs.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\skinning_vs.cso">
+      <PackagePath>skinning_vs.cso</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\NavSet01.xml">
+      <PackagePath>Assets\Resources\Levels\NavSet01.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\Scene01_RH_X2.xml">
+      <PackagePath>Assets\Resources\Levels\Scene01_RH_X2.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\metal_road_barrier3.txt">
+      <PackagePath>Assets\Resources\Levels\metal_road_barrier3.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\flag.jpg">
+      <PackagePath>Assets\flag.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Bridge03\asphalt.jpg">
+      <PackagePath>Assets\Resources\Models\Bridge03\asphalt.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Bridge03\granite.jpg">
+      <PackagePath>Assets\Resources\Models\Bridge03\granite.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Bridge03\newsprnt.jpg">
+      <PackagePath>Assets\Resources\Models\Bridge03\newsprnt.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\PortaCabin\Seamless asphalt tarmac road tar texture ver 2.jpg">
+      <PackagePath>Assets\Resources\Models\PortaCabin\Seamless asphalt tarmac road tar texture ver 2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\PortaCabin\walnut.jpg">
+      <PackagePath>Assets\Resources\Models\PortaCabin\walnut.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\Seamless_Asphalt_Texture_NORMAL.jpg">
+      <PackagePath>Assets\Resources\Textures\Seamless_Asphalt_Texture_NORMAL.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\castle.jpg">
+      <PackagePath>Assets\Textures\castle.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\Dragon_Bump_Col2.jpg">
+      <PackagePath>Assets\Textures\Dragon_Bump_Col2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\Dragon_ground_color.jpg">
+      <PackagePath>Assets\Textures\Dragon_ground_color.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\Dragon_Nor.jpg">
+      <PackagePath>Assets\Textures\Dragon_Nor.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\Dragon_Nor_mirror2.jpg">
+      <PackagePath>Assets\Textures\Dragon_Nor_mirror2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\GreenDragon.jpg">
+      <PackagePath>Assets\Textures\GreenDragon.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\RedDragon.jpg">
+      <PackagePath>Assets\Textures\RedDragon.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\LockScreenLogo.scale-200.png">
+      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\arrow.png">
+      <PackagePath>Assets\Resources\Levels\arrow.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\Fence.png">
+      <PackagePath>Assets\Resources\Levels\Fence.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\metal_road_barrier3.png">
+      <PackagePath>Assets\Resources\Levels\metal_road_barrier3.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Barrier2\texture_0_4182610456910466637.png">
+      <PackagePath>Assets\Resources\Models\Barrier2\texture_0_4182610456910466637.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Castle\Castle.png">
+      <PackagePath>Assets\Resources\Models\Castle\Castle.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Cow\texture_0_6195987693227547908.png">
+      <PackagePath>Assets\Resources\Models\Cow\texture_0_6195987693227547908.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Duck\Duck.png">
+      <PackagePath>Assets\Resources\Models\Duck\Duck.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Duck\DuckBright.png">
+      <PackagePath>Assets\Resources\Models\Duck\DuckBright.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Duck\texture_0_6195987693227547908.png">
+      <PackagePath>Assets\Resources\Models\Duck\texture_0_6195987693227547908.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Home\texture_0_6195987693227547908.png">
+      <PackagePath>Assets\Resources\Models\Home\texture_0_6195987693227547908.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Home\texture_0_6195987693227547908_BLACK.png">
+      <PackagePath>Assets\Resources\Models\Home\texture_0_6195987693227547908_BLACK.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\BlackStripe.png">
+      <PackagePath>Assets\Resources\Models\Kart\BlackStripe.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\BlueCamo.png">
+      <PackagePath>Assets\Resources\Models\Kart\BlueCamo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\BlueStripe.png">
+      <PackagePath>Assets\Resources\Models\Kart\BlueStripe.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\GoodYearEagle.png">
+      <PackagePath>Assets\Resources\Models\Kart\GoodYearEagle.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\GreenCamo.png">
+      <PackagePath>Assets\Resources\Models\Kart\GreenCamo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\GreenStripe.png">
+      <PackagePath>Assets\Resources\Models\Kart\GreenStripe.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\GreyCamo.png">
+      <PackagePath>Assets\Resources\Models\Kart\GreyCamo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\PurpleCamo.png">
+      <PackagePath>Assets\Resources\Models\Kart\PurpleCamo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\PurpleStripe.png">
+      <PackagePath>Assets\Resources\Models\Kart\PurpleStripe.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\RedCamo.png">
+      <PackagePath>Assets\Resources\Models\Kart\RedCamo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\RedStripe.png">
+      <PackagePath>Assets\Resources\Models\Kart\RedStripe.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\WhiteStripe.png">
+      <PackagePath>Assets\Resources\Models\Kart\WhiteStripe.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\YellowCamo.png">
+      <PackagePath>Assets\Resources\Models\Kart\YellowCamo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\YellowStripe.png">
+      <PackagePath>Assets\Resources\Models\Kart\YellowStripe.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\PortaCabin\tarmacTexture.png">
+      <PackagePath>Assets\Resources\Models\PortaCabin\tarmacTexture.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\PortaCabin\texture_0_4182610456910466637.png">
+      <PackagePath>Assets\Resources\Models\PortaCabin\texture_0_4182610456910466637.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\PortaCabin\texture_0_4182610456910466637_BLACK.png">
+      <PackagePath>Assets\Resources\Models\PortaCabin\texture_0_4182610456910466637_BLACK.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\WatchTower\All_Wood_A.png">
+      <PackagePath>Assets\Resources\Models\WatchTower\All_Wood_A.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\WatchTower\All_Wood_C.png">
+      <PackagePath>Assets\Resources\Models\WatchTower\All_Wood_C.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\flares\corona.png">
+      <PackagePath>Assets\Resources\Textures\flares\corona.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\flares\divine.png">
+      <PackagePath>Assets\Resources\Textures\flares\divine.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\flares\extendring.png">
+      <PackagePath>Assets\Resources\Textures\flares\extendring.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\Garage04.png">
+      <PackagePath>Assets\Resources\Textures\Garage04.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\Intro02.png">
+      <PackagePath>Assets\Resources\Textures\Intro02.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\SplashScreen.scale-200.png">
+      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Square150x150Logo.scale-200.png">
+      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Square44x44Logo.scale-200.png">
+      <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\grass.png">
+      <PackagePath>Assets\Textures\grass.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\GroundNormalMap.png">
+      <PackagePath>Assets\Textures\GroundNormalMap.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\noise.bmp">
+      <PackagePath>Assets\Resources\Levels\noise.bmp</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\Terrain01.bmp">
+      <PackagePath>Assets\Resources\Levels\Terrain01.bmp</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\BrightonKarting5.bmp">
+      <PackagePath>Assets\Resources\Textures\BrightonKarting5.bmp</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\grass1.bmp">
+      <PackagePath>Assets\Textures\grass1.bmp</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\heightmap.bmp">
+      <PackagePath>Assets\Textures\heightmap.bmp</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\heightmap2.bmp">
+      <PackagePath>Assets\Textures\heightmap2.bmp</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\normalmap.bmp">
+      <PackagePath>Assets\Textures\normalmap.bmp</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Cow\texture_0_6195987693227547908.dds">
+      <PackagePath>Assets\Resources\Models\Cow\texture_0_6195987693227547908.dds</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\asphalt.dds">
+      <PackagePath>Assets\Resources\Textures\asphalt.dds</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\grassenvmap1024.dds">
+      <PackagePath>Assets\Resources\Textures\grassenvmap1024.dds</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\grass_texture.dds">
+      <PackagePath>Assets\Resources\Textures\grass_texture.dds</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\nightenvmap1024.dds">
+      <PackagePath>Assets\Resources\Textures\nightenvmap1024.dds</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\grassenvmap1024.dds">
+      <PackagePath>Assets\Textures\grassenvmap1024.dds</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\Waves.dds">
+      <PackagePath>Assets\Textures\Waves.dds</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\grassAlpha.tif">
+      <PackagePath>Assets\Resources\Textures\grassAlpha.tif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\Fire.tif">
+      <PackagePath>Assets\Textures\Fire.tif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\grassAlpha.tif">
+      <PackagePath>Assets\Textures\grassAlpha.tif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Castle\Castle.obj">
+      <PackagePath>Assets\Resources\Models\Castle\Castle.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\FaringTexture2.obj">
+      <PackagePath>Assets\Resources\Models\Kart\FaringTexture2.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\KartLowPoly.obj">
+      <PackagePath>Assets\Resources\Models\Kart\KartLowPoly.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\KartLowPolyWC.obj">
+      <PackagePath>Assets\Resources\Models\Kart\KartLowPolyWC.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Driver\GTR_Driver3Smooth.obj">
+      <PackagePath>Assets\Resources\Models\Driver\GTR_Driver3Smooth.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Driver\GTR_Driver3SmoothFeet.obj">
+      <PackagePath>Assets\Resources\Models\Driver\GTR_Driver3SmoothFeet.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Driver\GTR_Driver3SmoothHands.obj">
+      <PackagePath>Assets\Resources\Models\Driver\GTR_Driver3SmoothHands.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Driver\GTR_Driver3SmoothHead.obj">
+      <PackagePath>Assets\Resources\Models\Driver\GTR_Driver3SmoothHead.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Driver\GTR_Driver3SmoothLegs.obj">
+      <PackagePath>Assets\Resources\Models\Driver\GTR_Driver3SmoothLegs.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\Fence02_RH_X2.obj">
+      <PackagePath>Assets\Resources\Levels\Fence02_RH_X2.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\Fence03_RH_X2.obj">
+      <PackagePath>Assets\Resources\Levels\Fence03_RH_X2.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\Fence04_RH_X2.obj">
+      <PackagePath>Assets\Resources\Levels\Fence04_RH_X2.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\RacingLine_RH_X2.obj">
+      <PackagePath>Assets\Resources\Levels\RacingLine_RH_X2.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Barrier2\Barrier.obj">
+      <PackagePath>Assets\Resources\Models\Barrier2\Barrier.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Barrier2\Barrier2.obj">
+      <PackagePath>Assets\Resources\Models\Barrier2\Barrier2.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Bridge03\Bridge03.obj">
+      <PackagePath>Assets\Resources\Models\Bridge03\Bridge03.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Bridge03\Sphere.obj">
+      <PackagePath>Assets\Resources\Models\Bridge03\Sphere.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Cow\Cow.obj">
+      <PackagePath>Assets\Resources\Models\Cow\Cow.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Cow\Cow2.obj">
+      <PackagePath>Assets\Resources\Models\Cow\Cow2.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Duck\Duck.obj">
+      <PackagePath>Assets\Resources\Models\Duck\Duck.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Home\Home.obj">
+      <PackagePath>Assets\Resources\Models\Home\Home.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\PortaCabin\PortaCabin.obj">
+      <PackagePath>Assets\Resources\Models\PortaCabin\PortaCabin.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\WatchTower\Tower_B_.obj">
+      <PackagePath>Assets\Resources\Models\WatchTower\Tower_B_.obj</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Sounds\fart.wav">
+      <PackagePath>Assets\Resources\Sounds\fart.wav</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Sounds\Two Stroke Revving.mp3">
+      <PackagePath>Assets\Resources\Sounds\Two Stroke Revving.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Sounds\Two Stroke Revving1.mp3">
+      <PackagePath>Assets\Resources\Sounds\Two Stroke Revving1.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Sounds\Two Stroke Revving2.mp3">
+      <PackagePath>Assets\Resources\Sounds\Two Stroke Revving2.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Sounds\Two Stroke Revving3.mp3">
+      <PackagePath>Assets\Resources\Sounds\Two Stroke Revving3.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Sounds\Two Stroke Revving4.mp3">
+      <PackagePath>Assets\Resources\Sounds\Two Stroke Revving4.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\FmodStudio\lib\x64\fmod.dll">
+      <PackagePath>fmod.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\assimp-vc140-mt.dll">
+      <PackagePath>assimp-vc140-mt.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Models\castle.3DS">
+      <PackagePath>Assets\Models\castle.3DS</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Models\sphere.3ds">
+      <PackagePath>Assets\Models\sphere.3ds</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Models\Dragon_Baked_Actions_fbx_7_4_binary.fbxX">
+      <PackagePath>Assets\Models\Dragon_Baked_Actions_fbx_7_4_binary.fbxX</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\Fence02_RH.mtl">
+      <PackagePath>Assets\Resources\Levels\Fence02_RH.mtl</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\Fence03_RH_X2.mtl">
+      <PackagePath>Assets\Resources\Levels\Fence03_RH_X2.mtl</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\RacingLine_RH_X2.mtl">
+      <PackagePath>Assets\Resources\Levels\RacingLine_RH_X2.mtl</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Barrier2\Barrier.mtl">
+      <PackagePath>Assets\Resources\Models\Barrier2\Barrier.mtl</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Barrier2\Barrier2.mtl">
+      <PackagePath>Assets\Resources\Models\Barrier2\Barrier2.mtl</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Bridge03\Bridge03.mtl">
+      <PackagePath>Assets\Resources\Models\Bridge03\Bridge03.mtl</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Bridge03\Sphere.mtl">
+      <PackagePath>Assets\Resources\Models\Bridge03\Sphere.mtl</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Castle\Castle.mtl">
+      <PackagePath>Assets\Resources\Models\Castle\Castle.mtl</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Cow\Cow.mtl">
+      <PackagePath>Assets\Resources\Models\Cow\Cow.mtl</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Cow\Cow2.mtl">
+      <PackagePath>Assets\Resources\Models\Cow\Cow2.mtl</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Duck\Duck.mtl">
+      <PackagePath>Assets\Resources\Models\Duck\Duck.mtl</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Home\Home.mtl">
+      <PackagePath>Assets\Resources\Models\Home\Home.mtl</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\FaringTexture2.mtl">
+      <PackagePath>Assets\Resources\Models\Kart\FaringTexture2.mtl</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\KartLowPoly.mtl">
+      <PackagePath>Assets\Resources\Models\Kart\KartLowPoly.mtl</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\KartLowPolyWC.mtl">
+      <PackagePath>Assets\Resources\Models\Kart\KartLowPolyWC.mtl</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\PortaCabin\PortaCabin.mtl">
+      <PackagePath>Assets\Resources\Models\PortaCabin\PortaCabin.mtl</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\WatchTower\Tower_B_.mtl">
+      <PackagePath>Assets\Resources\Models\WatchTower\Tower_B_.mtl</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\App4.winmd">
+      <PackagePath>App4.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug.UWPDesktop</Name>
+      <Version>14.0.33728.0</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug.UWPDesktop, MinVersion = 14.0.33728.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.14.00.Desktop.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug.UWPDesktop</Name>
+      <Version>14.0.33728.0</Version>
+      <Architecture>ARM64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug.UWPDesktop, MinVersion = 14.0.33728.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\.\AppX\Debug\ARM64\Microsoft.VCLibs.ARM64.Debug.14.00.Desktop.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug.UWPDesktop</Name>
+      <Version>14.0.33728.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug.UWPDesktop, MinVersion = 14.0.33728.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.14.00.Desktop.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug.UWPDesktop</Name>
+      <Version>14.0.33728.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug.UWPDesktop, MinVersion = 14.0.33728.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.14.00.Desktop.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,394 @@
+
+#include "pch.h"
+#include "Model.h"
+#include "Material.h"
+#include "Effect.h"
+#include <iostream>
+#include <exception>
+#include <string>
+
+using namespace std;
+using namespace DirectX;
+using namespace DirectX::PackedVector;
+
+
+
+void Model::load(ID3D11Device *device, Effect *_effect, std::wstring& filename, bool preTrans) {
+
+	wcout<< L"Loading Model: " <<filename<< endl;
+	try
+	{
+		if (!device || !inputLayout)
+			throw exception("Invalid parameters for Model instantiation");
+
+		HRESULT hr=loadModelAssimp(device, filename,preTrans);
+
+
+		// Build the vertex input layout - this is done here since each object may load it's data into the IA differently.  This requires the compiled vertex shader bytecode.
+		//hr = DXVertexExt::createInputLayout(device, vsBytecode, &inputLayout);
+
+		if (!SUCCEEDED(hr))
+			throw exception("Cannot load Assimp odel");
+	
+
+	}
+	catch (exception& e)
+	{
+		cout << "Model could not be instantiated due to:\n";
+		cout << e.what() << endl;
+
+
+		if (vertexBuffer)
+			vertexBuffer->Release();
+
+		if (indexBuffer)
+			indexBuffer->Release();
+
+		if (inputLayout)
+			inputLayout->Release();
+
+		vertexBuffer = nullptr;
+		indexBuffer = nullptr;
+		inputLayout = nullptr;
+
+		numMeshes = 0;
+	}
+}
+
+Model::~Model() {
+	if (vertexBufferCPU)
+		free(vertexBufferCPU);
+}
+
+
+void Model::render(ID3D11DeviceContext *context) {//, int mode
+
+	effect->bindPipeline(context);
+
+
+
+	// Validate Model before rendering (see notes in constructor)
+	if (!context || !vertexBuffer || !indexBuffer || !effect)
+		return;
+
+	// Set vertex layout
+	context->IASetInputLayout(effect->getVSInputLayout());
+
+	// Set Model vertex and index buffers for IA
+	ID3D11Buffer* vertexBuffers[] = { vertexBuffer };
+	UINT vertexStrides[] = { sizeof(ExtendedVertexStruct) };
+	UINT vertexOffsets[] = { 0 };
+
+	context->IASetVertexBuffers(0, 1, vertexBuffers, vertexStrides, vertexOffsets);
+	context->IASetIndexBuffer(indexBuffer, DXGI_FORMAT_R32_UINT, 0);
+
+	// Set primitive topology for IA
+	context->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+
+	// Bind texture resource views and texture sampler objects to the PS stage of the pipeline
+	if (numTextures>0 && sampler) {
+
+		context->PSSetShaderResources(0, numTextures, textures);
+		context->PSSetSamplers(0, 1, &sampler);
+	}
+
+
+	// Set vertex layout
+	context->IASetInputLayout(inputLayout);
+	
+	// Apply the cBuffer.
+	context->VSSetConstantBuffers(0, 1, &cBufferModelGPU);
+	context->PSSetConstantBuffers(0, 1, &cBufferModelGPU);
+	//numMeshes
+	// Draw Model
+	for (uint32_t indexOffset = 0, i = 0; i < numMeshes; indexOffset += indexCount[i], ++i)
+	{
+
+		context->DrawIndexed(indexCount[i], indexOffset, baseVertexOffset[i]);
+	}
+	
+
+}
+
+void Model::renderSimp(ID3D11DeviceContext *context) {
+
+	// Validate Model before rendering (see notes in constructor)
+	if (!context || !vertexBuffer || !indexBuffer )
+		return;
+
+	// Set vertex layout
+	context->IASetInputLayout(effect->getVSInputLayout());
+
+	// Set Model vertex and index buffers for IA
+	ID3D11Buffer* vertexBuffers[] = { vertexBuffer };
+	UINT vertexStrides[] = { sizeof(ExtendedVertexStruct) };
+	UINT vertexOffsets[] = { 0 };
+
+	context->IASetVertexBuffers(0, 1, vertexBuffers, vertexStrides, vertexOffsets);
+	context->IASetIndexBuffer(indexBuffer, DXGI_FORMAT_R32_UINT, 0);
+
+	// Set primitive topology for IA
+	context->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+
+
+	// Bind texture resource views and texture sampler objects to the PS stage of the pipeline
+	if (numTextures>0 && sampler) {
+
+		context->PSSetShaderResources(0, numTextures, textures);
+		context->PSSetSamplers(0, 1, &sampler);
+	}
+
+	// Apply the cBuffer.
+	context->VSSetConstantBuffers(0, 1, &cBufferModelGPU);
+	context->PSSetConstantBuffers(0, 1, &cBufferModelGPU);
+
+	// Draw Model
+	for (uint32_t indexOffset = 0, i = 0; i < numMeshes; indexOffset += indexCount[i], ++i)
+		context->DrawIndexed(indexCount[i], indexOffset, baseVertexOffset[i]);
+}
+
+
+HRESULT Model::loadModelAssimp(ID3D11Device *device, const std::wstring& filename,bool preTrans)
+{
+	uint32_t *_indexBuffer = nullptr;
+
+	std::wstring w(filename); 
+	std::string filename_string(w.begin(), w.end());
+	// Get filename extension
+	wstring ext = filename.substr(filename.length() - 4);
+
+	try
+	{
+	if (preTrans)
+		scene = importer.ReadFile(filename_string, aiProcess_PreTransformVertices|aiProcess_GenSmoothNormals | aiProcess_CalcTangentSpace);
+	else
+		scene = importer.ReadFile(filename_string,  aiProcess_GenSmoothNormals | aiProcess_CalcTangentSpace);
+
+		//| aiProcess_PreTransformVertices  | aiProcess_Triangulate 
+		//| aiProcess_JoinIdenticalVertices | aiProcess_SortByPType);
+
+
+		//scene = importer.ReadFile(filename_string, 0);
+
+		if (!scene)
+		{
+			printf("Couldn't load model - Error Importing Asset");
+			return false;
+		}
+		cout << "Num Meshes: " << scene->mNumMeshes << endl;
+		numMeshes = scene->mNumMeshes;
+
+		if (numMeshes == 0)
+			throw exception("Empty model loaded");
+
+
+		uint32_t numIndices = 0;
+		//printf("Num Meshes %d\n", scene->mNumMeshes);
+		for (uint32_t k = 0; k < numMeshes; ++k)
+		{
+			aiMesh* mesh = scene->mMeshes[k];
+			//Store base vertex index;
+			baseVertexOffset.push_back(numVertices);
+			// Increment vertex count
+			numVertices += mesh->mNumVertices;
+			// Store num indices for current mesh
+			indexCount.push_back(mesh->mNumFaces * 3);
+			numIndices += mesh->mNumFaces * 3;
+		}
+
+			// Create vertex buffer
+		vertexBufferCPU = (ExtendedVertexStruct*)malloc(numVertices * sizeof(ExtendedVertexStruct));
+
+		if (!vertexBufferCPU)
+				throw exception("Cannot create vertex buffer");
+
+			// Create index buffer
+			_indexBuffer = (uint32_t*)malloc(numIndices * sizeof(uint32_t));
+
+			if (!_indexBuffer)
+				throw exception("Cannot create index buffer");
+
+			// Copy vertex data into single buffer
+			ExtendedVertexStruct *vptr = vertexBufferCPU;
+			uint32_t *indexPtr = _indexBuffer;
+
+			for (uint32_t i = 0; i < numMeshes; ++i) 
+			{
+
+				aiMesh* mesh = scene->mMeshes[i];
+
+				uint32_t j = 0;
+				for ( j = 0; j < mesh->mNumFaces; ++j)		
+				{
+					const aiFace& face = mesh->mFaces[j];
+					for (int k = 0; k < 3; ++k)
+					{
+						int VIndex = baseVertexOffset[i] + face.mIndices[k];
+
+						aiVector3D pos = mesh->mVertices[face.mIndices[k]];
+						aiVector3D uv = mesh->HasTextureCoords(0) ? mesh->mTextureCoords[0][face.mIndices[k]] : aiVector3D(1.0f, 1.0f, 1.0f);
+						aiVector3D uv2 = mesh->HasTextureCoords(1) ? mesh->mTextureCoords[1][face.mIndices[k]] : aiVector3D(1.0f, 1.0f, 1.0f);
+						
+						aiVector3D normal = mesh->HasNormals() ? mesh->mNormals[face.mIndices[k]] : aiVector3D(1.0f, 1.0f, 1.0f);
+						aiVector3D tangent = mesh->HasTangentsAndBitangents() ? mesh->mTangents[face.mIndices[k]] : aiVector3D(1.0f, 1.0f, 1.0f);
+						//aiVector3D bitangent = mesh->HasTangentsAndBitangents() ? mesh->mBitangents[face.mIndices[k]] : aiVector3D(1.0f, 1.0f, 1.0f);
+						//Flip normal.x for OBJ & GSF (might be required for other files too?)
+						if (0 == ext.compare(L".obj") || 0 == ext.compare(L".gsf"))// || 0 == ext.compare(L".3ds")
+						{
+							normal.x = -normal.x;
+							pos.x = -pos.x;
+						}
+						vptr[VIndex].pos = XMFLOAT3(pos.x, pos.y, pos.z);
+						vptr[VIndex].normal = XMFLOAT3(normal.x, normal.y, normal.z);
+						vptr[VIndex].tangent =  XMFLOAT3(tangent.x, tangent.y, tangent.z);
+						vptr[VIndex].texCoord = XMFLOAT2(uv.x, 1-uv.y);
+						vptr[VIndex].texCoordX = XMFLOAT2(uv2.x,1-uv2.y);
+						
+						vptr[VIndex].matDiffuse = materials[0]->getColour()->diffuse;//XMCOLOR(1.0f, 1.0f, 1.0f, 1.0f);
+						vptr[VIndex].matSpecular = materials[0]->getColour()->specular;// XMCOLOR(1.0f, 1.0f, 1.0f, 1.0f);
+						indexPtr[0] = face.mIndices[k];
+						indexPtr++;
+					}
+				}//for each face
+
+			}//for each mesh
+
+	
+			// Setup DX vertex buffer interfaces
+			D3D11_BUFFER_DESC vertexDesc;
+			D3D11_SUBRESOURCE_DATA vertexData;
+
+			ZeroMemory(&vertexDesc, sizeof(D3D11_BUFFER_DESC));
+			ZeroMemory(&vertexData, sizeof(D3D11_SUBRESOURCE_DATA));
+
+			vertexDesc.Usage = D3D11_USAGE_IMMUTABLE;
+			vertexDesc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
+			vertexDesc.ByteWidth = numVertices * sizeof(ExtendedVertexStruct);
+			vertexData.pSysMem = vertexBufferCPU;
+
+			HRESULT hr = device->CreateBuffer(&vertexDesc, &vertexData, &vertexBuffer);
+
+			if (!SUCCEEDED(hr))
+				throw exception("Vertex buffer cannot be created");
+
+			// Setup index buffer
+			D3D11_BUFFER_DESC indexDesc;
+			D3D11_SUBRESOURCE_DATA indexData;
+
+			ZeroMemory(&indexDesc, sizeof(D3D11_BUFFER_DESC));
+			ZeroMemory(&indexData, sizeof(D3D11_SUBRESOURCE_DATA));
+
+			indexDesc.Usage = D3D11_USAGE_IMMUTABLE;
+			indexDesc.BindFlags = D3D11_BIND_INDEX_BUFFER;
+			indexDesc.ByteWidth = numIndices * sizeof(uint32_t);
+			indexData.pSysMem = _indexBuffer;
+
+			hr = device->CreateBuffer(&indexDesc, &indexData, &indexBuffer);
+
+			if (!SUCCEEDED(hr))
+				throw exception("Index buffer cannot be created");
+
+			// Dispose of local resources
+
+			if (_indexBuffer)
+			free(_indexBuffer);
+
+			//printf("done\n");
+
+		}
+		catch (exception& e)
+		{
+			cout << "Model could not be instantiated due to:\n";
+			cout << e.what() << endl;
+
+			if (vertexBufferCPU)
+				free(vertexBufferCPU);
+
+			if (_indexBuffer)
+				free(_indexBuffer);
+
+			return-1;
+		}
+
+	return 0;
+}
+
+//Model::Model(ID3D11Device *device, Effect *_effect, const std::wstring& filename, ID3D11ShaderResourceView *tex_view, Material *_material) {
+//
+//	Num_Textures = 1;
+//	load(device, _effect, filename,  _material);
+//	// Setup texture interfaces
+//	textureResourceViewArray[0] = tex_view;
+//	if (textureResourceViewArray[0])
+//		textureResourceViewArray[0]->AddRef();
+//
+//
+//}
+//
+//Model::Model(ID3D11Device *device, Effect *_effect, const std::wstring& filename, ID3D11ShaderResourceView *_tex_view_array[], int _num_textures, Material *_material) {
+//
+//	load(device, _effect, filename,  _material);
+//	setTextures(0,_num_textures, _tex_view_array);
+//	//Num_Textures = min(MAX_TEXTURES, _num_textures);
+//	//for (int i = 0; i < Num_Textures; i++)
+//	//	textureResourceViewArray[i] = _tex_view_array[i];
+//	
+//
+//
+////}
+//void Model::setTextures(int _start_slot, int _num_textures, ID3D11ShaderResourceView *_tex_view_array[]){
+//	if (_start_slot > MAX_TEXTURES - 1 | _start_slot <0 | _num_textures<1)return;
+//	int num_textures = min(_num_textures + _start_slot, MAX_TEXTURES) - _start_slot;
+//	Num_Textures = max(num_textures + _start_slot, Num_Textures);
+//
+//	for (int i = _start_slot; i < num_textures + _start_slot; i++)
+//		textureResourceViewArray[i] = _tex_view_array[i - _start_slot];
+//};
+
+
+
+
+//
+//XMMATRIX Model::update(ID3D11DeviceContext *context, Camera *camera) {
+//	// //Update castle cBuffer
+//	cBufferCPU->worldMatrix = worldMatrix;
+//	cBufferCPU->worldITMatrix = XMMatrixTranspose(XMMatrixInverse(nullptr, cBufferCPU->worldMatrix));
+//	cBufferCPU->WVPMatrix = cBufferCPU->worldMatrix*camera->getViewMatrix() * *(camera->getProjMatrix());
+//	mapCbuffer(context, cBufferCPU, cBufferGPU, sizeof(CBufferModel));
+//	return worldMatrix;
+//}
+
+//
+//void Model::renderBasic(ID3D11DeviceContext *context) {
+//
+//
+//
+//	// Validate Model before rendering (see notes in constructor)
+//	if (!context || !vertexBuffer || !indexBuffer || !effect)
+//		return;
+//
+//	// Set vertex layout
+//	context->IASetInputLayout(effect->getVSInputLayout());
+//
+//	// Set Model vertex and index buffers for IA
+//	ID3D11Buffer* vertexBuffers[] = { vertexBuffer };
+//	UINT vertexStrides[] = { sizeof(DXVertexExt) };
+//	UINT vertexOffsets[] = { 0 };
+//
+//	context->IASetVertexBuffers(0, 1, vertexBuffers, vertexStrides, vertexOffsets);
+//	context->IASetIndexBuffer(indexBuffer, DXGI_FORMAT_R32_UINT, 0);
+//
+//	// Set primitive topology for IA
+//	context->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+//
+//
+//	context->PSSetSamplers(0, 1, &sampler);
+//	// Apply the cBuffer.
+//	context->VSSetConstantBuffers(4, 1, &cBufferGPU);
+//	context->PSSetConstantBuffers(4, 1, &cBufferGPU);
+//
+//
+//	// Draw Model
+//	for (uint32_t indexOffset = 0, i = 0; i < numMeshes; indexOffset += indexCount[i], ++i)
+//		context->DrawIndexed(indexCount[i], indexOffset, baseVertexOffset[i]);
+//}

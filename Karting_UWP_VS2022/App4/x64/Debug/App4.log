@@ -1,0 +1,44 @@
+﻿  AIKart.cpp
+  BaseModel.cpp
+  Box.cpp
+  CGDConsole.cpp
+  Camera.cpp
+  Effect.cpp
+  FirstPersonCamera.cpp
+  Flare.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\Effect.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\BaseModel.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\CGDConsole.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\Camera.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\AIKart.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\Flare.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\Box.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\FirstPersonCamera.cpp)
+  Grid.cpp
+  Kart.cpp
+  Material.cpp
+  Menu.cpp
+  Model.cpp
+  PhysXKarting.cpp
+  PhysXVehicleController.cpp
+  PhysXVehicleUtils.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\Model.cpp)
+  PlayerKart.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\Grid.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\Menu.cpp)
+  Quad.cpp
+  ShadowMap.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\PhysXVehicleController.cpp)
+  Terrain.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\Material.cpp)
+  Texture.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\PhysXVehicleUtils.cpp)
+  Utils.cpp
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\PhysXKarting.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\Kart.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\PlayerKart.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\ShadowMap.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\Quad.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\Terrain.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\Texture.cpp)
+C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\Source\Includes.h(28,10): fatal error C1083: Cannot open include file: 'targetver.h': No such file or directory (compiling source file ..\..\Resources\Libs\Source\Utils.cpp)

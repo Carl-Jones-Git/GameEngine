@@ -1,0 +1,10 @@
+# Exported from 3D Builder
+
+
+newmtl Mat_0
+Kd 1.000000 1.000000 1.000000
+map_Kd texture_0_4182610456910466637_BLACK.png
+
+newmtl Mat_1
+Kd 1.000000 1.000000 1.000000
+map_Kd tarmacTexture.png

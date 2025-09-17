@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\App4.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\basic_texture_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\basic_texture_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\flare_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\flare_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\grass_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\grass_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\per_pixel_lighting_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\per_pixel_lighting_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\planarShadow_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\sky_box_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\sky_box_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\fire_gs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\fire_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\fire_update_gs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\fire_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\ocean_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\ocean_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\pointlight_shadow_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\pointlight_shadow_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\reflection_map_ps.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\reflection_map_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\shadow_map_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\x64\Debug\App4\skinning_vs.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\NavSet01.xml</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\Scene01_RH_X2.xml</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\metal_road_barrier3.txt</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\flag.jpg</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\LockScreenLogo.scale-200.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\arrow.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\Fence.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\metal_road_barrier3.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\noise.bmp</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\Terrain01.bmp</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Barrier2\texture_0_4182610456910466637.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Bridge03\asphalt.jpg</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Bridge03\granite.jpg</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Bridge03\newsprnt.jpg</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Castle\Castle.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Cow\texture_0_6195987693227547908.dds</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Cow\texture_0_6195987693227547908.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Duck\Duck.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Duck\DuckBright.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Duck\texture_0_6195987693227547908.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Home\texture_0_6195987693227547908.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Home\texture_0_6195987693227547908_BLACK.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\BlackStripe.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\BlueCamo.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\BlueStripe.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\GoodYearEagle.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\GreenCamo.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\GreenStripe.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\GreyCamo.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\PurpleCamo.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\PurpleStripe.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\RedCamo.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\RedStripe.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\WhiteStripe.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\YellowCamo.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\YellowStripe.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\PortaCabin\Seamless asphalt tarmac road tar texture ver 2.jpg</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\PortaCabin\tarmacTexture.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\PortaCabin\texture_0_4182610456910466637.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\PortaCabin\texture_0_4182610456910466637_BLACK.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\PortaCabin\walnut.jpg</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\WatchTower\All_Wood_A.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\WatchTower\All_Wood_C.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\asphalt.dds</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\BrightonKarting5.bmp</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\flares\corona.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\flares\divine.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\flares\extendring.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\Garage04.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\grassAlpha.tif</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\grassenvmap1024.dds</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\grass_texture.dds</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\Intro02.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\nightenvmap1024.dds</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Textures\Seamless_Asphalt_Texture_NORMAL.jpg</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\SplashScreen.scale-200.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Square150x150Logo.scale-200.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Square44x44Logo.scale-200.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Square44x44Logo.targetsize-24_altform-unplated.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\StoreLogo.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\castle.jpg</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\Dragon_Bump_Col2.jpg</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\Dragon_ground_color.jpg</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\Dragon_Nor.jpg</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\Dragon_Nor_mirror2.jpg</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\Fire.tif</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\grass.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\grass1.bmp</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\grassAlpha.tif</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\grassenvmap1024.dds</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\GreenDragon.jpg</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\GroundNormalMap.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\heightmap.bmp</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\heightmap2.bmp</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\normalmap.bmp</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\RedDragon.jpg</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Textures\Waves.dds</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Wide310x150Logo.scale-200.png</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Castle\Castle.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\FaringTexture2.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\KartLowPoly.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\KartLowPolyWC.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Sounds\fart.wav</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Sounds\Two Stroke Revving.mp3</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Sounds\Two Stroke Revving1.mp3</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Sounds\Two Stroke Revving2.mp3</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Sounds\Two Stroke Revving3.mp3</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Sounds\Two Stroke Revving4.mp3</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Driver\GTR_Driver3Smooth.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Driver\GTR_Driver3SmoothFeet.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Driver\GTR_Driver3SmoothHands.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Driver\GTR_Driver3SmoothHead.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Driver\GTR_Driver3SmoothLegs.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\Fence02_RH_X2.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\Fence03_RH_X2.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\Fence04_RH_X2.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\RacingLine_RH_X2.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Barrier2\Barrier.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Barrier2\Barrier2.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Bridge03\Bridge03.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Bridge03\Sphere.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Cow\Cow.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Cow\Cow2.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Duck\Duck.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Home\Home.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\PortaCabin\PortaCabin.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\WatchTower\Tower_B_.obj</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Resources\Libs\FmodStudio\lib\x64\fmod.dll</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Models\castle.3DS</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Models\Dragon_Baked_Actions_fbx_7_4_binary.fbxX</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Models\sphere.3ds</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\Fence02_RH.mtl</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\Fence03_RH_X2.mtl</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Levels\RacingLine_RH_X2.mtl</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Barrier2\Barrier.mtl</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Barrier2\Barrier2.mtl</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Bridge03\Bridge03.mtl</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Bridge03\Sphere.mtl</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Castle\Castle.mtl</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Cow\Cow.mtl</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Cow\Cow2.mtl</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Duck\Duck.mtl</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Home\Home.mtl</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\FaringTexture2.mtl</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\KartLowPoly.mtl</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\Kart\KartLowPolyWC.mtl</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\PortaCabin\PortaCabin.mtl</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\Assets\Resources\Models\WatchTower\Tower_B_.mtl</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Carl\OneDrive - University of South Wales\UWP\Karting_UWP_VS2019_V4\App4\assimp-vc140-mt.dll</FullPath>
+    </ContentFile>
+  </ContentFiles>
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>
