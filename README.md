@@ -48,7 +48,7 @@ A lightweight, educational game engine built with C++ and DirectX 11, featuring 
 ## Source Code
 **[🔗 GameEngine Repository Link](https://github.com/Carl-Jones-Git/GameEngine/tree/main/Resources/Libs/Source)**
 
-**[🔗 Karting "Scene" source code Link](https://github.com/Carl-Jones-Git/GameEngine)**
+**[🔗 Karting "Scene" source code Link](https://github.com/Carl-Jones-Git/GameEngine/tree/main/DX11_Karting%20-%20VS2022/Source)**
 
 ## Design Philosophy
 
