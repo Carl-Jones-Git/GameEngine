@@ -46,7 +46,8 @@ A lightweight, educational game engine built with C++ and DirectX 11, featuring 
 - **XML Configuration** - Scene and settings management via TinyXML
 
 ## Source Code
-**[🔗 GameEngine Repository Link](https://github.com/Carl-Jones-Git/GameEngine/Resources/Libs/Source)**
+**[🔗 GameEngine Repository Link](https://github.com/Carl-Jones-Git/GameEngine/tree/main/Resources/Libs/Source)**
+
 **[🔗 Karting "Scene" source code Link](https://github.com/Carl-Jones-Git/GameEngine)**
 
 ## Design Philosophy
