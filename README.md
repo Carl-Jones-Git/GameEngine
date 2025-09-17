@@ -14,7 +14,7 @@ A lightweight, educational game engine built with C++ and DirectX 11, featuring 
 - **Resource Management** - Efficient loading and caching of assets
 - **Scene Graph** - Hierarchical scene organization
 
-### Graphics & Rendering
+### Graphics & Rendering [Watch skin rendering video](https://www.youtube.com/watch?v=Zt6Al5h8oL4)
 - **Multiple Light Types** - Point, directional, and spot lights with real-time shadows
 - **Advanced Materials** - PBR-style material system with multiple texture support
 - **3D Model Loading** - Support for complex meshes and materials via Assimp
@@ -186,8 +186,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Inspired by modern game engines and real-time rendering research
 - Educational resources from graphics programming communities
 
-## Contact
-
-**Carl Jones** - [Your Email] - [Your Portfolio/Website]
-
-Project Link: [https://github.com/yourusername/your-repo-name](https://github.com/yourusername/your-repo-name)
