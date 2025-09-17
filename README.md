@@ -153,6 +153,7 @@ This project uses the following open-source libraries:
 This engine is designed for educational purposes and includes:
 - Well-commented source code explaining techniques
 - Examples of when to use public access vs. encapsulation
+
 The following are available on request:
 - Step-by-step tutorials for key systems
 - Performance profiling examples
