@@ -45,6 +45,11 @@ A lightweight, educational game engine built with C++ and DirectX 11, featuring 
 - **ImGui Integration** - In-engine debugging and tweaking interface
 - **XML Configuration** - Scene and settings management via TinyXML
 
+## Source Code
+**Game engine source code is here:**
+**Karting "Scene" source code is here:**
+DX11_Karting - VS2022/Source
+
 ## Design Philosophy
 
 ### Direct Public Access Pattern
