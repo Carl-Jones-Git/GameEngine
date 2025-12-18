@@ -169,7 +169,7 @@ void BlurUtility::blurModel(System* system,Model*obj)
 		//Render object to be blured offscreen
 		context->OMSetRenderTargets(1, &intermedRTV, depthStencilViewBlur);
 		
-		for (int i = 0; i < obj->instances.size(); i++)
+		for (int i = 0; i < obj->getNumInstances(); i++)
 		{
 			XMMATRIX objMat = obj->getWorldMatrix(i);
 			obj->setWorldMatrix(XMMatrixScaling(1.0, 1.0, 1.0) * objMat,i);

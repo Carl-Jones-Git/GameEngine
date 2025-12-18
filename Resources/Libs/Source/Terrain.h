@@ -37,7 +37,7 @@ class Terrain : public BaseModel
 	UINT numInd = 0;
 	ExtendedVertexStruct *vertices;
 	UINT*indices;
-	ID3D11SamplerState* anisoSampler=nullptr;
+	//ID3D11SamplerState* anisoSampler=nullptr;
 	//ID3D11SamplerState* shadowSampler = nullptr;
 	UINT8 colour[COLOUR_MAP_SIZE][COLOUR_MAP_SIZE][4];
 

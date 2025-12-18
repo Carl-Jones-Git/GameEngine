@@ -1,1 +1,643 @@
-﻿  DX11Proj.vcxproj -> C:\Users\Carl\OneDrive - University of South Wales\UWP\DX11_CS3S664_Karting - VS2019V4\Release\DX11Proj.exe
+﻿  AIKart.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(47,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/AIKart.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(79,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/AIKart.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '../Resources/Libs/Source/AIKart.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\AIKart.cpp(61,24): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\AIKart.cpp(63,65): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\AIKart.cpp(120,15): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\AIKart.cpp(125,36): warning C4244: 'argument': conversion from 'double' to 'const physx::PxReal', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\AIKart.cpp(126,37): warning C4244: 'argument': conversion from 'double' to 'const physx::PxReal', possible loss of data
+  BaseModel.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(47,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/BaseModel.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(79,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/BaseModel.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '../Resources/Libs/Source/BaseModel.cpp')
+  
+  BlurUtility.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(47,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/BlurUtility.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(79,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/BlurUtility.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '../Resources/Libs/Source/BlurUtility.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BlurUtility.cpp(155,53): warning C4244: 'argument': conversion from 'FLOAT' to 'int', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BlurUtility.cpp(155,36): warning C4244: 'argument': conversion from 'FLOAT' to 'int', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BlurUtility.cpp(172,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BlurUtility.cpp(178,50): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BlurUtility.cpp(178,45): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BlurUtility.cpp(178,40): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BlurUtility.cpp(181,50): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BlurUtility.cpp(181,45): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BlurUtility.cpp(181,40): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BlurUtility.cpp(190,69): warning C4244: 'argument': conversion from 'FLOAT' to 'int', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BlurUtility.cpp(190,44): warning C4244: 'argument': conversion from 'FLOAT' to 'int', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BlurUtility.cpp(254,52): warning C4244: 'argument': conversion from 'FLOAT' to 'int', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BlurUtility.cpp(254,35): warning C4244: 'argument': conversion from 'FLOAT' to 'int', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BlurUtility.cpp(277,68): warning C4244: 'argument': conversion from 'FLOAT' to 'int', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BlurUtility.cpp(277,43): warning C4244: 'argument': conversion from 'FLOAT' to 'int', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BlurUtility.cpp(348,28): warning C4244: '=': conversion from 'int' to 'FLOAT', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BlurUtility.cpp(349,29): warning C4244: '=': conversion from 'int' to 'FLOAT', possible loss of data
+  Box.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(47,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/Box.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(79,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/Box.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '../Resources/Libs/Source/Box.cpp')
+  
+  Camera.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Camera.h(41,8): warning C4305: 'argument': truncation from 'double' to 'float'
+  (compiling source file '../Resources/Libs/Source/Camera.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Camera.cpp(33,45): warning C4305: 'argument': truncation from 'double' to 'float'
+  DynamicCube.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Camera.h(41,8): warning C4305: 'argument': truncation from 'double' to 'float'
+  (compiling source file '../Resources/Libs/Source/DynamicCube.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\DynamicCube.cpp(31,23): warning C4244: '=': conversion from 'int' to 'FLOAT', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\DynamicCube.cpp(32,24): warning C4244: '=': conversion from 'int' to 'FLOAT', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\DynamicCube.cpp(39,30): warning C4244: '=': conversion from 'FLOAT' to 'UINT', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\DynamicCube.cpp(40,31): warning C4244: '=': conversion from 'FLOAT' to 'UINT', possible loss of data
+  Effect.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Effect.cpp(182,34): warning C4101: 'e': unreferenced local variable
+  FirstPersonCamera.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Camera.h(41,8): warning C4305: 'argument': truncation from 'double' to 'float'
+  (compiling source file '../Resources/Libs/Source/FirstPersonCamera.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\FirstPersonCamera.h(40,180): warning C4305: 'argument': truncation from 'double' to 'float'
+  (compiling source file '../Resources/Libs/Source/FirstPersonCamera.cpp')
+  
+  Flare.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(47,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/Flare.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(79,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/Flare.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '../Resources/Libs/Source/Flare.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Flare.cpp(99,52): warning C4244: 'argument': conversion from 'FLOAT' to 'int', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Flare.cpp(99,35): warning C4244: 'argument': conversion from 'FLOAT' to 'int', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Flare.cpp(149,52): warning C4244: 'argument': conversion from 'FLOAT' to 'int', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Flare.cpp(149,35): warning C4244: 'argument': conversion from 'FLOAT' to 'int', possible loss of data
+  Grid.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(47,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/Grid.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(79,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/Grid.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '../Resources/Libs/Source/Grid.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Grid.cpp(53,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Grid.cpp(55,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Grid.cpp(58,37): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Grid.cpp(59,37): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Grid.cpp(89,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Grid.cpp(91,21): warning C4018: '<': signed/unsigned mismatch
+  Kart.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(47,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/Kart.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(79,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/Kart.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '../Resources/Libs/Source/Kart.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(55,50): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(59,60): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(64,49): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(64,44): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(64,39): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(64,34): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(66,73): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(66,68): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(66,63): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(67,48): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(67,43): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(67,38): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(67,33): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(70,49): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(74,47): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(82,49): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(89,90): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(89,71): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(89,52): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(92,93): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(92,73): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(92,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(92,184): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(92,178): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(101,81): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(101,63): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(101,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(102,80): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(102,62): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(102,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(103,83): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(103,64): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(103,46): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(104,95): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(104,76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(104,57): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(113,91): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(113,72): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(113,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(113,132): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(114,90): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(119,91): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(119,72): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(119,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(119,212): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(119,195): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(119,177): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(120,76): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(121,89): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(167,15): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(187,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(195,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(203,32): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(207,119): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(207,85): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(207,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(207,208): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(207,186): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(207,165): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(208,119): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(208,85): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(208,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(208,207): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(208,185): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(208,164): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(216,128): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(216,111): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(216,94): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(227,50): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(229,52): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(245,50): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(247,48): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Kart.cpp(251,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Material.cpp
+  Menu.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(47,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/Menu.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(79,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/Menu.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '../Resources/Libs/Source/Menu.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Camera.h(41,8): warning C4305: 'argument': truncation from 'double' to 'float'
+  (compiling source file '../Resources/Libs/Source/Menu.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Menu.cpp(88,60): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Menu.cpp(169,67): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Menu.cpp(170,67): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Menu.cpp(170,88): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Menu.cpp(171,14): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Menu.cpp(175,58): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Menu.cpp(175,84): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Menu.cpp(177,59): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Menu.cpp(177,85): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Menu.cpp(232,24): warning C4018: '>=': signed/unsigned mismatch
+  Mesh.cpp
+  Model.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(47,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/Model.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(79,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/Model.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '../Resources/Libs/Source/Model.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Model.cpp(151,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Model.cpp(154,51): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Model.cpp(154,46): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Model.cpp(154,41): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Model.cpp(154,36): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Model.cpp(175,39): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Model.cpp(203,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Model.cpp(252,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Model.cpp(280,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  ParticleSystem.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(47,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/ParticleSystem.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(79,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/ParticleSystem.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '../Resources/Libs/Source/ParticleSystem.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\ParticleSystem.cpp(46,127): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\ParticleSystem.cpp(46,67): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  PhysXKarting.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(47,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/PhysXKarting.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(79,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/PhysXKarting.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '../Resources/Libs/Source/PhysXKarting.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\PhysXKarting.cpp(63,43): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\PhysXKarting.cpp(123,78): warning C4244: '=': conversion from 'float' to 'physx::PxI16', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\PhysXKarting.cpp(139,56): warning C4305: 'argument': truncation from 'double' to 'float'
+  PhysXVehicleController.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(47,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/PhysXVehicleController.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(79,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/PhysXVehicleController.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '../Resources/Libs/Source/PhysXVehicleController.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\PhysXVehicleController.cpp(103,13): warning C4305: 'initializing': truncation from 'double' to 'physx::PxF32'
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\PhysXVehicleController.cpp(274,151): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\PhysXVehicleController.cpp(274,109): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\PhysXVehicleController.cpp(275,155): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\PhysXVehicleController.cpp(275,111): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\PhysXVehicleController.cpp(276,155): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\PhysXVehicleController.cpp(276,111): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\PhysXVehicleController.cpp(277,156): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\PhysXVehicleController.cpp(277,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\PhysXVehicleController.cpp(559,27): warning C4244: '=': conversion from 'float' to 'physx::PxU32', possible loss of data
+  PlayerKart.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(47,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/PlayerKart.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(79,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/PlayerKart.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '../Resources/Libs/Source/PlayerKart.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\PlayerKart.cpp(332,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  ShadowMap.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Camera.h(41,8): warning C4305: 'argument': truncation from 'double' to 'float'
+  (compiling source file '../Resources/Libs/Source/ShadowMap.cpp')
+  
+  Compiling...
+  ShadowVolume.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(47,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/ShadowVolume.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(79,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/ShadowVolume.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '../Resources/Libs/Source/ShadowVolume.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Camera.h(41,8): warning C4305: 'argument': truncation from 'double' to 'float'
+  (compiling source file '../Resources/Libs/Source/ShadowVolume.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\ShadowVolume.cpp(45,10): warning C4101: 'hr': unreferenced local variable
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\ShadowVolume.cpp(306,20): warning C4018: '<': signed/unsigned mismatch
+  SkinUtility.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(47,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/SkinUtility.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(79,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/SkinUtility.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '../Resources/Libs/Source/SkinUtility.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinUtility.cpp(147,54): warning C4244: '=': conversion from 'double' to 'INT', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinUtility.cpp(148,49): warning C4244: '=': conversion from 'FLOAT' to 'INT', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinUtility.cpp(151,34): warning C4838: conversion from 'double' to 'FLOAT' requires a narrowing conversion
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinUtility.cpp(151,34): warning C4244: 'initializing': conversion from 'double' to 'FLOAT', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinUtility.cpp(151,50): warning C4838: conversion from 'double' to 'FLOAT' requires a narrowing conversion
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinUtility.cpp(151,50): warning C4244: 'initializing': conversion from 'double' to 'FLOAT', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinUtility.cpp(151,65): warning C4838: conversion from 'double' to 'FLOAT' requires a narrowing conversion
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinUtility.cpp(151,65): warning C4244: 'initializing': conversion from 'double' to 'FLOAT', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinUtility.cpp(151,80): warning C4838: conversion from 'double' to 'FLOAT' requires a narrowing conversion
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinUtility.cpp(151,80): warning C4244: 'initializing': conversion from 'double' to 'FLOAT', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinUtility.cpp(151,94): warning C4838: conversion from 'double' to 'FLOAT' requires a narrowing conversion
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinUtility.cpp(151,94): warning C4244: 'initializing': conversion from 'double' to 'FLOAT', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinUtility.cpp(151,108): warning C4838: conversion from 'double' to 'FLOAT' requires a narrowing conversion
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinUtility.cpp(151,108): warning C4244: 'initializing': conversion from 'double' to 'FLOAT', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinUtility.cpp(239,28): warning C4244: '=': conversion from 'int' to 'FLOAT', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinUtility.cpp(240,29): warning C4244: '=': conversion from 'int' to 'FLOAT', possible loss of data
+  SkinnedModel.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(47,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/SkinnedModel.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(79,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/SkinnedModel.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '../Resources/Libs/Source/SkinnedModel.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Camera.h(41,8): warning C4305: 'argument': truncation from 'double' to 'float'
+  (compiling source file '../Resources/Libs/Source/SkinnedModel.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.h(83,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file '../Resources/Libs/Source/SkinnedModel.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.h(101,63): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  (compiling source file '../Resources/Libs/Source/SkinnedModel.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.cpp(69,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.cpp(75,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.cpp(79,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.cpp(94,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.cpp(173,23): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.cpp(175,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.cpp(181,23): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.cpp(188,11): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.cpp(189,23): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.cpp(191,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.cpp(204,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.cpp(251,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.cpp(258,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.cpp(274,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.cpp(291,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.cpp(374,16): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  System.cpp
+  Terrain.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(47,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/Terrain.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(79,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/Terrain.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '../Resources/Libs/Source/Terrain.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Terrain.cpp(51,42): warning C4244: 'argument': conversion from 'double' to 'uint32_t', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Terrain.cpp(51,37): warning C4244: 'argument': conversion from 'double' to 'uint32_t', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Terrain.cpp(51,32): warning C4244: 'argument': conversion from 'double' to 'uint32_t', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Terrain.cpp(51,27): warning C4244: 'argument': conversion from 'double' to 'uint32_t', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Terrain.cpp(97,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Terrain.cpp(98,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Terrain.cpp(100,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Terrain.cpp(101,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Terrain.cpp(105,54): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Triangle.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(47,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/Triangle.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(79,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '../Resources/Libs/Source/Triangle.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '../Resources/Libs/Source/Triangle.cpp')
+  
+  Utils.cpp
+  Scene.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Camera.h(41,8): warning C4305: 'argument': truncation from 'double' to 'float'
+  (compiling source file 'Source/Scene.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\FirstPersonCamera.h(40,180): warning C4305: 'argument': truncation from 'double' to 'float'
+  (compiling source file 'Source/Scene.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(47,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Source/Scene.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(79,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Source/Scene.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Source/Scene.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.h(83,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'Source/Scene.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.h(101,63): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'Source/Scene.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.h(87,39): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+  (compiling source file 'Source/Scene.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(96,44): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(103,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(128,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(427,51): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(427,46): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(427,41): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(427,36): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(533,47): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(534,30): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(562,58): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(562,52): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(562,46): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(564,29): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(564,23): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(582,63): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(582,56): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(582,49): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(583,32): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(583,23): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(588,64): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(635,40): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(654,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(689,61): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(690,47): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(701,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(702,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(703,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(704,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(712,43): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(713,43): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(718,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(722,56): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(767,78): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(767,54): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(767,30): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(798,49): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(798,44): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(798,39): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(798,34): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(808,33): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(808,26): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(808,19): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(838,54): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(838,49): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(838,44): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(838,39): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(856,33): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(856,26): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(856,19): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(858,79): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(858,69): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(858,91): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(858,23): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(862,33): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(862,26): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(862,19): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(864,79): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(864,69): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(864,91): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(864,23): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(868,33): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(868,26): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(868,19): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(897,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(897,50): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(897,45): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(897,40): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(917,33): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(917,26): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(917,19): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(918,79): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(918,69): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(918,91): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(918,23): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(924,33): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(924,26): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(924,19): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(925,79): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(925,69): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(925,91): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(925,23): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(931,33): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(931,26): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(931,19): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(932,81): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(932,70): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(932,93): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(932,23): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(966,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1003,9): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1018,34): warning C4305: '=': truncation from 'double' to 'FLOAT'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1058,51): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1058,46): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1060,57): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1060,52): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1060,47): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1070,61): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1074,61): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1074,50): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1079,56): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1079,51): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1079,46): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1082,60): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1082,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1087,51): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1087,46): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1088,51): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1089,52): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1090,60): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1090,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1095,51): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1095,46): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1096,51): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1097,52): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1098,60): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1098,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1103,51): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1103,46): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1104,51): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1105,52): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1106,60): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1106,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1111,56): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1111,51): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1111,46): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1114,60): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1114,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1119,51): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1119,46): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1120,51): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1121,52): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1122,60): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1122,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1127,51): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1127,46): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1130,60): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1130,55): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1237,19): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1249,27): warning C4244: '=': conversion from 'double' to 'FLOAT', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1277,65): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1277,49): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1277,33): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1290,53): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1291,58): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1292,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1323,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1324,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1326,72): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1326,61): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1326,50): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1327,72): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1327,61): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1327,50): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1328,73): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1328,62): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1328,51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1331,36): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1332,51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1349,15): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1365,15): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1376,84): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1376,66): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1376,43): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1387,27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1388,27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1405,27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1406,27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1422,27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1423,27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1479,43): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1578,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1678,30): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1699,38): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1705,38): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.cpp(1881,25): warning C4305: '+=': truncation from 'double' to 'float'
+  main.cpp
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\Camera.h(41,8): warning C4305: 'argument': truncation from 'double' to 'float'
+  (compiling source file 'Source/main.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\FirstPersonCamera.h(40,180): warning C4305: 'argument': truncation from 'double' to 'float'
+  (compiling source file 'Source/main.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(47,20): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Source/main.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(79,21): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'Source/main.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BaseModel.h(85,112): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Source/main.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.h(83,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'Source/main.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinnedModel.h(101,63): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  (compiling source file 'Source/main.cpp')
+  
+C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Source\Scene.h(87,39): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+  (compiling source file 'Source/main.cpp')
+  
+  Generating code
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\SkinUtility.cpp(292): warning C4715: 'SkinUtility::setupBlurRenderTargets': not all control paths return a value
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\BlurUtility.cpp(441): warning C4715: 'BlurUtility::setupBlurRenderTargets': not all control paths return a value
+C:\Users\Carl\Documents\GitHub\GameEngine\Resources\Libs\Source\PhysXKarting.cpp(241): warning C4715: 'PhysXKarting::initScenePX': not all control paths return a value
+  523 of 3723 functions (14.0%) were compiled, the rest were copied from previous compilation.
+    296 functions were new in current compilation
+    61 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  DX11Proj.vcxproj -> C:\Users\Carl\Documents\GitHub\GameEngine\DX11_Karting - VS2022\Release\DX11Proj.exe

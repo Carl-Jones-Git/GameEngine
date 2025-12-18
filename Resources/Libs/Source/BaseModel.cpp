@@ -23,19 +23,19 @@
 #include "Includes.h"
 #include <BaseModel.h>
 
-BaseModel::BaseModel(ID3D11Device *device, shared_ptr<Effect> _effect, std::shared_ptr<Material> _material, int _meshNumber) {
+BaseModel::BaseModel(ID3D11Device* device, shared_ptr<Effect> _effect, std::shared_ptr<Material> _material, int _meshNumber) {
 	meshNumber = _meshNumber;
 	effect = _effect;
-	Instance instance= Instance(XMMatrixIdentity(), _material);
+	Instance instance = Instance(XMMatrixIdentity(), _material);
 	instances.push_back(instance);
 	createDefaultLinearSampler(device);
 	initCBuffer(device);
 }
 
-void BaseModel::initCBuffer(ID3D11Device *device){	
-	
+void BaseModel::initCBuffer(ID3D11Device* device) {
+
 	// Allocate 16 byte aligned block of memory for "main memory" copy of cBufferBasic
-	cBufferModelCPU = (CBufferModel*)_aligned_malloc(sizeof(CBufferModel), 16);
+	cBufferModelCPU.reset( (CBufferModel*)_aligned_malloc(sizeof(CBufferModel), 16));
 
 	// Fill out cBufferModelCPU
 	cBufferModelCPU->worldMatrix = XMMatrixIdentity();
@@ -52,29 +52,46 @@ void BaseModel::initCBuffer(ID3D11Device *device){
 	cbufferDesc.Usage = D3D11_USAGE_DYNAMIC;
 	cbufferDesc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
 	cbufferDesc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
-	cbufferInitData.pSysMem = cBufferModelCPU;// Initialise GPU CBuffer with data from CPU CBuffer
+	cbufferInitData.pSysMem = cBufferModelCPU.get();// Initialise GPU CBuffer with data from CPU CBuffer
 
-	HRESULT hr = device->CreateBuffer(&cbufferDesc, &cbufferInitData,&cBufferModelGPU);
+	HRESULT hr = device->CreateBuffer(&cbufferDesc, &cbufferInitData, &cBufferModelGPU);
 }
 
-void BaseModel::setWorldMatrix(XMMATRIX _worldMatrix,int n){
+void BaseModel::setWorldMatrix(XMMATRIX _worldMatrix, int n) {
 	instances[n].worldMatrix = _worldMatrix;
 	cBufferModelCPU->worldMatrix = _worldMatrix;
-	XMVECTOR det=XMMatrixDeterminant(_worldMatrix);
+	XMVECTOR det = XMMatrixDeterminant(_worldMatrix);
 	cBufferModelCPU->worldITMatrix = XMMatrixInverse(&det, XMMatrixTranspose(_worldMatrix));
 }
 
-void BaseModel::update(ID3D11DeviceContext* context,int i) {
+void BaseModel::update(ID3D11DeviceContext* context, int i) {
 	cBufferModelCPU->worldMatrix = instances[i].worldMatrix;
 	XMVECTOR det = XMMatrixDeterminant(instances[i].worldMatrix);
 	cBufferModelCPU->worldITMatrix = XMMatrixInverse(&det, XMMatrixTranspose(instances[i].worldMatrix));
-	mapCbuffer(context, cBufferModelCPU, cBufferModelGPU, sizeof(CBufferModel));
-	context->PSSetConstantBuffers(0, 1, &cBufferModelGPU);
-	context->VSSetConstantBuffers(0, 1, &cBufferModelGPU);
+	mapCbuffer(context, cBufferModelCPU.get(), cBufferModelGPU.Get(), sizeof(CBufferModel));
+	context->PSSetConstantBuffers(0, 1, cBufferModelGPU.GetAddressOf());
+	context->VSSetConstantBuffers(0, 1, cBufferModelGPU.GetAddressOf());
 }
 
-void BaseModel::createDefaultLinearSampler(ID3D11Device *device){
-	
+void BaseModel::renderInstances(ID3D11DeviceContext* context)
+{
+	for (int i = 0; i < instances.size(); i++)
+	{
+		if (instances[i].dynamicPX)
+		{
+			physx::PxTransform modelT = instances[i].dynamicPX->getGlobalPose();
+			XMVECTOR quart = DirectX::XMLoadFloat4(&XMFLOAT4(modelT.q.x, modelT.q.y, modelT.q.z, modelT.q.w));
+			instances[i].worldMatrix = (XMMatrixRotationQuaternion(quart) * XMMatrixTranslation(modelT.p.x, modelT.p.y + 0.2, modelT.p.z));
+		}
+		update(context, i);
+		render(context, i);
+	}
+	update(context, 0);
+}
+
+
+void BaseModel::createDefaultLinearSampler(ID3D11Device* device) {
+
 	// If textures are used a sampler is required for the pixel shader to sample the texture
 	D3D11_SAMPLER_DESC linearDesc;
 	ZeroMemory(&linearDesc, sizeof(D3D11_SAMPLER_DESC));
@@ -102,7 +119,7 @@ BaseModel::~BaseModel() {
 		sampler->Release();
 
 	if (cBufferModelCPU)
-		_aligned_free(cBufferModelCPU);
+		cBufferModelCPU.reset();
 	if (cBufferModelGPU)
 		cBufferModelGPU->Release();
 	cout << "BaseModel Destructor Complete" << endl;

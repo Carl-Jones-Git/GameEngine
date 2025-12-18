@@ -40,7 +40,7 @@ HRESULT Box::init(ID3D11Device *device) {
 	}
 		ExtendedVertexStruct vertices[] = {
 
-			//Front face
+		//Front face
 		{ XMFLOAT3(-1.0f, -1.0f, -1.0f), XMFLOAT3(0.0f, 0.0f, -1.0f),XMFLOAT3(0.0f, 0.0f, -1.0f),diffuse, specular, XMFLOAT2(0.0f, 0.0f) }, //0
 		{ XMFLOAT3(-1.0f, +1.0f, -1.0f), XMFLOAT3(0.0f, 0.0f, -1.0f),XMFLOAT3(0.0f, 0.0f, -1.0f),diffuse,specular, XMFLOAT2(0.0f, +1.0f) }, //1
 		{ XMFLOAT3(+1.0f, +1.0f, -1.0f), XMFLOAT3(0.0f, 0.0f, -1.0f),XMFLOAT3(0.0f, 0.0f, -1.0f),diffuse,specular, XMFLOAT2(+1.0f, +1.0f) }, //2
@@ -157,7 +157,6 @@ HRESULT Box::init(ID3D11Device *device) {
 
 		ZeroMemory(&linearDesc, sizeof(D3D11_SAMPLER_DESC));
 		linearDesc.Filter = D3D11_FILTER_ANISOTROPIC;
-		//linearDesc.Filter = D3D11_FILTER_MIN_MAG_MIP_POINT;
 		linearDesc.AddressU = D3D11_TEXTURE_ADDRESS_MIRROR;
 		linearDesc.AddressV = D3D11_TEXTURE_ADDRESS_MIRROR;
 		linearDesc.AddressW = D3D11_TEXTURE_ADDRESS_MIRROR;
@@ -172,7 +171,7 @@ HRESULT Box::init(ID3D11Device *device) {
 
 	catch (exception& e)
 	{
-		cout << "Triangle object could not be instantiated due to:\n";
+		cout << "Object could not be instantiated due to:\n";
 		cout << e.what() << endl;
 
 		if (vertexBuffer)
@@ -192,8 +191,8 @@ HRESULT Box::init(ID3D11Device *device) {
 
 void Box::render(ID3D11DeviceContext *context, int instanceIndex) {
 
-	context->PSSetConstantBuffers(0, 1, &cBufferModelGPU);
-	context->VSSetConstantBuffers(0, 1, &cBufferModelGPU);
+	context->PSSetConstantBuffers(0, 1, cBufferModelGPU.GetAddressOf());
+	context->VSSetConstantBuffers(0, 1, cBufferModelGPU.GetAddressOf());
 
 	// Validate object before rendering 
 	if (!context || !vertexBuffer)
@@ -212,13 +211,13 @@ void Box::render(ID3D11DeviceContext *context, int instanceIndex) {
 	}
 
 	// Set vertex and index buffers for IA
-	ID3D11Buffer* vertexBuffers[] = { vertexBuffer };
+	ID3D11Buffer* vertexBuffers[] = { vertexBuffer.Get()};
 	UINT vertexStrides[] = { sizeof(ExtendedVertexStruct) };
 	UINT vertexOffsets[] = { 0 };
 
 	context->IASetVertexBuffers(0, 1, vertexBuffers, vertexStrides, vertexOffsets);
 
-	context->IASetIndexBuffer(indexBuffer, DXGI_FORMAT_R32_UINT, 0);
+	context->IASetIndexBuffer(indexBuffer.Get(), DXGI_FORMAT_R32_UINT, 0);
 
 	// Set primitive topology for IA
 	context->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);

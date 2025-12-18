@@ -42,17 +42,33 @@
 #include <System.h>
 #endif
 
-enum Quality {WHITE=-1, LOWEST, LOW, MEDIUM, HIGH, HIGHEST };
-enum MenuState { Intro, MainMenu, CreateLobby, JoinLobby, WaitingToStart, MenuDone, MenuNone };
+ /// @brief Quality preset levels for graphics rendering
+enum class RenderQuality {
+	Lowest,
+	Low,
+	Medium,
+	High,
+	Highest
+};
+/// @brief Menu states
+enum class MenuState  { 
+	Intro, MainMenu, 
+	CreateLobby, 
+	JoinLobby, 
+	WaitingToStart, 
+	MenuDone, 
+	MenuNone 
+};
+
 class Menu
 {
 protected:
-	int quality = MEDIUM;
-	NetMgr *netMgr;
+	int quality = (int)RenderQuality::Medium;
+	NetMgr *m_networkManager;
 #ifdef PC_BUILD
-	System* system = nullptr;
+	System* m_system = nullptr;
 #else
-	std::shared_ptr<DX::DeviceResources> system;
+	std::shared_ptr<DX::DeviceResources> m_system;
 #endif
 
 	LookAtCamera* lookAtCamera;
@@ -65,15 +81,15 @@ protected:
 
 
 	int playerKartWrap = 0;
-	vector <std::string> *kartWraps;
-	vector <shared_ptr <Texture>> *kartTextures;
+	vector <std::string> *m_kartWrapNames;
+	vector <shared_ptr <Texture>> *m_kartTextures;
 	bool mainMenuInit = false;
 
 public:
 #ifdef PC_BUILD
-	Menu(System* _system) { system = _system; };
+	Menu(System* _system) { m_system = _system; };
 #else
-	Menu(std::shared_ptr<DX::DeviceResources> _system ) { system = _system; };
+	Menu(std::shared_ptr<DX::DeviceResources> _system ) { m_system = _system; };
 #endif
 
 	void init(NetMgr* _netMgr);
@@ -83,14 +99,14 @@ public:
 	//helper
 	void setPlayerKartTextures(vector <std::string> *_kartWraps, vector <shared_ptr <Texture>> *_kartTextures, int _playerKartWrap) {
 		playerKartWrap = _playerKartWrap;
-		kartWraps=_kartWraps;
-		kartTextures=_kartTextures;
+		m_kartWrapNames=_kartWraps;
+		m_kartTextures=_kartTextures;
 	}
 	void drawShadow(Model* model, shared_ptr<Effect>  shadowEffect, XMMATRIX* shadowMatrix, ID3D11DeviceContext* context);
 	void initMainMenu();
-	void renderMainMenu( PlayerKart* playerKart, MenuState* MainMenuState,  float stepSize);
-	void renderGUIMenu(MenuState* MainMenuState, Kart* kartArray[], int nKarts);
-	int getQuality() { return quality; };
+	void renderMainMenu( PlayerKart* m_playerKart, MenuState* MainMenuState,  float m_fixedTimeStep);
+	void renderGUIMenu(MenuState* MainMenuState, Kart* m_allKarts[], int nKarts);
+	RenderQuality getQuality() { return (RenderQuality)quality; };
 	~Menu() {
 		cout << "Menu destructor called" << endl;
 		if (lookAtCamera)

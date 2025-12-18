@@ -113,7 +113,7 @@ extern LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	if(mainScene!=nullptr)
-	if(mainScene->MainMenuState< MenuDone)
+	if(mainScene->getMenuState() < MenuState::MenuDone)
 		ImGui_ImplWin32_WndProcHandler(hWnd, message, wParam,lParam);
 	RECT				clientRect;
 	static POINT		prevMousePos, currentMousePos;
@@ -200,7 +200,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		Scene *mainScene = (Scene*)GetWindowLongPtrW(hWnd, GWLP_USERDATA);
 
 		if (mainScene)
-			mainScene->destoryWindow();
+			mainScene->destroyWindow();
 	}
 
 	case WM_DESTROY:

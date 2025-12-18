@@ -164,7 +164,7 @@ void Flare::render(ID3D11DeviceContext *context, int instanceIndex )
 	context->IASetInputLayout(effect->getVSInputLayout());
 
 	// Set vertex and index buffers for IA
-	ID3D11Buffer* vertexBuffers[] = { vertexBuffer };
+	ID3D11Buffer* vertexBuffers[] = { vertexBuffer.Get()};
 	UINT vertexStrides[] = { sizeof(FlareVertexStruct) };
 	UINT vertexOffsets[] = { 0 };
 

@@ -96,7 +96,7 @@ HRESULT System::setupDeviceDependentResources(HWND hwnd) {
 	LONG height = clientRect.bottom - clientRect.top;
 	
 	// Get default adapter
-	HRESULT hr = dxgiFactory->EnumAdapters(0, &defaultAdapter);
+	HRESULT hr = dxgiFactory->EnumAdapters(1, &defaultAdapter);
 
 	// Create D3D device
 	if (SUCCEEDED(hr)) {

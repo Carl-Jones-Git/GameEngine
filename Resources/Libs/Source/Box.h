@@ -33,5 +33,4 @@ public:
 	ID3D11SamplerState* anisoSampler = nullptr;
 	void render(ID3D11DeviceContext *context, int instanceIndex=0);
 	HRESULT init(ID3D11Device *device);
-
 };

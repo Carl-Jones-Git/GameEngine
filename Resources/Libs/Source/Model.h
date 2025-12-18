@@ -65,8 +65,8 @@ public:
 	void load(ID3D11Device* device, const std::wstring& filename);
 	void render(ID3D11DeviceContext *context,int instanceIndex = 0);
 	int getVBSizeBytes() { return num_vert * sizeof(ExtendedVertexStruct); }
-	ID3D11Buffer* getIndices() { return  indexBuffer; }
-	ID3D11Buffer* getVB() { return  vertexBuffer; }
+	ComPtr<ID3D11Buffer>  getIndices() { return  indexBuffer; }
+	ComPtr<ID3D11Buffer>  getVB() { return  vertexBuffer; }
 	int getNumInd() { return 	num_ind; }
 	int getNumFaces() { return 	num_ind / 3; }
 	int getNumVert() { return 	num_vert; }

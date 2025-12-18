@@ -91,14 +91,14 @@ void Triangle::render(ID3D11DeviceContext *context, int instanceIndex) {
 	if (instances[instanceIndex].materials.size() > 0)
 		instances[instanceIndex].materials[0]->update(context);
 	if (sampler) {
-		context->PSSetSamplers(0, 1, &sampler);
+		context->PSSetSamplers(0, 1, sampler.GetAddressOf());
 	}
 
 
 	//// Set vertex layout
 
 	// Set vertex and index buffers for IA
-	ID3D11Buffer* vertexBuffers[] = { vertexBuffer };
+	ID3D11Buffer* vertexBuffers[] = { vertexBuffer.Get()};
 	UINT vertexStrides[] = { sizeof(BasicVertexStruct) };
 	UINT vertexOffsets[] = { 0 };
 

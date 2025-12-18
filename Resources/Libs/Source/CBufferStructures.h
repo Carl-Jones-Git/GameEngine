@@ -8,13 +8,20 @@ using namespace DirectX::PackedVector;
 // CBuffer struct
 // Use 16byte aligned so can use optimised XMMathFunctions instead of setting _XM_NO_INNTRINSICS_ define when compiling for x86
 
-//// CBuffer struct
-//__declspec(align(16)) struct CBufferBasic {
-//	DirectX::XMMATRIX		WVPMatrix;
-//	DirectX::XMMATRIX		worldITMatrix;
-//	DirectX::XMFLOAT3		lightDir;
-//};
-// CBuffer struct
+// ============================================================================
+// Custom Deleters for Aligned Memory (SIMD requirements)
+// ============================================================================
+
+/// @brief Deleter for 16-byte aligned memory (required for DirectXMath types)
+struct AlignedDeleter {
+	void operator()(void* ptr) const {
+		if (ptr) {
+			_aligned_free(ptr);
+		}
+	}
+};
+
+// CBuffer structurs
 struct CBufferBone {
 	DirectX::XMMATRIX		boneMatrix;
 

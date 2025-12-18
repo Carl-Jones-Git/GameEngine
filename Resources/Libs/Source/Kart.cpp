@@ -23,7 +23,7 @@
 #include <Includes.h>
 #include <Kart.h>
 #include <PhysXVehicleController.h>
-extern wstring ResourcePath;
+extern const wstring RESOURCE_PATH;
 
 Kart::Kart(FMOD::System* _FMSystem,ID3D11Device* device, ID3D11DeviceContext* context, Terrain *_ground, shared_ptr<Effect>  _perPixelEffect,  shared_ptr<Texture> kartTexture)
 {
@@ -34,8 +34,8 @@ Kart::Kart(FMOD::System* _FMSystem,ID3D11Device* device, ID3D11DeviceContext* co
 	FMSystem = _FMSystem;
 	FMOD_RESULT result;
 
-	result = FMSystem->createSound(WStringToString(ResourcePath + L"Resources/Sounds/Two Stroke Revving2.mp3").c_str(), FMOD_DEFAULT | FMOD_LOOP_NORMAL, nullptr, &engine2);
-	result = FMSystem->createSound(WStringToString(ResourcePath + L"Resources/Sounds/Two Stroke Revving3.mp3").c_str(), FMOD_DEFAULT | FMOD_LOOP_NORMAL, nullptr, &engine3);
+	result = FMSystem->createSound(WStringToString(RESOURCE_PATH + L"Resources/Sounds/Two Stroke Revving2.mp3").c_str(), FMOD_DEFAULT | FMOD_LOOP_NORMAL, nullptr, &engine2);
+	result = FMSystem->createSound(WStringToString(RESOURCE_PATH + L"Resources/Sounds/Two Stroke Revving3.mp3").c_str(), FMOD_DEFAULT | FMOD_LOOP_NORMAL, nullptr, &engine3);
 	if (result != FMOD_OK)
 		// Handle error
 		cout << "cant find sound" << endl;
@@ -74,7 +74,7 @@ Kart::Kart(FMOD::System* _FMSystem,ID3D11Device* device, ID3D11DeviceContext* co
 	matTire->setSpecular(XMFLOAT4(0.5, 0.5, 0.5, 0.001));
 	matTire->setUsage(DIFFUSE_MAP);
 	// Load Tire Texture
-	Texture tireTexture = Texture(context, device, ResourcePath + L"Resources\\Models\\Kart\\GoodYearEagle.png");
+	Texture tireTexture = Texture(context, device, RESOURCE_PATH + L"Resources\\Models\\Kart\\GoodYearEagle.png");
 	matTire->setTexture(tireTexture.getShaderResourceView());
 
 	//Kart Faring Material
@@ -87,43 +87,43 @@ Kart::Kart(FMOD::System* _FMSystem,ID3D11Device* device, ID3D11DeviceContext* co
 
 	//Load Kart components separately so they can have different materials and PhysX properties
 	XMMATRIX FramePreTransMat = XMMatrixScaling(0.001 * scaleKart, 0.001 * scaleKart, 0.001 * scaleKart);
-	Frame = new  Model(context,device, wstring(ResourcePath + L"Resources\\Models\\Kart\\KartLowPoly.obj"), perPixelEffectCullNone, glossBlack, 0,&FramePreTransMat);
+	Frame = new  Model(context,device, wstring(RESOURCE_PATH + L"Resources\\Models\\Kart\\KartLowPoly.obj"), perPixelEffectCullNone, glossBlack, 0,&FramePreTransMat);
 	//Load Faring
 	XMMATRIX FaringPreTransMat = XMMatrixScaling(0.0032* scaleKart, 0.0032 * scaleKart, 0.0032 * scaleKart) * XMMatrixRotationX(XMConvertToRadians(-90)) * XMMatrixTranslation(0.0, 0.05, 0.2);
-	Farings = new  Model(context, device, wstring(ResourcePath + L"Resources\\Models\\Kart\\FaringTexture2.obj"), _perPixelEffect, matFaring, DEFAULT,&FaringPreTransMat);
+	Farings = new  Model(context, device, wstring(RESOURCE_PATH + L"Resources\\Models\\Kart\\FaringTexture2.obj"), _perPixelEffect, matFaring, DEFAULT,&FaringPreTransMat);
 	
 		//Farings = new  Model(context, device, wstring(L"..\\Resources\\Models\\VWBeetle\\Beetle3.obj"), _reflectionEffect, matFaring, DEFAULT, &FaringPreTransMat);
 
 	//Load Engine
-	Engine = new  Model(context, device, wstring(ResourcePath + L"Resources\\Models\\Kart\\KartLowPoly.obj"), _perPixelEffect, matChrome,  4,&FramePreTransMat);
+	Engine = new  Model(context, device, wstring(RESOURCE_PATH + L"Resources\\Models\\Kart\\KartLowPoly.obj"), _perPixelEffect, matChrome,  4,&FramePreTransMat);
 	
 	//Wheels and Tires
 	FLWheel2KartMat = XMMatrixTranslation(-0.7 * scaleKart, 0.18 * scaleKart, 0.75 * scaleKart);
 	FRWheel2KartMat = XMMatrixTranslation(0.7 * scaleKart, 0.18 * scaleKart, 0.75 * scaleKart);
 	RearTires2KartMat = XMMatrixTranslation(0.0 * scaleKart, 0.18 * scaleKart, -0.65 * scaleKart);
 	XMMATRIX Wheel2kartPreTransMat = XMMatrixScaling(0.001 * scaleKart, 0.001 * scaleKart, 0.001 * scaleKart);
-	FLWheel = new  Model(context, device, wstring(ResourcePath + L"Resources\\Models\\Kart\\KartLowPolyWC.obj"), _perPixelEffect, glossBlackReflection, 8, &Wheel2kartPreTransMat);
-	FRWheel = new  Model(context, device, wstring(ResourcePath + L"Resources\\Models\\Kart\\KartLowPolyWC.obj"), _perPixelEffect, glossBlackReflection, 10, &Wheel2kartPreTransMat);
-	FLTire = new  Model(context, device, wstring(ResourcePath + L"Resources\\Models\\Kart\\KartLowPolyWC.obj"), _perPixelEffect, matTire, 9, &Wheel2kartPreTransMat);
-	FRTire = new  Model(context, device, wstring(ResourcePath + L"Resources\\Models\\Kart\\KartLowPolyWC.obj"), _perPixelEffect, matTire, 7, &Wheel2kartPreTransMat);
-	RearWheels = new  Model(context, device, wstring(ResourcePath + L"Resources\\Models\\Kart\\KartLowPolyWC.obj"), _perPixelEffect, glossBlack, 6, &FramePreTransMat);
-	RearTires = new  Model(context, device, wstring(ResourcePath + L"Resources\\Models\\Kart\\KartLowPolyWC.obj"), _perPixelEffect, matTire, 5, &Wheel2kartPreTransMat);
+	FLWheel = new  Model(context, device, wstring(RESOURCE_PATH + L"Resources\\Models\\Kart\\KartLowPolyWC.obj"), _perPixelEffect, glossBlackReflection, 8, &Wheel2kartPreTransMat);
+	FRWheel = new  Model(context, device, wstring(RESOURCE_PATH + L"Resources\\Models\\Kart\\KartLowPolyWC.obj"), _perPixelEffect, glossBlackReflection, 10, &Wheel2kartPreTransMat);
+	FLTire = new  Model(context, device, wstring(RESOURCE_PATH + L"Resources\\Models\\Kart\\KartLowPolyWC.obj"), _perPixelEffect, matTire, 9, &Wheel2kartPreTransMat);
+	FRTire = new  Model(context, device, wstring(RESOURCE_PATH + L"Resources\\Models\\Kart\\KartLowPolyWC.obj"), _perPixelEffect, matTire, 7, &Wheel2kartPreTransMat);
+	RearWheels = new  Model(context, device, wstring(RESOURCE_PATH + L"Resources\\Models\\Kart\\KartLowPolyWC.obj"), _perPixelEffect, glossBlack, 6, &FramePreTransMat);
+	RearTires = new  Model(context, device, wstring(RESOURCE_PATH + L"Resources\\Models\\Kart\\KartLowPolyWC.obj"), _perPixelEffect, matTire, 5, &Wheel2kartPreTransMat);
 	
 	//Load Steering Wheel
 	XMMATRIX SWheelPreTransMat = XMMatrixScaling(0.001 * scaleKart, 0.001 * scaleKart, 0.001 * scaleKart) * XMMatrixTranslation(0, 0, -0.65) * XMMatrixRotationX(XMConvertToRadians(35));
 	SWheel2KartMat = XMMatrixRotationX(XMConvertToRadians(-35)) * XMMatrixTranslation(0, 0, 0.65);
-	SWheel = new  Model(context, device, wstring(ResourcePath + L"Resources\\Models\\Kart\\KartLowPolyWC.obj"), _perPixelEffect, mattBlack, 2,&SWheelPreTransMat);
-	SWheelHub = new  Model(context, device, wstring(ResourcePath + L"Resources\\Models\\Kart\\KartLowPolyWC.obj"), _perPixelEffect, mattBlack, 3,&SWheelPreTransMat);
+	SWheel = new  Model(context, device, wstring(RESOURCE_PATH + L"Resources\\Models\\Kart\\KartLowPolyWC.obj"), _perPixelEffect, mattBlack, 2,&SWheelPreTransMat);
+	SWheelHub = new  Model(context, device, wstring(RESOURCE_PATH + L"Resources\\Models\\Kart\\KartLowPolyWC.obj"), _perPixelEffect, mattBlack, 3,&SWheelPreTransMat);
 	
 	//Load Driver Parts
 	XMMATRIX DriverPreTransMat = XMMatrixScaling(0.049 * scaleKart, 0.049 * scaleKart, 0.049 * scaleKart) * XMMatrixRotationX(XMConvertToRadians(-82)) * XMMatrixTranslation(-0.45 * scaleKart, 0.15 * scaleKart, 0.2 * scaleKart);
 	XMMATRIX HandsPreTransMat = DriverPreTransMat * XMMatrixTranslation(0, 0, -0.65) * XMMatrixRotationX(XMConvertToRadians(35));
 	Hands2KartMat = XMMatrixRotationX(XMConvertToRadians(-35)) * XMMatrixTranslation(0, 0, 0.65);
-	Driver = new  Model(context, device, wstring(ResourcePath + L"Resources\\Models\\Driver\\GTR_Driver3Smooth.obj"), _perPixelEffect, mattGrey, 5,&DriverPreTransMat);
-	Head = new  Model(context, device, wstring(ResourcePath + L"Resources\\Models\\Driver\\GTR_Driver3Smooth.obj"), _perPixelEffect, glossBlackReflection,  7, &DriverPreTransMat);
-	Shoes = new  Model(context, device, wstring(ResourcePath + L"Resources\\Models\\Driver\\GTR_Driver3SmoothFeet.obj"), _perPixelEffect, mattBlack, DEFAULT, &DriverPreTransMat);
-	Hands = new  Model(context, device, wstring(ResourcePath + L"Resources\\Models\\Driver\\GTR_Driver3SmoothHands.obj"), _perPixelEffect, mattGrey, DEFAULT, &HandsPreTransMat);
-	Legs = new  Model(context, device, wstring(ResourcePath + L"Resources\\Models\\Driver\\GTR_Driver3SmoothLegs.obj"), _perPixelEffect, mattGrey,  DEFAULT, &DriverPreTransMat);
+	Driver = new  Model(context, device, wstring(RESOURCE_PATH + L"Resources\\Models\\Driver\\GTR_Driver3Smooth.obj"), _perPixelEffect, mattGrey, 5,&DriverPreTransMat);
+	Head = new  Model(context, device, wstring(RESOURCE_PATH + L"Resources\\Models\\Driver\\GTR_Driver3Smooth.obj"), _perPixelEffect, glossBlackReflection,  7, &DriverPreTransMat);
+	Shoes = new  Model(context, device, wstring(RESOURCE_PATH + L"Resources\\Models\\Driver\\GTR_Driver3SmoothFeet.obj"), _perPixelEffect, mattBlack, DEFAULT, &DriverPreTransMat);
+	Hands = new  Model(context, device, wstring(RESOURCE_PATH + L"Resources\\Models\\Driver\\GTR_Driver3SmoothHands.obj"), _perPixelEffect, mattGrey, DEFAULT, &HandsPreTransMat);
+	Legs = new  Model(context, device, wstring(RESOURCE_PATH + L"Resources\\Models\\Driver\\GTR_Driver3SmoothLegs.obj"), _perPixelEffect, mattGrey,  DEFAULT, &DriverPreTransMat);
 
 }
 
@@ -353,10 +353,10 @@ Kart::~Kart()
 	//FMOD::System* FMSystem; Cleaned up in Scene
 	channel2->stop();
 	channel3->stop();
-	engine2->release();
+	/*engine2->release();
 	engine2 = nullptr;
 	engine3->release();
-	engine3 = nullptr;
+	engine3 = nullptr;*/
 
 
 }

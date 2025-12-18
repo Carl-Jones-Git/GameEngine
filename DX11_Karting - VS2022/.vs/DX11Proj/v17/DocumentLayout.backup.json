@@ -1,0 +1,503 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\DX11_Karting - VS2022\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\DynamicCube.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\DynamicCube.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Box.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Box.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Triangle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Terrain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Animation.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Animation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\BaseModel.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\DX11_Karting - VS2022\\Source\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|solutionrelative:Source\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Menu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\BlurUtility.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\BaseModel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Grid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Grid.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\ParticleSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Terrain.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\SkinnedModel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Triangle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\ShadowMap.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Model.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Kart.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\PlayerKart.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Model.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\ShadowMap.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\DX11_Karting - VS2022\\Source\\Sceneold2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Source\\Sceneold2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Flare.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\System.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Material.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Material.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F779B709-C566-4FEF-82F6-1E8D72DA7351}|DX11Proj.vcxproj|C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Flare.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 342,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DynamicCube.cpp",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\DynamicCube.cpp",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\DynamicCube.cpp",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\DynamicCube.cpp",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\DynamicCube.cpp",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-05T15:41:13.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DynamicCube.h",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\DynamicCube.h",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\DynamicCube.h",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\DynamicCube.h",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\DynamicCube.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAjwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-04T19:30:41.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Animation.cpp",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Animation.cpp",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\Animation.cpp",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Animation.cpp*",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\Animation.cpp*",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAFAAAACCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-04T19:25:02.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Triangle.cpp",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Triangle.cpp",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\Triangle.cpp",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Triangle.cpp",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\Triangle.cpp",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAjwF0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-04T17:57:24.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Terrain.cpp",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Terrain.cpp",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\Terrain.cpp",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Terrain.cpp",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\Terrain.cpp",
+              "ViewState": "AgIAAB8BAAAAAAAAAAAjwFUBAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-04T17:51:58.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Model.cpp",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Model.cpp",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\Model.cpp",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Model.cpp",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\Model.cpp",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAAwFQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-04T17:37:14.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "PlayerKart.h",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\PlayerKart.h",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\PlayerKart.h",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\PlayerKart.h",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\PlayerKart.h",
+              "ViewState": "AgIAACQAAAAAAAAAAAAuwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-04T17:26:52.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Kart.cpp",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Kart.cpp",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\Kart.cpp",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Kart.cpp",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\Kart.cpp",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAuwH0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-04T17:24:50.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Scene.cpp",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\DX11_Karting - VS2022\\Source\\Scene.cpp",
+              "RelativeDocumentMoniker": "Source\\Scene.cpp",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\DX11_Karting - VS2022\\Source\\Scene.cpp",
+              "RelativeToolTip": "Source\\Scene.cpp",
+              "ViewState": "AgIAAPUCAAAAAAAAAADwvwUDAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-04T17:15:22.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Menu.cpp",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Menu.cpp",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\Menu.cpp",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Menu.cpp",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\Menu.cpp",
+              "ViewState": "AgIAAOkAAAAAAAAAAADwv/kAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-04T17:15:02.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Grid.cpp",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Grid.cpp",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\Grid.cpp",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Grid.cpp",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\Grid.cpp",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAgwJcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-04T16:44:38.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BaseModel.h",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\BaseModel.h",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\BaseModel.h",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\BaseModel.h",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\BaseModel.h",
+              "ViewState": "AgIAADMAAAAAAAAAAAAswC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-04T15:29:17.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BaseModel.cpp",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\BaseModel.cpp",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\BaseModel.cpp",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\BaseModel.cpp",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\BaseModel.cpp",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAuwFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-04T17:14:29.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Box.h",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Box.h",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\Box.h",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Box.h*",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\Box.h*",
+              "ViewState": "AgIAAAwAAAAAAAAAAIAwwB8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-04T16:04:27.231Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Box.cpp",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Box.cpp",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\Box.cpp",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Box.cpp*",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\Box.cpp*",
+              "ViewState": "AgIAABIAAAAAAAAAAADwv6gAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-04T16:02:12.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ShadowMap.cpp",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\ShadowMap.cpp",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\ShadowMap.cpp",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\ShadowMap.cpp",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\ShadowMap.cpp",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAAwMQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-04T17:46:05.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Animation.h",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Animation.h",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\Animation.h",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Animation.h",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\Animation.h",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-04T19:24:49.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BlurUtility.cpp",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\BlurUtility.cpp",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\BlurUtility.cpp",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\BlurUtility.cpp",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\BlurUtility.cpp",
+              "ViewState": "AgIAAJsAAAAAAAAAAADwv6sAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-04T16:01:50.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ParticleSystem.cpp",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\ParticleSystem.cpp",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\ParticleSystem.cpp",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\ParticleSystem.cpp",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\ParticleSystem.cpp",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAAAKYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-04T18:05:31.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Grid.h",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Grid.h",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\Grid.h",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Grid.h",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\Grid.h",
+              "ViewState": "AgIAABoAAAAAAAAAAAAjwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-04T18:08:58.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Triangle.h",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Triangle.h",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\Triangle.h",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Triangle.h",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\Triangle.h",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAjwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-04T17:57:53.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SkinnedModel.cpp",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\SkinnedModel.cpp",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\SkinnedModel.cpp",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\SkinnedModel.cpp",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\SkinnedModel.cpp",
+              "ViewState": "AgIAAHgBAAAAAAAAAAAjwIIBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-04T17:58:27.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Terrain.h",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Terrain.h",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\Terrain.h",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Terrain.h",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\Terrain.h",
+              "ViewState": "AgIAABoAAAAAAAAAAAAjwCcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-04T17:59:34.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ShadowMap.h",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\ShadowMap.h",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\ShadowMap.h",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\ShadowMap.h",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\ShadowMap.h",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-04T17:13:14.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Sceneold2.cpp",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\DX11_Karting - VS2022\\Source\\Sceneold2.cpp",
+              "RelativeDocumentMoniker": "Source\\Sceneold2.cpp",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\DX11_Karting - VS2022\\Source\\Sceneold2.cpp",
+              "RelativeToolTip": "Source\\Sceneold2.cpp",
+              "ViewState": "AgIAACYFAAAAAAAAAAAMwDAFAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-04T17:08:39.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Model.h",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Model.h",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\Model.h",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Model.h",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\Model.h",
+              "ViewState": "AgIAADQAAAAAAAAAAAAgwDwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-04T15:58:54.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "xmemory",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory",
+              "ViewState": "AgIAAL0FAAAAAAAAAAAgwM0FAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-04T16:40:15.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Flare.cpp",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Flare.cpp",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\Flare.cpp",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Flare.cpp",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\Flare.cpp",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAgwKYAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-29T18:16:23.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "System.cpp",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\System.cpp",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\System.cpp",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\System.cpp",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\System.cpp",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAkwFQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-04T15:06:36.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Flare.h",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Flare.h",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\Flare.h",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Flare.h",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\Flare.h",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-29T18:21:28.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Material.h",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Material.h",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\Material.h",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Material.h",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\Material.h",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-29T18:21:53.231Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Material.cpp",
+              "DocumentMoniker": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Material.cpp",
+              "RelativeDocumentMoniker": "..\\Resources\\Libs\\Source\\Material.cpp",
+              "ToolTip": "C:\\Users\\Carl\\Documents\\GitHub\\GameEngine\\Resources\\Libs\\Source\\Material.cpp",
+              "RelativeToolTip": "..\\Resources\\Libs\\Source\\Material.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-29T18:22:15.91Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

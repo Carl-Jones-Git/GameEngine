@@ -254,7 +254,7 @@ HRESULT Terrain::init(ID3D11Device *device, ID3D11DeviceContext* context, int _w
 	linearDesc.MaxLOD = D3D11_FLOAT32_MAX;
 	linearDesc.ComparisonFunc = D3D11_COMPARISON_ALWAYS;
 
-	device->CreateSamplerState(&linearDesc, &anisoSampler);
+	device->CreateSamplerState(&linearDesc, &sampler);
 
 	// Dispose of local resources
 	grassHeightStage->Release();
@@ -332,15 +332,14 @@ Terrain::~Terrain()
 	if (vertices)
 		free(vertices);
 
-	if (anisoSampler)
-		anisoSampler->Release();
+
 }
 
 
 void Terrain::render(ID3D11DeviceContext *context, int instanceIndex ) {
 
-	context->PSSetConstantBuffers(0, 1, &cBufferModelGPU);
-	context->VSSetConstantBuffers(0, 1, &cBufferModelGPU);
+	context->PSSetConstantBuffers(0, 1, cBufferModelGPU.GetAddressOf());
+	context->VSSetConstantBuffers(0, 1, cBufferModelGPU.GetAddressOf());
 
 	// Validate object before rendering 
 	if (!context || !vertexBuffer )
@@ -355,17 +354,17 @@ void Terrain::render(ID3D11DeviceContext *context, int instanceIndex ) {
 		instances[instanceIndex].materials[0]->update(context);
 
 
-	if (anisoSampler) {
-		context->PSSetSamplers(0, 1, &anisoSampler);
+	if (sampler) {
+		context->PSSetSamplers(0, 1, sampler.GetAddressOf());
 	}
 
 	// Set Model vertex and index buffers for IA
-	ID3D11Buffer* vertexBuffers[] = { vertexBuffer };
+	ID3D11Buffer* vertexBuffers[] = { vertexBuffer.Get()};
 	UINT vertexStrides[] = { sizeof(ExtendedVertexStruct) };
 	UINT vertexOffsets[] = { 0 };
 
 	context->IASetVertexBuffers(0, 1, vertexBuffers, vertexStrides, vertexOffsets);
-	context->IASetIndexBuffer(indexBuffer, DXGI_FORMAT_R32_UINT, 0);
+	context->IASetIndexBuffer(indexBuffer.Get(), DXGI_FORMAT_R32_UINT, 0);
 
 	// Set primitive topology for IA
 	context->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);

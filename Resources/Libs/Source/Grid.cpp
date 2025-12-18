@@ -148,8 +148,8 @@ Grid::~Grid() {
 
 void Grid::render(ID3D11DeviceContext *context, int instanceIndex) {
 
-	context->PSSetConstantBuffers(0, 1, &cBufferModelGPU);
-	context->VSSetConstantBuffers(0, 1, &cBufferModelGPU);
+	context->PSSetConstantBuffers(0, 1, cBufferModelGPU.GetAddressOf());
+	context->VSSetConstantBuffers(0, 1, cBufferModelGPU.GetAddressOf());
 
 	// Validate object before rendering 
 	if (!context || !vertexBuffer )
@@ -165,17 +165,17 @@ void Grid::render(ID3D11DeviceContext *context, int instanceIndex) {
 	if (sampler) {
 
 		//context->PSSetShaderResources(0, numTextures, textures);
-		context->PSSetSamplers(0, 1, &sampler);
+		context->PSSetSamplers(0, 1, sampler.GetAddressOf());
 	}
 
 	// Set vertex and index buffers for IA
-	ID3D11Buffer* vertexBuffers[] = { vertexBuffer };
+	ID3D11Buffer* vertexBuffers[] = { vertexBuffer.Get()};
 	UINT vertexStrides[] = { sizeof(ExtendedVertexStruct) };
 	UINT vertexOffsets[] = { 0 };
 
 	context->IASetVertexBuffers(0, 1, vertexBuffers, vertexStrides, vertexOffsets);
 
-	context->IASetIndexBuffer(indexBuffer, DXGI_FORMAT_R32_UINT, 0);
+	context->IASetIndexBuffer(indexBuffer.Get(), DXGI_FORMAT_R32_UINT, 0);
 
 	// Set primitive topology for IA
 	context->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);

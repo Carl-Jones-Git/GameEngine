@@ -24,82 +24,110 @@
 #include <Includes.h>
 #include <d3d11_2.h>
 #include <DirectXMath.h>
+#include <wrl/client.h>
 #include "Effect.h"
 #include <Material.h>
 #include <Texture.h>
+#include <memory>
+#include <vector>
 
 #include <PxPhysicsAPI.h>
 #include <PxFiltering.h>
 
-#define MAX_MATERIALS 8
+using Microsoft::WRL::ComPtr;
+
+constexpr int MAX_MATERIALS = 8;
 
 struct Instance
 {
 	physx::PxRigidDynamic* dynamicPX = nullptr;
 	DirectX::XMMATRIX worldMatrix;
-	vector<std::shared_ptr < Material > >materials;
-	Instance(DirectX::XMMATRIX _worldMatrix, std::shared_ptr < Material > _material) {
-		worldMatrix = _worldMatrix;
-		if(_material) materials.push_back(_material);
-	}
-	Instance(DirectX::XMMATRIX _worldMatrix, vector<std::shared_ptr < Material >> _materials) {
-		worldMatrix = _worldMatrix;
-		for( int i = 0; i<_materials.size();i++)
-		 materials.push_back(_materials[i]);
-	}
+	std::vector<std::shared_ptr<Material>> materials;
 
+	explicit Instance(DirectX::XMMATRIX _worldMatrix, std::shared_ptr<Material> _material = nullptr)
+		: worldMatrix(_worldMatrix)
+	{
+		if (_material) {
+			materials.push_back(std::move(_material));
+		}
+	}
+	//Instance(DirectX::XMMATRIX _worldMatrix, std::shared_ptr < Material > _material) {
+	//	worldMatrix = _worldMatrix;
+	//	if (_material) materials.push_back(_material);
+	//}
+	//Instance(DirectX::XMMATRIX _worldMatrix, vector<std::shared_ptr < Material >> _materials) {
+	//	worldMatrix = _worldMatrix;
+	//	for (int i = 0; i < _materials.size(); i++)
+	//		materials.push_back(_materials[i]);
+	//}
+
+
+	Instance(DirectX::XMMATRIX _worldMatrix, std::vector<std::shared_ptr<Material>> _materials)
+		: worldMatrix(_worldMatrix), materials(std::move(_materials))
+	{
+	}
 };
 
 // Abstract base class to model mesh objects for rendering in DirectX
 class BaseModel {
-
 public:
-	int						meshNumber;
-	ID3D11Buffer			*vertexBuffer = nullptr;
-	ID3D11Buffer			*indexBuffer = nullptr;
-	shared_ptr<Effect>		effect = nullptr;
-	ID3D11SamplerState		*sampler = nullptr;
-	vector <Instance>		instances;
-	CBufferModel			*cBufferModelCPU = nullptr;
-	ID3D11Buffer			*cBufferModelGPU = nullptr;
-	bool					visible = true;
+	BaseModel(ID3D11Device* device, std::shared_ptr<Effect> _effect,
+		std::shared_ptr<Material> _material = nullptr, int _meshNumber = -1);
+	virtual ~BaseModel();
 
-public:
+	// Disable copy operations
+	BaseModel(const BaseModel&) = delete;
+	BaseModel& operator=(const BaseModel&) = delete;
 
-	BaseModel(ID3D11Device* device, shared_ptr<Effect> _effect, std::shared_ptr<Material> _material=nullptr, int _meshNumber = -1);
+	// Enable move operations
+	BaseModel(BaseModel&&) noexcept = default;
+	BaseModel& operator=(BaseModel&&) noexcept = default;
 
-	~BaseModel();
+	virtual void render(ID3D11DeviceContext* context, int instanceIndex = 0) = 0;
+	virtual HRESULT init(ID3D11Device* device) = 0;
 
-	virtual void render(ID3D11DeviceContext *context,int instanceIndex = 0) = 0;
-	virtual HRESULT init(ID3D11Device *device) = 0;
-	void update(ID3D11DeviceContext *context, int i=0);
+	void update(ID3D11DeviceContext* context, int i = 0);
+	void renderInstances(ID3D11DeviceContext* context);
 
-	void renderInstances(ID3D11DeviceContext* context)
-	{
-		for (int i = 0; i < instances.size(); i++)
-		{
-			if (instances[i].dynamicPX)
-			{
-				physx::PxTransform modelT = instances[i].dynamicPX->getGlobalPose();
-				XMVECTOR quart = DirectX::XMLoadFloat4(&XMFLOAT4(modelT.q.x, modelT.q.y, modelT.q.z, modelT.q.w));
-				instances[i].worldMatrix = (XMMatrixRotationQuaternion(quart) * XMMatrixTranslation(modelT.p.x, modelT.p.y + 0.2, modelT.p.z));
-			}
-			update(context, i);
-			render(context, i);
-		}
-		update(context, 0);
-	}
+	// Material management
+	void setMaterial(ID3D11Device* device, std::shared_ptr<Material> _material,
+		int instanceIndex = 0, int materialIndex = 0);
+	std::shared_ptr<Material> getMaterial(int instanceIndex = 0, int materialIndex = 0) const { return instances[instanceIndex].materials[materialIndex]; };
+	vector<std::shared_ptr < Material > >getMaterials(int instanceIndex = 0) const { return instances[instanceIndex].materials; }
 
-	void setMaterial(ID3D11Device* device, std::shared_ptr<Material>_material, int instanceIndex = 0, int materialIndex = 0);
-	std::shared_ptr<Material> getMaterial(int instanceIndex = 0, int materialIndex = 0) {return instances[instanceIndex].materials[materialIndex];};
-	vector<std::shared_ptr < Material > >getMaterials(int instanceIndex = 0) { return instances[instanceIndex].materials; }
-	void setEffect(shared_ptr<Effect> _effect){ effect = _effect;};// effect must have the same input layout as the model
-	shared_ptr<Effect>  getEffect() { return  effect; };
-	void initCBuffer(ID3D11Device *device);
-	void createDefaultLinearSampler(ID3D11Device *device);
-	void setWorldMatrix(DirectX::XMMATRIX _worldMatrix,int n=0);
-	DirectX::XMMATRIX getWorldMatrix(int n=0){ return instances[n].worldMatrix; };
-	void setVisible(bool vis) { visible = vis; };
-	bool getVisible() { return visible; };
-	void setSampler(ID3D11SamplerState* _sampler) { if (sampler)sampler->Release();sampler = _sampler; };
+
+	// Effect management
+	void setEffect(std::shared_ptr<Effect> _effect) { effect = std::move(_effect); }
+	std::shared_ptr<Effect> getEffect() const { return effect; }
+
+	// World matrix management
+	void setWorldMatrix(DirectX::XMMATRIX _worldMatrix, int n = 0);
+	DirectX::XMMATRIX getWorldMatrix(int n = 0) const { return instances[n].worldMatrix; };
+
+	// Visibility
+	void setVisible(bool vis) { visible = vis; }
+	bool getVisible() const { return visible; }
+
+	// Sampler management
+	void setSampler(ID3D11SamplerState* _sampler) { if (sampler)sampler->Release(); sampler = _sampler; };
+
+	// Instance management
+	void setDynamicPX(int _instance, physx::PxRigidDynamic* _dynamicPX = nullptr) { instances[_instance].dynamicPX = _dynamicPX; };
+	int getNumInstances() { return instances.size(); };
+	void addInstance(DirectX::XMMATRIX _worldMatrix, std::shared_ptr < Material > _material) { instances.push_back(Instance(_worldMatrix, _material)); };
+	void addInstance(DirectX::XMMATRIX _worldMatrix, vector<std::shared_ptr < Material >> _materials) { instances.push_back(Instance(_worldMatrix, _materials)); };
+
+protected:
+	void initCBuffer(ID3D11Device* device);
+	void createDefaultLinearSampler(ID3D11Device* device);
+	std::vector<Instance> instances;
+	int meshNumber;
+	ComPtr<ID3D11Buffer> vertexBuffer;
+	ComPtr<ID3D11Buffer> indexBuffer;
+	std::shared_ptr<Effect> effect;
+	ComPtr<ID3D11SamplerState> sampler;
+	std::unique_ptr<CBufferModel, decltype(&_aligned_free)> cBufferModelCPU{ nullptr, &_aligned_free };
+	ComPtr<ID3D11Buffer> cBufferModelGPU;
+
+	bool visible = true;
 };

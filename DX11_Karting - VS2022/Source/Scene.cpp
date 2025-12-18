@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-// Master include file - common practice in large projects
+// Master include file
 #include <Includes.h>
 #include <string.h>
 #include <d3d11shader.h>
@@ -45,18 +45,26 @@
 
 // Resource path configuration based on input method
 #ifdef PC_BUILD
-wstring ResourcePath = L"..\\";
-string ShaderPath = "Shaders\\cso\\";
+extern const wstring RESOURCE_PATH = L"..\\";
+extern const string SHADER_PATH = "Shaders\\cso\\";
 #else
-wstring ResourcePath = L"Assets\\";
-string ShaderPath = "";
+extern const wstring RESOURCE_PATH = L"Assets\\";
+extern const string SHADER_PATH = "";
 #endif 
 
-// Global variables for skin rendering parameters
-float gUseTSD = 1.0f;
-float gLightDistance = 10.0f;
-float gLightVec[3] = { 0.0f, 10.0f, 10.0f };
-float gRed = 1.0f;
+namespace {
+
+	// Start/finish position for race track
+	const XMVECTOR startFinishPos = XMVectorSet(36, 0.0f, 0.7f, 1.0f);
+	constexpr float startDist = 10.0f;
+	constexpr float finishDist = 10.0f;
+
+	// Global variables for skin rendering parameters
+	float g_toggleSubsurfaceScatter = 1.0f;// Toggle SS on/off with 't'
+	float g_lightDistance = 10.0f; // Move light in towards face with 'i', and out away from face with 'o'
+	float g_lightVec[3] = { 0.0f, 10.0f, 10.0f };
+	float g_subsurfaceScatter = 1.0f;// Magnitude of SS increase with 'l' decrease with 'k'
+}
 
 // External PhysX variables (shared across modules)
 extern bool gVehicleOrderComplete;
@@ -70,27 +78,14 @@ extern PxMaterial* mMaterial;
 extern PxMaterial* grassMaterial;
 extern PxRigidStatic* gDrivableGroundPlane;
 
-// Constants for PhysX box setup
-const float boxHalfSize = 0.5;
-const physx::PxU32 boxSize = 5;
-const int S = (boxSize * (boxSize + 1.0)) / 2;
-
-// Start/finish position for race track
-XMVECTOR startFinishPos = XMVectorSet(36, 0.0f, 0.7f, 1.0f);
-float startDist = 10.0f;
-float finishDist = 10.0f;
-
-float terrainScale = 2.0;
-bool renderFrame = false;  // Control flag for rendering
-
 //Convert Model to PhysX Shape
-void Scene::toPhysX(shared_ptr < Model> model, XMVECTOR R, XMVECTOR T, PhysXMode type, int instance)
+void Scene::convertModelToPhysX(shared_ptr < Model> model, XMVECTOR R, XMVECTOR T, PhysXMode type, int instance)
 {
 	PxMaterial* material = mPhysics->createMaterial(0.0f, 0.0f, 0.6f);
-	if (type == DRIVEABLE)
+	if (type == PhysXMode::Driveable)
 		material = mPhysics->createMaterial(0.6f, 0.4f, 0.6f);
 	//Get Vertices
-	if (type == STATIC || type == DRIVEABLE)//Static
+	if (type == PhysXMode::Static || type == PhysXMode::Driveable)//Static
 	{
 		PxVec3* verts = (PxVec3*)malloc(sizeof(PxVec3) * model->getNumVert());
 		PxTransform t(PxVec3(0, 0, 0), PxQuat(XMConvertToRadians(0), PxVec3(0, 1, 0)));
@@ -117,7 +112,7 @@ void Scene::toPhysX(shared_ptr < Model> model, XMVECTOR R, XMVECTOR T, PhysXMode
 		PxFilterData simFilterData(COLLISION_FLAG_OBSTACLE, COLLISION_FLAG_CHASSIS, 0, 0);
 		shape->setSimulationFilterData(simFilterData);
 
-		if (type == DRIVEABLE)//make driveable
+		if (type == PhysXMode::Driveable)//make driveable
 		{
 			PxFilterData qryFilterData;
 			setupDrivableSurface(qryFilterData);
@@ -149,7 +144,7 @@ void Scene::toPhysX(shared_ptr < Model> model, XMVECTOR R, XMVECTOR T, PhysXMode
 		PxFilterData simFilterData(COLLISION_FLAG_OBSTACLE, COLLISION_FLAG_GROUND | COLLISION_FLAG_CHASSIS | COLLISION_FLAG_OBSTACLE, 0, 0);
 		shape->setSimulationFilterData(simFilterData);
 		//Add the mesh to the PhysX Scene
-		model->instances[instance].dynamicPX = r;
+		model->setDynamicPX(instance,r);
 
 		mScene->addActor(*r);
 		free(verts);
@@ -158,10 +153,10 @@ void Scene::toPhysX(shared_ptr < Model> model, XMVECTOR R, XMVECTOR T, PhysXMode
 
 
 
-// Load models from XML - demonstrates external asset configuration
-void Scene::load(string path, shared_ptr<Effect> effect, float mapScale, float LHCoords)
+// Load Scene Models from XML - demonstrates external asset configuration
+void Scene::loadScene(const string& path, shared_ptr<Effect> effect, float mapScale, float LHCoords)
 {
-	models.clear();
+	m_sceneModels.clear();
 	ti::XMLDocument doc;
 	doc.LoadFile(path.c_str());
 	if (doc.Error())
@@ -170,16 +165,16 @@ void Scene::load(string path, shared_ptr<Effect> effect, float mapScale, float L
 	{
 		ti::XMLElement* scene = doc.RootElement();
 		ti::XMLElement* model = scene->FirstChildElement("Model");
-		models.clear();
+		m_sceneModels.clear();
 
-		if (model) // Load models if available
-			loadModel(model, &models, effect);
+		if (model) // Load m_sceneModels if available
+			loadModel(model, &m_sceneModels, effect);
 
 		// Special handling for specific model types
-		if (models.size() > 1)
+		if (m_sceneModels.size() > 1)
 		{
 			// Model[0] is assumed to be the Racing Line
-			models[0]->getMaterial(0)->setEmissive(XMFLOAT4(1, 1, 1, 1));
+			m_sceneModels[0]->getMaterial(0)->setEmissive(XMFLOAT4(1, 1, 1, 1));
 
 			// Custom sampler for racing line arrows
 			D3D11_SAMPLER_DESC linearDesc;
@@ -195,14 +190,14 @@ void Scene::load(string path, shared_ptr<Effect> effect, float mapScale, float L
 			linearDesc.ComparisonFunc = D3D11_COMPARISON_ALWAYS;
 
 			ID3D11SamplerState* sampler;
-			system->getDevice()->CreateSamplerState(&linearDesc, &sampler);
-			models[0]->setSampler(sampler);
+			m_system->getDevice()->CreateSamplerState(&linearDesc, &sampler);
+			m_sceneModels[0]->setSampler(sampler);
 
 			// Model[1] is assumed to be the boundary fence
 			shared_ptr<Effect> effectA2C = make_shared<Effect>(effect);
-			effectA2C->setCullMode(system->getDevice(), D3D11_CULL_NONE);
-			effectA2C->setAlphaToCoverage(system->getDevice(), TRUE);
-			models[1]->setEffect(effectA2C);
+			effectA2C->setCullMode(m_system->getDevice(), D3D11_CULL_NONE);
+			effectA2C->setAlphaToCoverage(m_system->getDevice(), TRUE);
+			m_sceneModels[1]->setEffect(effectA2C);
 		}
 	}
 }
@@ -211,8 +206,8 @@ void Scene::load(string path, shared_ptr<Effect> effect, float mapScale, float L
 void Scene::loadModel(ti::XMLElement* model, vector<shared_ptr<Model>>* modelList,
 	shared_ptr<Effect> effect, float mapScale, float LHCoords)
 {
-	ID3D11DeviceContext* context = system->getDeviceContext();
-	ID3D11Device* device = system->getDevice();
+	ID3D11DeviceContext* context = m_system->getDeviceContext();
+	ID3D11Device* device = m_system->getDevice();
 
 	while (model)
 	{
@@ -225,7 +220,7 @@ void Scene::loadModel(ti::XMLElement* model, vector<shared_ptr<Model>>* modelLis
 		XMVECTOR pos = vecFromStr(data);
 		pos = DirectX::XMVectorSetX(pos, DirectX::XMVectorGetX(pos) * mapScale);
 		pos = DirectX::XMVectorSetZ(pos, DirectX::XMVectorGetZ(pos) * mapScale);
-		pos = DirectX::XMVectorSetY(pos, grass->CalculateYValueWorld(
+		pos = DirectX::XMVectorSetY(pos, m_terrain->CalculateYValueWorld(
 			DirectX::XMVectorGetX(pos), DirectX::XMVectorGetZ(pos)) + DirectX::XMVectorGetY(pos));
 
 		XMVECTOR rot = vecFromStr(data);
@@ -242,7 +237,7 @@ void Scene::loadModel(ti::XMLElement* model, vector<shared_ptr<Model>>* modelLis
 
 		if (physX.compare("Dynamic") == 0)
 		{
-			// Dynamic models cannot be scaled in PhysX, so pre-transform vertices
+			// Dynamic m_sceneModels cannot be scaled in PhysX, so pre-transform vertices
 			XMMATRIX PreTransScaleMat = XMMatrixScaling(DirectX::XMVectorGetX(scale),
 				DirectX::XMVectorGetY(scale),
 				DirectX::XMVectorGetZ(scale));
@@ -260,7 +255,7 @@ void Scene::loadModel(ti::XMLElement* model, vector<shared_ptr<Model>>* modelLis
 			XMVECTOR Q = XMQuaternionRotationMatrix(rotM);
 
 			// Create dynamic PhysX model
-			toPhysX((*modelList)[modelList->size() - 1], Q, pos, DYNAMIC);
+			convertModelToPhysX((*modelList)[modelList->size() - 1], Q, pos, PhysXMode::Dynamic);
 		}
 		else
 		{
@@ -279,9 +274,9 @@ void Scene::loadModel(ti::XMLElement* model, vector<shared_ptr<Model>>* modelLis
 			(*modelList)[modelList->size() - 1]->update(context);
 
 			if (physX.compare("Static") == 0)
-				toPhysX((*modelList)[modelList->size() - 1], XMVectorZero(), XMVectorZero(), STATIC);
+				convertModelToPhysX((*modelList)[modelList->size() - 1], XMVectorZero(), XMVectorZero(), PhysXMode::Static);
 			else if (physX.compare("Driveable") == 0)
-				toPhysX((*modelList)[modelList->size() - 1], XMVectorZero(), XMVectorZero(), DRIVEABLE);
+				convertModelToPhysX((*modelList)[modelList->size() - 1], XMVectorZero(), XMVectorZero(), PhysXMode::Driveable);
 		}
 
 		cout << "Loaded:" << pathName.string() << endl;
@@ -294,7 +289,7 @@ void Scene::loadModel(ti::XMLElement* model, vector<shared_ptr<Model>>* modelLis
 			XMVECTOR posI = vecFromStr(data);
 			posI = DirectX::XMVectorSetX(posI, DirectX::XMVectorGetX(posI) * mapScale);
 			posI = DirectX::XMVectorSetZ(posI, DirectX::XMVectorGetZ(posI) * mapScale);
-			posI = DirectX::XMVectorSetY(posI, grass->CalculateYValueWorld(
+			posI = DirectX::XMVectorSetY(posI, m_terrain->CalculateYValueWorld(
 				DirectX::XMVectorGetX(posI), DirectX::XMVectorGetZ(posI)) + DirectX::XMVectorGetY(posI));
 
 			XMVECTOR rotI = vecFromStr(data);
@@ -308,30 +303,30 @@ void Scene::loadModel(ti::XMLElement* model, vector<shared_ptr<Model>>* modelLis
 			if (physX.compare("Dynamic") == 0)
 			{
 				XMVECTOR QI = XMQuaternionRotationMatrix(rotMI);
-				(*modelList)[modelList->size() - 1]->instances.push_back(
-					Instance(rotMI * XMMatrixTranslation(DirectX::XMVectorGetX(posI),
+				(*modelList)[modelList->size() - 1]->addInstance(
+					rotMI * XMMatrixTranslation(DirectX::XMVectorGetX(posI),
 						DirectX::XMVectorGetY(posI),
 						DirectX::XMVectorGetZ(posI)),
-						(*modelList)[modelList->size() - 1]->getMaterials(0)));
+						(*modelList)[modelList->size() - 1]->getMaterials(0));
 
-				toPhysX((*modelList)[modelList->size() - 1], QI, posI, DYNAMIC,
-					(*modelList)[modelList->size() - 1]->instances.size() - 1);
+				convertModelToPhysX((*modelList)[modelList->size() - 1], QI, posI, PhysXMode::Dynamic,
+					(*modelList)[modelList->size() - 1]->getNumInstances() - 1);
 			}
 			else
 			{
-				(*modelList)[modelList->size() - 1]->instances.push_back(
-					Instance(rotMI * XMMatrixScaling(DirectX::XMVectorGetX(scaleI),
+				(*modelList)[modelList->size() - 1]->addInstance(
+					rotMI * XMMatrixScaling(DirectX::XMVectorGetX(scaleI),
 						DirectX::XMVectorGetY(scaleI),
 						DirectX::XMVectorGetZ(scaleI)) *
 						XMMatrixTranslation(DirectX::XMVectorGetX(posI),
 							DirectX::XMVectorGetY(posI),
 							DirectX::XMVectorGetZ(posI)),
-						(*modelList)[modelList->size() - 1]->getMaterials(0)));
+						(*modelList)[modelList->size() - 1]->getMaterials(0));
 
 				if (physX.compare("Static") == 0)
-					toPhysX((*modelList)[modelList->size() - 1], XMVectorZero(), XMVectorZero(), STATIC);
+					convertModelToPhysX((*modelList)[modelList->size() - 1], XMVectorZero(), XMVectorZero(), PhysXMode::Static);
 				else if (physX.compare("Driveable") == 0)
-					toPhysX((*modelList)[modelList->size() - 1], XMVectorZero(), XMVectorZero(), DRIVEABLE);
+					convertModelToPhysX((*modelList)[modelList->size() - 1], XMVectorZero(), XMVectorZero(), PhysXMode::Driveable);
 			}
 			modelInstance = modelInstance->NextSiblingElement("Instance");
 		}
@@ -341,96 +336,211 @@ void Scene::loadModel(ti::XMLElement* model, vector<shared_ptr<Model>>* modelLis
 
 // Viewport setup for DirectX
 HRESULT Scene::rebuildViewport() {
-	ID3D11DeviceContext* context = system->getDeviceContext();
+	ID3D11DeviceContext* context = m_system->getDeviceContext();
 	if (!context)
 		return E_FAIL;
 
 	// Bind render target and depth/stencil views
-	ID3D11RenderTargetView* renderTargetView = system->getBackBufferRTV();
-	context->OMSetRenderTargets(1, &renderTargetView, system->getDepthStencil());
+	ID3D11RenderTargetView* renderTargetView = m_system->getBackBufferRTV();
+	context->OMSetRenderTargets(1, &renderTargetView, m_system->getDepthStencil());
 
-	// Setup viewport for main window
+	// Setup m_viewport for main window
 	RECT clientRect;
-	GetClientRect(wndHandle, &clientRect);
-	viewport.TopLeftX = 0;
-	viewport.TopLeftY = 0;
-	viewport.Width = static_cast<FLOAT>(clientRect.right - clientRect.left);
-	viewport.Height = static_cast<FLOAT>(clientRect.bottom - clientRect.top);
-	viewport.MinDepth = 0.0f;
-	viewport.MaxDepth = 1.0f;
+	GetClientRect(m_wndHandle, &clientRect);
+	m_viewport.TopLeftX = 0;
+	m_viewport.TopLeftY = 0;
+	m_viewport.Width = static_cast<FLOAT>(clientRect.right - clientRect.left);
+	m_viewport.Height = static_cast<FLOAT>(clientRect.bottom - clientRect.top);
+	m_viewport.MinDepth = 0.0f;
+	m_viewport.MaxDepth = 1.0f;
 
 	// Set Viewport
-	context->RSSetViewports(1, &viewport);
+	context->RSSetViewports(1, &m_viewport);
 
 	return S_OK;
 }
 
 // Main resource setup for the application
 HRESULT Scene::initialiseSceneResources() {
-	ID3D11DeviceContext* context = system->getDeviceContext();
-	ID3D11Device* device = system->getDevice();
+	ID3D11DeviceContext* context = m_system->getDeviceContext();
+	ID3D11Device* device = m_system->getDevice();
 	if (!device)
 		return E_FAIL;
 
-	// Set up viewport for the main window
+	// Set up m_viewport for the main window
 	rebuildViewport();
 
 	// Draw intro screen while loading
-	if (MainMenuState == Intro)
+	if (m_menuState == MenuState::Intro)
 	{
-		menu = new Menu(system);
-		menu->init(&netMgr);
-		menu->renderIntro();
+		m_menu = make_unique<Menu>(m_system.get());
+		m_menu->init(&m_networkManager);
+		m_menu->renderIntro();
 	}
 
-	// Initialize FMOD audio system
-	FMOD_RESULT result = FMOD::System_Create(&FMSystem);
+	// Initialize FMOD audio m_system
+	FMOD_RESULT result = FMOD::System_Create(&m_audioSystem);
 	if (result != FMOD_OK)
 	{
-		FMSystem->release();
-		delete FMSystem;
-		FMSystem = nullptr;
-		cout << "cant create sound system" << endl;
+		m_audioSystem->release();
+		delete m_audioSystem;
+		m_audioSystem = nullptr;
+		cout << "cant create sound m_system" << endl;
 	}
 
-	result = FMSystem->init(32, FMOD_INIT_NORMAL, nullptr);
+	result = m_audioSystem->init(32, FMOD_INIT_NORMAL, nullptr);
 	if (result != FMOD_OK)
 	{
-		FMSystem->release();
-		delete FMSystem;
-		FMSystem = nullptr;
+		m_audioSystem->release();
+		delete m_audioSystem;
+		m_audioSystem = nullptr;
 		cout << "cant init sound" << endl;
 	}
 
 	// Initialize PhysX
-	PXScene = new PhysXKarting();
+	m_physXScene = make_unique< PhysXKarting>();
 
 	// Create shadow map
 	XMVECTOR lightVec = XMVectorSet(-124.0, 50, 60, 1.0);
-	shadowMap = new ShadowMap(device, lightVec, 4096);
+	m_shadowMap = make_unique<ShadowMap>(device, lightVec, 4096);
 
 	// Initialize post-processing effects
-	bloom = new BlurUtility(system->getDevice(), context, 300, 240);
-	skinSim = new SkinUtility(system->getDevice(), context, 1068, 712);
+	m_bloomUtility = make_unique<BlurUtility>(m_system->getDevice(), context, 300, 240);
+	m_skinSimulationUtility = make_unique <SkinUtility>(m_system->getDevice(), context, 1068, 712);
 
 	// Setup main rendering effects
 	shared_ptr<Effect> perPixelLightingEffect(new Effect(device, "Shaders\\cso\\per_pixel_lighting_vs.cso",
 		"Shaders\\cso\\per_pixel_lighting_ps.cso",
 		extVertexDesc, ARRAYSIZE(extVertexDesc)));
 
-	shared_ptr<Effect> reflectionMappingEffect(new Effect(device, "Shaders\\cso\\reflection_map_vs.cso",
-		"Shaders\\cso\\reflection_map_ps.cso",
+	// Setup subsurface scattering and load face model
+	setupSkinEffectAndLoadFaceModel(context, device);
+
+	// Setup skyBox and skyBoxEffect
+	setupSkyBoxAndSkyBoxEffect(context, device);
+
+	// Setup water and water effect (based on Nvidia Ocean shaders)
+	setupWaterAndWaterEffect(context,device);
+
+	// Create box material for PhysX boxes
+	shared_ptr<Material> boxMaterial(new Material(device, XMFLOAT4(-1.0, -1.0, 1.0, 1.0)));
+	boxMaterial->setSpecular(XMFLOAT4(0.3, 0.3, 0.3, 0.01));
+	boxMaterial->setUsage(DIFFUSE_MAP);
+	boxMaterial->setTexture(Texture(device, L"..\\Resources\\Textures\\WoodCrate02.dds").getShaderResourceView());
+	// Load box model as template for each box in stack
+	m_physXBox = make_unique <Box>(device, perPixelLightingEffect, boxMaterial);
+
+	// Foliage and terrain setup
+
+	// Terrain setup - loads a heightMap  and colour textures and creates a Terrain. The 
+	// texture colour(from grassDiffuse) is used to define which parts are track and which 
+	// parts are grass. The terrain pixel shader is complex. Where the terrain is track, 
+	// bump mapping is applied (groundNormals) and the colour comes from the asphaltDiffuse 
+	// texture. The grass parts are rendered with a shell shader technique that uses noiseMap 
+	// to define where blades of grass will form and the colour comes from grassColour. 
+	// Where the terrain is underwater the grass fades to dirt.  
+
+	// Setup terrain and terrain effect
+	setupTerrainAndTerrainEffect(context, device);
+
+	// Load AI Kart navigation points also used for racing line assist
+	m_navigationPoints = make_unique<NavPoints>();
+	m_navigationPoints->load("..\\Resources\\Levels\\NavSet01.xml");
+
+	shared_ptr<Effect> emissiveEffect(new Effect(device, "Shaders\\cso\\per_pixel_lighting_vs.cso",
+		"Shaders\\cso\\emissive_ps.cso",
 		extVertexDesc, ARRAYSIZE(extVertexDesc)));
 
-	// SkyBox effect with specialized render states
+	// Load orb template for rendering at origin of point lights
+	loadOrbTemplate(context, device, emissiveEffect);
+
+	// Load Skinned models and skinning effect
+	loadSkinnedModels(context, device);
+
+	// Setup random trees and tree effect
+	setupRandomTreesAndTreeEffect(context, device);
+
+	// Setup particle systems and effects for kart wheels
+	setupParticleSystemsAndEffects(context, device);
+
+	// Setup lens flares and flare effect
+	setupLensFlaresAndFlareEffect(device);
+
+	// Initialize PhysX karts scene
+	initKartsAndPhysXScene(context,device,perPixelLightingEffect,emissiveEffect);
+
+	// Setup main camera
+	m_mainCamera = make_unique <FirstPersonCamera>(device, XMVectorSet(-9.0, 2.0, 17.0, 1.0f),
+		XMVectorSet(0.0f, 1.0f, 0.0f, 1.0f),
+		XMVectorSet(0.8f, 0.0f, -1.0f, 1.0f));
+
+	m_mainCamera->setFlying(false);
+
+	// Setup light constant buffers
+	setupLightsConstantBuffers(context,device);
+	// Scene constant buffer setup
+	setupSceneConstantBuffers(context, device);
+
+	// Enable main m_menu
+	m_menuState = MenuState::MainMenu;
+
+	return S_OK;
+}
+
+// Setup skyBox and skyBoxEffect
+HRESULT Scene::setupSkyBoxAndSkyBoxEffect(ID3D11DeviceContext* context, ID3D11Device* device)
+{
+	//Setup SkyBox effect with specialized render states
 	shared_ptr<Effect> skyBoxEffect(new Effect(device, "Shaders\\cso\\sky_box_vs.cso",
 		"Shaders\\cso\\sky_box_ps.cso",
 		extVertexDesc, ARRAYSIZE(extVertexDesc)));
 	skyBoxEffect->setCullMode(device, D3D11_CULL_FRONT);
 	skyBoxEffect->setDepthFunction(device, D3D11_COMPARISON_LESS_EQUAL);
 
+	// Setup cube environment texture
+	m_cubeDayTexture = make_unique< Texture>(device, L"..\\Resources\\Textures\\grassenvmap1024.dds");
+	ID3D11ShaderResourceView* cubeDayTextureSRV = m_cubeDayTexture->getShaderResourceView();
+
+	// Bind cube texture to shader slot 6 (used by multiple effects)
+	context->PSSetShaderResources(6, 1, &cubeDayTextureSRV);
+
+	// Create skybox
+	shared_ptr<Material> skyBoxMaterial(new Material(device));
+	skyBoxMaterial->setTexture(Texture(device, L"..//Resources\\Textures\\nightenvmap1024.dds").getShaderResourceView());
+	m_skyBox = make_unique<Box>(device, skyBoxEffect, skyBoxMaterial);
+	m_skyBox->setWorldMatrix(m_skyBox->getWorldMatrix() * XMMatrixScaling(1000, 1000, 1000));
+	m_skyBox->update(context);
+	return S_OK;
+}
+
+// Setup water and water effect (based on Nvidia Ocean shaders)
+HRESULT Scene::setupWaterAndWaterEffect(ID3D11DeviceContext* context, ID3D11Device* device)
+{
+	// Create dynamic cube map for rendering relections in water
+	m_dynamicCubeMap = make_unique<DynamicCube>(device, context, XMVectorSet(-54.0, 1.0, 66.0, 1), 512);
+	m_dynamicCubeMap->updateCubeCameras(context, XMVectorSet(-54.0, 0.0, 66.0, 1));
+	ID3D11ShaderResourceView* dynamicCubeMapSRV = m_dynamicCubeMap->getSRV();
+	context->PSSetShaderResources(6, 1, &dynamicCubeMapSRV);
+	// Create water material
+	shared_ptr<Material> waterMaterial(new Material(device));
+	waterMaterial->setTexture(Texture(device, L"..\\Resources\\Textures\\Waves.dds").getShaderResourceView());
+	// Load water shaders and create water effect
+	shared_ptr<Effect> waterEffect(new Effect(device, "Shaders\\cso\\ocean_vs.cso",
+		"Shaders\\cso\\ocean_ps.cso",
+		extVertexDesc, ARRAYSIZE(extVertexDesc)));
+	// Create water as a grid
+	m_water = make_unique<Grid>(10, 10, device, waterEffect, waterMaterial);
+	m_water->setWorldMatrix(XMMatrixScaling(3.0, 0.3, 3.0) *
+		XMMatrixTranslation(-68.0, 0.9, 54.0));
+	m_water->update(context);
+	return S_OK;
+}
+
+// Setup subsurface scattering and load face model
+HRESULT Scene::setupSkinEffectAndLoadFaceModel(ID3D11DeviceContext* context, ID3D11Device* device)
+{
 	// Skin rendering effect
-	skinEffect = make_shared<Effect>(device, "Shaders\\cso\\per_pixel_lighting_vs.cso",
+	m_skinEffect = make_shared<Effect>(device, "Shaders\\cso\\per_pixel_lighting_vs.cso",
 		"Shaders\\cso\\basic_skin_ps.cso",
 		extVertexDesc, ARRAYSIZE(extVertexDesc));
 
@@ -446,64 +556,52 @@ HRESULT Scene::initialiseSceneResources() {
 	shared_ptr<Material> skinMat(new Material(device));
 	skinMat->setSpecular(XMFLOAT4(1.0, 1.0, 1.0, 1.0));
 	skinMat->setTextures(faceTextureArray, 3);
-	skinEffect->setCullMode(device, D3D11_CULL_NONE);
+	m_skinEffect->setCullMode(device, D3D11_CULL_NONE);
 
-	face = new Model(context, device, wstring(L"..\\Resources\\Models\\Face\\Peter2.3ds"), skinEffect, skinMat);
-	face->setWorldMatrix(XMMatrixScaling(0.03, 0.03, 0.03) *
+	m_faceModel = make_unique <Model>(context, device, wstring(L"..\\Resources\\Models\\Face\\Peter2.3ds"), m_skinEffect, skinMat);
+	m_faceModel->setWorldMatrix(XMMatrixScaling(0.03, 0.03, 0.03) *
 		XMMatrixRotationZ(XMConvertToRadians(-2)) *
 		XMMatrixTranslation(-0.3, 5.2, 1));
-	face->update(context);
+	m_faceModel->update(context);
+	return S_OK;
+}
 
-	// Setup cube environment texture
-	cubeDayTexture = new Texture(device, L"..\\Resources\\Textures\\grassenvmap1024.dds");
-	ID3D11ShaderResourceView* cubeDayTextureSRV = cubeDayTexture->getShaderResourceView();
+// Load orb template for rendering at origin of point lights
+HRESULT Scene::loadOrbTemplate(ID3D11DeviceContext* context, ID3D11Device* device, shared_ptr <Effect> emissiveEffect)
+{
+	shared_ptr<Material> lightMaterial(new Material(device));
+	shared_ptr<Material> redMat(new Material(device, XMFLOAT4(1.0, 0.0, 0.0, 1.0)));
+	redMat->setDiffuse(XMFLOAT4(1.0, 0.0, 0.0, 1.0));
+	redMat->setSpecular(XMFLOAT4(1.0, 0.0, 0.0, 1.0));
 
-	// Bind cube texture to shader slot 6 (used by multiple effects)
-	context->PSSetShaderResources(6, 1, &cubeDayTextureSRV);
+	lightMaterial->setTexture(Texture(device, L"..\\Resources\\Textures\\orb.tif").getShaderResourceView());
+	lightMaterial->setUsage(EMISSIVE_MAP);
 
-	// Create skybox
-	shared_ptr<Material> skyBoxMaterial(new Material(device));
-	skyBoxMaterial->setTexture(Texture(device, L"..//Resources\\Textures\\nightenvmap1024.dds").getShaderResourceView());
-	skyBox = new Box(device, skyBoxEffect, skyBoxMaterial);
-	skyBox->setWorldMatrix(skyBox->getWorldMatrix() * XMMatrixScaling(1000, 1000, 1000));
-	skyBox->update(context);
+	m_lightOrbTemplate = make_unique <Model>(context, device, wstring(L"..\\Resources\\Models\\sphere.obj"), emissiveEffect, lightMaterial, 0);
 
-	// Setup water rendering
-	dynamicCubeMap = new DynamicCube(device, context, XMVectorSet(-54.0, 1.0, 66.0, 1), 512);
-	dynamicCubeMap->updateCubeCameras(context, XMVectorSet(-54.0, 0.0, 66.0, 1));
-	ID3D11ShaderResourceView* dynamicCubeMapSRV = dynamicCubeMap->getSRV();
-	context->PSSetShaderResources(6, 1, &dynamicCubeMapSRV);
+	XMMATRIX lightInstanceMatrix = XMMatrixScaling(0.025, 0.025, 0.025) *
+		XMMatrixTranslation(4.13, 0, 58.30);
 
-	shared_ptr<Material> waterMaterial(new Material(device));
-	waterMaterial->setTexture(Texture(device, L"..\\Resources\\Textures\\Waves.dds").getShaderResourceView());
+	m_lightOrbTemplate->addInstance(lightInstanceMatrix, lightMaterial);
 
-	shared_ptr<Effect> waterEffect(new Effect(device, "Shaders\\cso\\ocean_vs.cso",
-		"Shaders\\cso\\ocean_ps.cso",
-		extVertexDesc, ARRAYSIZE(extVertexDesc)));
+	XMMATRIX orbInstanceMat = XMMatrixScaling(0.5, 0.5, 0.5) *
+		XMMatrixTranslation(0, m_terrain->CalculateYValueWorld(0, 0) + 5.0, 0);
 
-	water = new Grid(10, 10, device, waterEffect, waterMaterial);
-	water->setWorldMatrix(XMMatrixScaling(3.0, 0.3, 3.0) *
-		XMMatrixTranslation(-68.0, 0.9, 54.0));
-	water->update(context);
+	m_lightOrbTemplate->addInstance(orbInstanceMat, redMat);
+	return S_OK;
+}
 
-	// Create box material for PhysX boxes
-	shared_ptr<Material> boxMat(new Material(device, XMFLOAT4(-1.0, -1.0, 1.0, 1.0)));
-	boxMat->setSpecular(XMFLOAT4(0.3, 0.3, 0.3, 0.01));
-	boxMat->setUsage(DIFFUSE_MAP);
-	boxMat->setTexture(Texture(device, L"..\\Resources\\Textures\\WoodCrate02.dds").getShaderResourceView());
-
-	physXBox = new Box(device, perPixelLightingEffect, boxMat);
-	boxMatArray = new XMMATRIX[S];
-
-	// Foliage and terrain setup
+// Setup terrain and terrain effect
+HRESULT Scene::setupTerrainAndTerrainEffect(ID3D11DeviceContext* context, ID3D11Device* device)
+{
 	shared_ptr<Effect> grassEffect(new Effect(device, "Shaders\\cso\\grass_vs.cso",
 		"Shaders\\cso\\grass_ps.cso",
 		extVertexDesc, ARRAYSIZE(extVertexDesc)));
 
-	// Alpha blending for grass
+	// Alpha blending for m_terrain
 	grassEffect->setAlphaBlendEnable(device, TRUE);
 
-	// Load grass textures
+	// Load m_terrain textures
 	Texture grassAlpha = Texture(device, L"..\\Resources\\Textures\\grassAlpha.tif");
 	Texture grassDiffuse = Texture(device, L"..\\Resources\\Textures\\BrightonKarting5.bmp");
 	Texture grassColour = Texture(device, L"..\\Resources\\Textures\\grass_texture.dds");
@@ -529,50 +627,165 @@ HRESULT Scene::initialiseSceneResources() {
 	grassMaterial->setTextures(grassTextureArray, 6);
 
 	// Create grassy terrain
-	float terrainOffsetXZ = -(terrainSizeWH * terrainScaleXZ) / 2.0f;
-	grass = new Terrain(device, context, terrainSizeWH, terrainSizeWH,
+	float terrainOffsetXZ = -(m_terrainResolution * m_terrainScaleXZ) / 2.0f;
+	m_terrain = make_unique<Terrain>(device, context, m_terrainResolution, m_terrainResolution,
 		heightMap.getTexture(), grassEffect, grassMaterial);
 
-	grass->setWorldMatrix(XMMatrixScaling(terrainScaleXZ, terrainScaleY, terrainScaleXZ) *
+	m_terrain->setWorldMatrix(XMMatrixScaling(m_terrainScaleXZ, m_terrainScaleY, m_terrainScaleXZ) *
 		XMMatrixTranslation(terrainOffsetXZ, -0.085, terrainOffsetXZ));
-	grass->update(context);
-	grass->setColourMap(device, context, grassDiffuse.getTexture());
+	m_terrain->update(context);
+	m_terrain->setColourMap(device, context, grassDiffuse.getTexture());
+	return S_OK;
+}
 
-	// Load AI Kart navigation points
-	navPoints = new NavPoints();
-	navPoints->load("..\\Resources\\Levels\\NavSet01.xml");
+// Setup particle systems and effects for kart wheels
+HRESULT Scene::setupParticleSystemsAndEffects(ID3D11DeviceContext* context, ID3D11Device* device)
+{
+	shared_ptr<Material> dirtMat(new Material(device));
+	Texture grassSkid = Texture(device, L"..\\Resources\\Textures\\grass_texture2.jpg");
+	dirtMat->setTexture(grassSkid.getShaderResourceView());
 
-	// Load orb for rendering NavPoints
-	shared_ptr<Material> beeMat(new Material(device));
-	shared_ptr<Material> redMat(new Material(device, XMFLOAT4(1.0, 0.0, 0.0, 1.0)));
-	redMat->setDiffuse(XMFLOAT4(1.0, 0.0, 0.0, 1.0));
-	redMat->setSpecular(XMFLOAT4(1.0, 0.0, 0.0, 1.0));
+	shared_ptr<Effect> dirtEffect(new Effect(device, "Shaders\\cso\\fire_vs.cso",
+		"Shaders\\cso\\dirt_ps.cso",
+		particleVertexDesc, ARRAYSIZE(particleVertexDesc)));
 
-	beeMat->setTexture(Texture(device, L"..\\Resources\\Textures\\orb.tif").getShaderResourceView());
-	beeMat->setUsage(EMISSIVE_MAP);
+	m_dirtParticles = make_unique <ParticleSystem>(device, dirtEffect, dirtMat);
+	m_dirtParticles->setWorldMatrix(XMMatrixScaling(0.7f, 1.5f, 0.7f) *
+		XMMatrixTranslation(-1.0f, m_terrain->CalculateYValueWorld(-1.0f, 0.0f) + 0.3, 0.0f));
+	m_dirtParticles->update(context);
 
-	shared_ptr<Effect> beeEffect(new Effect(device, "Shaders\\cso\\per_pixel_lighting_vs.cso",
-		"Shaders\\cso\\emissive_ps.cso",
+	shared_ptr<Material> smokeMat(new Material(device));
+	Texture smokeTexture = Texture(device, L"..\\Resources\\Textures\\Smoke.tif");
+	smokeMat->setTexture(smokeTexture.getShaderResourceView());
+
+	shared_ptr<Effect> smokeEffect(new Effect(device, "Shaders\\cso\\fire_vs.cso",
+		"Shaders\\cso\\fire_ps.cso",
+		particleVertexDesc, ARRAYSIZE(particleVertexDesc)));
+
+	m_smokeParticles = make_unique <ParticleSystem>(device, smokeEffect, smokeMat);
+	m_smokeParticles->setWorldMatrix(XMMatrixScaling(2.0f, 3.0f, 3.0f) *
+		XMMatrixTranslation(-1.0f, m_terrain->CalculateYValueWorld(-1.0f, 0.0f) + 1.3f, 0.0f));
+	m_smokeParticles->update(context);
+
+	// Don't write transparent objects to depth buffer
+	dirtEffect->setDepthWriteMask(device, D3D11_DEPTH_WRITE_MASK_ZERO);
+	smokeEffect->setDepthWriteMask(device, D3D11_DEPTH_WRITE_MASK_ZERO);
+	return S_OK;
+}
+
+// Setup random trees and tree effect
+HRESULT Scene::setupRandomTreesAndTreeEffect(ID3D11DeviceContext* context, ID3D11Device* device)
+{
+	// Generate random trees for foliage
+	shared_ptr<Effect> treeEffect(new Effect(device, "Shaders\\cso\\tree_vs.cso",
+		"Shaders\\cso\\tree_ps.cso",
 		extVertexDesc, ARRAYSIZE(extVertexDesc)));
 
-	orb3 = new Model(context, device, wstring(L"..\\Resources\\Models\\sphere.obj"), beeEffect, beeMat, 0);
+	treeEffect->setCullMode(device, D3D11_CULL_NONE);
+	treeEffect->setAlphaToCoverage(device, TRUE);  // Alpha to coverage for foliage
 
-	XMMATRIX beeInstanceMat = XMMatrixScaling(0.025, 0.025, 0.025) *
-		XMMatrixTranslation(4.13, 0, 58.30);
+	// Load m_treeTemplate textures
+	Texture treeDiffuse = Texture(device, L"..\\Resources\\Textures\\tree.tif");
+	shared_ptr<Material> treeMat(new Material(device, XMFLOAT4(0.3, 0, 0, 1.0)));
+	treeMat->setSpecular(XMFLOAT4(0.0, 0.0, 0.0, 0.001));
+	treeMat->setTexture(treeDiffuse.getShaderResourceView());
 
-	orb3->instances.push_back(Instance(beeInstanceMat, beeMat));
+	// Load m_treeTemplate model
+	m_treeTemplate = make_unique<Model>(context, device, wstring(L"..\\Resources\\Models\\tree.3ds"), treeEffect, treeMat);
+	m_treeTemplate->setWorldMatrix(XMMatrixTranslation(14.0f, m_terrain->CalculateYValueWorld(13.0f, 20.0f), 20.0f));
+	m_treeTemplate->update(context);
 
-	XMMATRIX orbInstanceMat = XMMatrixScaling(0.5, 0.5, 0.5) *
-		XMMatrixTranslation(0, grass->CalculateYValueWorld(0, 0) + 5.0, 0);
+	// Create random m_treeTemplate instances
+	for (int i = 0; i < NUM_TREES; i++)
+	{
+		float red = ((float)rand() / RAND_MAX) * 0.5;
+		float green = (((float)rand() / RAND_MAX) * 0.5) + 0.5;
+		float x = (((float)rand() / RAND_MAX) + 0.4) * 50.0f;
+		float z = (((float)rand() / RAND_MAX) + 0.4) * 25.0f;
 
-	orb3->instances.push_back(Instance(orbInstanceMat, redMat));
+		if (((float)rand() / RAND_MAX) > 0.5) x = -x;
+		if (((float)rand() / RAND_MAX) > 0.5) z = -z;
 
-	// Skinning effect for animated models
+		// Ensure trees are placed on valid terrain
+		while (m_terrain->getMapColour(x, z).x <= 0.0f)
+		{
+			x = (((float)rand() / RAND_MAX) + 0.4) * 50.0f;
+			z = (((float)rand() / RAND_MAX) + 0.4) * 25.0f;
+			if (((float)rand() / RAND_MAX) > 0.5) x = -x;
+			if (((float)rand() / RAND_MAX) > 0.5) z = -z;
+		}
+
+		float s = (((float)rand() / RAND_MAX) + 0.5);
+		float r = ((float)rand() / RAND_MAX);
+
+		shared_ptr<Material> treeInstanceMat(new Material(device, XMFLOAT4(red, 0, 0, 1.0)));
+		treeInstanceMat->setSpecular(XMFLOAT4(0.0, 0.0, 0.0, 0.001));
+		treeInstanceMat->setTexture(treeDiffuse.getShaderResourceView());
+
+		m_treeTemplate->addInstance(DirectX::XMMatrixRotationY(r) *
+			XMMatrixScaling(s, s, s) *
+			XMMatrixTranslation(x, m_terrain->CalculateYValueWorld(x, z), z),
+			treeInstanceMat);
+	}
+	return S_OK;
+}
+
+// Setup lens flares and flare effect
+HRESULT Scene::setupLensFlaresAndFlareEffect(ID3D11Device* device)
+{
+	// Create lens m_lensFlare
+	shared_ptr<Effect> flareEffect(new Effect(device, "Shaders\\cso\\flare_vs.cso",
+		"Shaders\\cso\\flare_ps.cso",
+		flareVertexDesc, ARRAYSIZE(flareVertexDesc)));
+
+	// Create custom flare blend state
+	ID3D11BlendState* flareBlendState = flareEffect->getBlendState();
+	D3D11_BLEND_DESC blendDesc;
+	flareBlendState->GetDesc(&blendDesc);
+	blendDesc.AlphaToCoverageEnable = FALSE;
+	blendDesc.RenderTarget[0].BlendEnable = TRUE;
+	blendDesc.RenderTarget[0].SrcBlend = D3D11_BLEND_ONE;
+	blendDesc.RenderTarget[0].DestBlend = D3D11_BLEND_ONE;
+	flareBlendState->Release();
+	device->CreateBlendState(&blendDesc, &flareBlendState);
+	flareEffect->setBlendState(flareBlendState);
+
+	// Load flare textures
+	Texture flare0Texture = Texture(device, L"..\\Resources\\Textures\\flares\\corona.png");
+	Texture flare1Texture = Texture(device, L"..\\Resources\\Textures\\flares\\divine.png");
+	Texture flare2Texture = Texture(device, L"..\\Resources\\Textures\\flares\\extendring.png");
+
+	shared_ptr<Material> flareMat0(new Material(device, XMFLOAT4(1, 1, 1, (float)0 / NUM_FLARES)));
+	flareMat0->setTexture(flare0Texture.getShaderResourceView());
+
+	// Create m_lensFlare
+	m_lensFlare = make_unique< Flare>(XMFLOAT3(-1250.0, 520.0, 1000.0), device, flareEffect, flareMat0);
+
+	for (int i = 1; i < NUM_FLARES; i++)
+	{
+		shared_ptr<Material> flareInstanceMat(new Material(device,
+			XMFLOAT4(randM1P1() * 0.5 + 0.5, randM1P1() * 0.5 + 0.5, randM1P1() * 0.5 + 0.5, (float)i / NUM_FLARES)));
+
+		if (randM1P1() > 0.0f)
+			flareInstanceMat->setTexture(flare1Texture.getShaderResourceView());
+		else
+			flareInstanceMat->setTexture(flare2Texture.getShaderResourceView());
+
+		m_lensFlare->addInstance(XMMatrixIdentity(), flareInstanceMat);
+	}
+	return S_OK;
+}
+
+
+// Load Skinned models and skinning effect
+HRESULT Scene::loadSkinnedModels(ID3D11DeviceContext* context, ID3D11Device* device)
+{
+	// Skinning effect for animated m_sceneModels
 	shared_ptr<Effect> skinningEffect(new Effect(device, "Shaders\\cso\\skinning_vs.cso",
 		"Shaders\\cso\\per_pixel_lighting_ps.cso",
 		skinVertexDesc, ARRAYSIZE(skinVertexDesc)));
 
-	// Load dragon model with animations
+	// Load m_dragonModel model with animations
 	Texture dragonNormalTexture = Texture(device, L"..\\Resources\\Models\\Black Dragon NEW\\textures\\Dragon_Nor.jpg");
 	Texture dragonTexture = Texture(device, L"..\\Resources\\Models\\Black Dragon NEW\\textures\\Dragon_ground_color.jpg");
 
@@ -586,23 +799,24 @@ HRESULT Scene::initialiseSceneResources() {
 	dragonMat->setUsage(DIFFUSE_MAP | NORMAL_MAP);
 	dragonMat->setTextures(dragonTextureArray, 2);
 
-	dragon = new SkinnedModel(context, device,
+	m_dragonModel = make_unique<SkinnedModel>(context, device,
 		wstring(L"..\\Resources\\Models\\Black Dragon NEW\\Dragon_Baked_Actions_fbx_7.4_binary.fbx"),
 		skinningEffect, dragonMat);
 
-	dragon->loadBones(device);
-	dragon->setWorldMatrix(dragon->getWorldMatrix() *
+	m_dragonModel->loadBones(device);
+	m_dragonModel->setWorldMatrix(m_dragonModel->getWorldMatrix() *
 		XMMatrixScaling(0.001, 0.001, 0.001) *
 		XMMatrixTranslation(10, 0, 0) *
-		XMMatrixTranslation(-20, 0 + grass->CalculateYValueWorld(-20, -30), -30));
+		XMMatrixTranslation(-20, 0 + m_terrain->CalculateYValueWorld(-20, -30), -30));
 
-	dragon->setCurrentAnim(3);
-	dragon->update(context);
+	m_dragonModel->setCurrentAnim(3);
+	m_dragonModel->update(context);
 
 	// Load Nathan character model
+	Texture nathanTextureBlue = Texture(device, L"..\\Resources\\Models\\55-rp_nathan_animated_003_walking_fbx\\tex\\rp_nathan_animated_003_dif_blue.jpg");
+
 	Texture nathanTextureBlack = Texture(device, L"..\\Resources\\Models\\55-rp_nathan_animated_003_walking_fbx\\tex\\rp_nathan_animated_003_dif_black.jpg");
 	Texture nathanTextureRed = Texture(device, L"..\\Resources\\Models\\55-rp_nathan_animated_003_walking_fbx\\tex\\rp_nathan_animated_003_dif_red.jpg");
-	Texture nathanTextureBlue = Texture(device, L"..\\Resources\\Models\\55-rp_nathan_animated_003_walking_fbx\\tex\\rp_nathan_animated_003_dif_blue.jpg");
 	Texture nathanNormalTexture = Texture(device, L"..\\Resources\\Models\\55-rp_nathan_animated_003_walking_fbx\\tex\\rp_nathan_animated_003_norm_small.dds");
 
 	ID3D11ShaderResourceView* nathanTextureArrayBlack[] = {
@@ -632,31 +846,31 @@ HRESULT Scene::initialiseSceneResources() {
 
 	nathanBlackMat->setTextures(nathanTextureArrayBlack, 2);
 
-	nathan = new SkinnedModel(context, device,
+	m_nathanModel = make_unique<SkinnedModel>(context, device,
 		wstring(L"..\\Resources\\Models\\55-rp_nathan_animated_003_walking_fbx\\rp_nathan_animated_003_walking2.fbx"),
 		skinningEffect, nathanBlackMat);
 
-	nathan->loadBones(device);
+	m_nathanModel->loadBones(device);
 
-	nathan->instances.push_back(Instance(nathan->getWorldMatrix() *
+	m_nathanModel->addInstance(m_nathanModel->getWorldMatrix() *
 		XMMatrixScaling(0.022, 0.022, 0.022) *
 		XMMatrixRotationY(XMConvertToRadians(180)) *
-		XMMatrixTranslation(8.635422, 0 + grass->CalculateYValueWorld(8.635422, 53.300213), 53.300213),
-		nathanBlueMat));
+		XMMatrixTranslation(8.635422, 0 + m_terrain->CalculateYValueWorld(8.635422, 53.300213), 53.300213),
+		nathanBlueMat);
 
-	nathan->instances.push_back(Instance(nathan->getWorldMatrix() *
+	m_nathanModel->addInstance(m_nathanModel->getWorldMatrix() *
 		XMMatrixScaling(0.022, 0.022, 0.022) *
 		XMMatrixRotationY(XMConvertToRadians(180)) *
-		XMMatrixTranslation(9.635422, 0 + grass->CalculateYValueWorld(9.635422, 53.300213), 53.300213),
-		nathanRedMat));
+		XMMatrixTranslation(9.635422, 0 + m_terrain->CalculateYValueWorld(9.635422, 53.300213), 53.300213),
+		nathanRedMat);
 
-	nathan->setWorldMatrix(nathan->getWorldMatrix() *
+	m_nathanModel->setWorldMatrix(m_nathanModel->getWorldMatrix() *
 		XMMatrixScaling(0.022, 0.022, 0.022) *
 		XMMatrixTranslation(5, 0, 0) *
-		XMMatrixTranslation(0, grass->CalculateYValueWorld(0, 0), 0));
+		XMMatrixTranslation(0, m_terrain->CalculateYValueWorld(0, 0), 0));
 
-	nathan->setCurrentAnim(0);
-	nathan->update(context);
+	m_nathanModel->setCurrentAnim(0);
+	m_nathanModel->update(context);
 
 	// Load Sophia character model
 	Texture sophiaTextureYellow = Texture(device, L"..\\Resources\\Models\\35-rp_sophia_animated_003_idling_fbx\\tex\\rp_sophia_animated_003_dif_yellow.jpg");
@@ -690,549 +904,456 @@ HRESULT Scene::initialiseSceneResources() {
 	shared_ptr<Material> sophiaMatPink(new Material(device, sophiaMatYellow));
 	sophiaMatPink->setTextures(sophiaTextureArrayPink, 2);
 
-	sophia = new SkinnedModel(context, device,
+	m_sophiaModel = make_unique <SkinnedModel>(context, device,
 		wstring(L"..\\Resources\\Models\\35-rp_sophia_animated_003_idling_fbx\\rp_sophia_animated_003_idling.fbx"),
 		skinningEffect, sophiaMatYellow);
 
-	sophia->loadBones(device);
 
-	sophia->instances.push_back(Instance(sophia->getWorldMatrix() *
+	m_sophiaModel->loadBones(device);
+
+	m_sophiaModel->addInstance(m_sophiaModel->getWorldMatrix() *
 		XMMatrixRotationX(XMConvertToRadians(-90)) *
 		XMMatrixRotationY(XMConvertToRadians(180)) *
 		XMMatrixScaling(0.009, 0.009, 0.009) *
-		XMMatrixTranslation(8.135422, 0 + grass->CalculateYValueWorld(8.135422, 53.300213), 53.300213),
-		sophiaMatWhite));
+		XMMatrixTranslation(8.135422, 0 + m_terrain->CalculateYValueWorld(8.135422, 53.300213), 53.300213),
+		sophiaMatWhite);
 
-	sophia->instances.push_back(Instance(sophia->getWorldMatrix() *
+	m_sophiaModel->addInstance(m_sophiaModel->getWorldMatrix() *
 		XMMatrixRotationX(XMConvertToRadians(-90)) *
 		XMMatrixRotationY(XMConvertToRadians(180)) *
 		XMMatrixScaling(0.009, 0.009, 0.009) *
-		XMMatrixTranslation(9.135422, 0 + grass->CalculateYValueWorld(9.135422, 53.300213), 53.300213),
-		sophiaMatPink));
+		XMMatrixTranslation(9.135422, 0 + m_terrain->CalculateYValueWorld(9.135422, 53.300213), 53.300213),
+		sophiaMatPink);
 
-	sophia->setWorldMatrix(sophia->getWorldMatrix() *
+	m_sophiaModel->setWorldMatrix(m_sophiaModel->getWorldMatrix() *
 		XMMatrixRotationX(XMConvertToRadians(-90)) *
 		XMMatrixRotationY(XMConvertToRadians(180)) *
 		XMMatrixScaling(0.009, 0.009, 0.009) *
-		XMMatrixTranslation(10.135422, 0 + grass->CalculateYValueWorld(10.135422, 53.300213), 53.300213));
+		XMMatrixTranslation(10.135422, 0 + m_terrain->CalculateYValueWorld(10.135422, 53.300213), 53.300213));
 
-	sophia->setCurrentAnim(0);
-	sophia->update(context);
+	m_sophiaModel->setCurrentAnim(0);
+	m_sophiaModel->update(context);
+	return S_OK;
+}
 
-	// Generate random trees for foliage
-	shared_ptr<Effect> treeEffect(new Effect(device, "Shaders\\cso\\tree_vs.cso",
-		"Shaders\\cso\\tree_ps.cso",
-		extVertexDesc, ARRAYSIZE(extVertexDesc)));
-
-	treeEffect->setCullMode(device, D3D11_CULL_NONE);
-	treeEffect->setAlphaToCoverage(device, TRUE);  // Alpha to coverage for foliage
-
-	// Load tree textures
-	Texture treeDiffuse = Texture(device, L"..\\Resources\\Textures\\tree.tif");
-	shared_ptr<Material> treeMat(new Material(device, XMFLOAT4(0.3, 0, 0, 1.0)));
-	treeMat->setSpecular(XMFLOAT4(0.0, 0.0, 0.0, 0.001));
-	treeMat->setTexture(treeDiffuse.getShaderResourceView());
-
-	// Load tree model
-	tree = new Model(context, device, wstring(L"..\\Resources\\Models\\tree.3ds"), treeEffect, treeMat);
-	tree->setWorldMatrix(XMMatrixTranslation(14.0f, grass->CalculateYValueWorld(13.0f, 20.0f), 20.0f));
-	tree->update(context);
-
-	// Create random tree instances
-	for (int i = 0; i < numTrees; i++)
-	{
-		float red = ((float)rand() / RAND_MAX) * 0.5;
-		float green = (((float)rand() / RAND_MAX) * 0.5) + 0.5;
-		float x = (((float)rand() / RAND_MAX) + 0.4) * 50.0f;
-		float z = (((float)rand() / RAND_MAX) + 0.4) * 25.0f;
-
-		if (((float)rand() / RAND_MAX) > 0.5) x = -x;
-		if (((float)rand() / RAND_MAX) > 0.5) z = -z;
-
-		// Ensure trees are placed on valid terrain
-		while (grass->getMapColour(x, z).x <= 0.0f)
-		{
-			x = (((float)rand() / RAND_MAX) + 0.4) * 50.0f;
-			z = (((float)rand() / RAND_MAX) + 0.4) * 25.0f;
-			if (((float)rand() / RAND_MAX) > 0.5) x = -x;
-			if (((float)rand() / RAND_MAX) > 0.5) z = -z;
-		}
-
-		float s = (((float)rand() / RAND_MAX) + 0.5);
-		float r = ((float)rand() / RAND_MAX);
-
-		shared_ptr<Material> treeInstanceMat(new Material(device, XMFLOAT4(red, 0, 0, 1.0)));
-		treeInstanceMat->setSpecular(XMFLOAT4(0.0, 0.0, 0.0, 0.001));
-		treeInstanceMat->setTexture(treeDiffuse.getShaderResourceView());
-
-		tree->instances.push_back(Instance(DirectX::XMMatrixRotationY(r) *
-			XMMatrixScaling(s, s, s) *
-			XMMatrixTranslation(x, grass->CalculateYValueWorld(x, z), z),
-			treeInstanceMat));
-	}
-
-	// Setup particle systems for kart effects
-	shared_ptr<Material> dirtMat(new Material(device));
-	Texture grassSkid = Texture(device, L"..\\Resources\\Textures\\grass_texture2.jpg");
-	dirtMat->setTexture(grassSkid.getShaderResourceView());
-
-	shared_ptr<Effect> dirtEffect(new Effect(device, "Shaders\\cso\\fire_vs.cso",
-		"Shaders\\cso\\dirt_ps.cso",
-		particleVertexDesc, ARRAYSIZE(particleVertexDesc)));
-
-	dirt = new ParticleSystem(device, dirtEffect, dirtMat);
-	dirt->setWorldMatrix(XMMatrixScaling(0.7f, 1.5f, 0.7f)*
-		XMMatrixTranslation(-1.0f, grass->CalculateYValueWorld(-1.0f, 0.0f) + 0.3, 0.0f));
-	dirt->update(context);
-
-	shared_ptr<Material> smokeMat(new Material(device));
-	Texture smokeTexture = Texture(device, L"..\\Resources\\Textures\\Smoke.tif");
-	smokeMat->setTexture(smokeTexture.getShaderResourceView());
-
-	shared_ptr<Effect> smokeEffect(new Effect(device, "Shaders\\cso\\fire_vs.cso",
-		"Shaders\\cso\\fire_ps.cso",
-		particleVertexDesc, ARRAYSIZE(particleVertexDesc)));
-
-	smoke = new ParticleSystem(device, smokeEffect, smokeMat);
-	smoke->setWorldMatrix(XMMatrixScaling(2.0f, 3.0f, 3.0f)*
-		XMMatrixTranslation(-1.0f, grass->CalculateYValueWorld(-1.0f, 0.0f) + 1.3f, 0.0f));
-	smoke->update(context);
-
-	// Don't write transparent objects to depth buffer
-	dirtEffect->setDepthWriteMask(device, D3D11_DEPTH_WRITE_MASK_ZERO);
-	smokeEffect->setDepthWriteMask(device, D3D11_DEPTH_WRITE_MASK_ZERO);
-
-	// Create lens flares
-	shared_ptr<Effect> flareEffect(new Effect(device, "Shaders\\cso\\flare_vs.cso",
-		"Shaders\\cso\\flare_ps.cso",
-		flareVertexDesc, ARRAYSIZE(flareVertexDesc)));
-
-	// Create custom flare blend state
-	ID3D11BlendState* flareBlendState = flareEffect->getBlendState();
-	D3D11_BLEND_DESC blendDesc;
-	flareBlendState->GetDesc(&blendDesc);
-	blendDesc.AlphaToCoverageEnable = FALSE;
-	blendDesc.RenderTarget[0].BlendEnable = TRUE;
-	blendDesc.RenderTarget[0].SrcBlend = D3D11_BLEND_ONE;
-	blendDesc.RenderTarget[0].DestBlend = D3D11_BLEND_ONE;
-	flareBlendState->Release();
-	device->CreateBlendState(&blendDesc, &flareBlendState);
-	flareEffect->setBlendState(flareBlendState);
-
-	// Load flare textures
-	Texture flare0Texture = Texture(device, L"..\\Resources\\Textures\\flares\\corona.png");
-	Texture flare1Texture = Texture(device, L"..\\Resources\\Textures\\flares\\divine.png");
-	Texture flare2Texture = Texture(device, L"..\\Resources\\Textures\\flares\\extendring.png");
-
-	shared_ptr<Material> flareMat0(new Material(device, XMFLOAT4(1, 1, 1, (float)0 / numFlares)));
-	flareMat0->setTexture(flare0Texture.getShaderResourceView());
-
-	// Create flares
-	flares = new Flare(XMFLOAT3(-1250.0, 520.0, 1000.0), device, flareEffect, flareMat0);
-
-	for (int i = 1; i < numFlares; i++)
-	{
-		shared_ptr<Material> flareInstanceMat(new Material(device,
-			XMFLOAT4(randM1P1() * 0.5 + 0.5, randM1P1() * 0.5 + 0.5, randM1P1() * 0.5 + 0.5, (float)i / numFlares)));
-
-		if (randM1P1() > 0.0f)
-			flareInstanceMat->setTexture(flare1Texture.getShaderResourceView());
-		else
-			flareInstanceMat->setTexture(flare2Texture.getShaderResourceView());
-
-		flares->instances.push_back(Instance(XMMatrixIdentity(), flareInstanceMat));
-	}
-
+// Initialize PhysX karts and scene
+HRESULT Scene::initKartsAndPhysXScene(ID3D11DeviceContext* context,ID3D11Device* device, shared_ptr <Effect> perPixelLightingEffect, shared_ptr <Effect> emissiveEffect)
+{
 	// Initialize PhysX karts scene
-	PXScene->initScenePX();
+	m_physXScene->initScenePX();
 
-	// Load models from Scene.xml (created with LevelEditor)
-	load("..\\Resources\\Levels\\Scene01_RH_X2.xml", perPixelLightingEffect);
+	// Load m_sceneModels from Scene.xml (created with LevelEditor)
+	loadScene("..\\Resources\\Levels\\Scene01_RH_X2.xml", perPixelLightingEffect);
 
 	// Create PhysX terrain from heightfield
-	PXScene->CreateHeightField(grass->getHeightArray(), terrainSizeWH, terrainScaleXZ, terrainScaleY);
+	m_physXScene->CreateHeightField(m_terrain->getHeightArray(), m_terrainResolution, m_terrainScaleXZ, m_terrainScaleY);
 
 	// Load karts
-	kartWraps.push_back("GreyCamo.png");
-	kartWraps.push_back("RedCamo.png");
-	kartWraps.push_back("YellowCamo.png");
-	kartWraps.push_back("GreenCamo.png");
-	kartWraps.push_back("BlueCamo.png");
-	kartWraps.push_back("PurpleCamo.png");
-	kartWraps.push_back("WhiteStripe.png");
-	kartWraps.push_back("BlackStripe.png");
-	kartWraps.push_back("RedStripe.png");
-	kartWraps.push_back("YellowStripe.png");
-	kartWraps.push_back("GreenStripe.png");
-	kartWraps.push_back("BlueStripe.png");
-	kartWraps.push_back("PurpleStripe.png");
+	m_kartWrapNames.push_back("GreyCamo.png");
+	m_kartWrapNames.push_back("RedCamo.png");
+	m_kartWrapNames.push_back("YellowCamo.png");
+	m_kartWrapNames.push_back("GreenCamo.png");
+	m_kartWrapNames.push_back("BlueCamo.png");
+	m_kartWrapNames.push_back("PurpleCamo.png");
+	m_kartWrapNames.push_back("WhiteStripe.png");
+	m_kartWrapNames.push_back("BlackStripe.png");
+	m_kartWrapNames.push_back("RedStripe.png");
+	m_kartWrapNames.push_back("YellowStripe.png");
+	m_kartWrapNames.push_back("GreenStripe.png");
+	m_kartWrapNames.push_back("BlueStripe.png");
+	m_kartWrapNames.push_back("PurpleStripe.png");
 
-	for (int i = 0; i < kartWraps.size(); i++)
+	for (int i = 0; i < m_kartWrapNames.size(); i++)
 	{
 		shared_ptr<Texture> tmpTex(new Texture(device,
-			StringToWString(string("..\\Resources\\Models\\Kart\\" + kartWraps[i]))));
-		kartTextures.push_back(tmpTex);
+			StringToWString(string("..\\Resources\\Models\\Kart\\" + m_kartWrapNames[i]))));
+		m_kartTextures.push_back(tmpTex);
 	}
 
 	// Create karts with random wraps
 	for (int i = 0; i < NUM_AI_VEHICLES - 1; i++)
-		aiKarts[i] = new AIKart(FMSystem, device, context, grass, navPoints,
-			perPixelLightingEffect, kartTextures[(int)(rand021() * (float)kartTextures.size())]);
+		m_aiKarts[i] = make_unique <AIKart>(m_audioSystem, device, context, m_terrain.get(), m_navigationPoints.get(),
+			perPixelLightingEffect, m_kartTextures[(int)(rand021() * (float)m_kartTextures.size())]);
 
-	aiKarts[NUM_AI_VEHICLES - 1] = new AIKart(FMSystem, device, context, grass, navPoints,
-		beeEffect, kartTextures[(int)(rand021() * (float)kartTextures.size())]);
+	m_aiKarts[NUM_AI_VEHICLES - 1] = make_unique <AIKart>(m_audioSystem, device, context, m_terrain.get(), m_navigationPoints.get(),
+		emissiveEffect, m_kartTextures[(int)(rand021() * (float)m_kartTextures.size())]);
 
-	int playerKartWrap = (int)(rand021() * (float)kartTextures.size());
-	playerKart = new PlayerKart(FMSystem, device, context, grass,
-		perPixelLightingEffect, kartTextures[playerKartWrap]);
+	int playerKartWrap = (int)(rand021() * (float)m_kartTextures.size());
+	m_playerKart = make_unique <PlayerKart>(m_audioSystem, device, context, m_terrain.get(),
+		perPixelLightingEffect, m_kartTextures[playerKartWrap]);
 
-	menu->setPlayerKartTextures(&kartWraps, &kartTextures, playerKartWrap);
+	m_menu->setPlayerKartTextures(&m_kartWrapNames, &m_kartTextures, playerKartWrap);
 
 	// Assign karts to array for batch PhysX updates
-	kartArray[0] = playerKart;
+	m_allKarts[0] = m_playerKart.get();
 	for (int i = 0; i < NUM_AI_VEHICLES; i++)
-		kartArray[i + 1] = aiKarts[i];
+		m_allKarts[i + 1] = m_aiKarts[i].get();
 
 	physx::PxVec3 pP(36.0f, 0, 1.2f);
-	pP.y = grass->CalculateYValueWorld(pP.x, pP.z) + pP.y;
+	pP.y = m_terrain->CalculateYValueWorld(pP.x, pP.z) + pP.y;
 
 	// Initialize PhysX vehicle controller
-	PXKartController = new PhysXVehicleController();
-	playerKart->setVehicle4W(PXKartController->initVehiclePX(pP.x, pP.y, pP.z, -100.0f, 0));
-	playerKart->setStartPosition(pP, 0);
+	m_physXKartController = make_unique <PhysXVehicleController>();
+	m_playerKart->setVehicle4W(m_physXKartController->initVehiclePX(pP.x, pP.y, pP.z, -100.0f, 0));
+	m_playerKart->setStartPosition(pP, 0);
 
 	for (int i = 0; i < NUM_AI_VEHICLES; i++)
 	{
-		aiKarts[i]->setVehicle4W(PXKartController->initVehiclePX(
+		m_aiKarts[i]->setVehicle4W(m_physXKartController->initVehiclePX(
 			pP.x + floor((i + 1) / 2) * 2, pP.y, pP.z - 2.0f * ((i + 1) % 2), -100.0f, i + 1));
-		aiKarts[i]->setStartPosition(pP, i + 1);
+		m_aiKarts[i]->setStartPosition(pP, i + 1);
 	}
+	return S_OK;
+}
 
-	// Setup main camera
-	mainCamera = new FirstPersonCamera(device, XMVectorSet(-9.0, 2.0, 17.0, 1.0f),
-		XMVectorSet(0.0f, 1.0f, 0.0f, 1.0f),
-		XMVectorSet(0.8f, 0.0f, -1.0f, 1.0f));
+// Scene constant buffer setup
+HRESULT Scene::setupSceneConstantBuffers(ID3D11DeviceContext* context,
+	ID3D11Device* device)
+{
+	m_sceneBufferCPU.reset((CBufferScene*)_aligned_malloc(sizeof(CBufferScene), 16));
 
-	mainCamera->setFlying(false);
+	// Fill out scene properties
+	m_sceneBufferCPU->windDir = XMFLOAT4(1, 0, 0, 1);
+	m_sceneBufferCPU->Time = 0.0;
+	m_sceneBufferCPU->grassHeight = 0.2;
+	m_sceneBufferCPU->USE_SHADOW_MAP = true;
+	m_sceneBufferCPU->QUALITY = (int)m_menu->getQuality();
+	m_sceneBufferCPU->fog = 0.15f;
+	m_sceneBufferCPU->numLights = m_numLightsActive;
+	// Create GPU constant buffer
+	D3D11_BUFFER_DESC cbufferDesc;
+	D3D11_SUBRESOURCE_DATA cbufferInitData;
+	ZeroMemory(&cbufferDesc, sizeof(D3D11_BUFFER_DESC));
+	ZeroMemory(&cbufferInitData, sizeof(D3D11_SUBRESOURCE_DATA));
+	cbufferDesc.ByteWidth = sizeof(CBufferScene);
+	cbufferDesc.Usage = D3D11_USAGE_DYNAMIC;
+	cbufferDesc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
+	cbufferDesc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
+
+	cbufferInitData.pSysMem = m_sceneBufferCPU.get();
+	cbufferDesc.ByteWidth = sizeof(CBufferScene);
+
+	HRESULT hr = device->CreateBuffer(&cbufferDesc, &cbufferInitData, &m_sceneBufferGPU);
+
+	mapCbuffer(context, m_sceneBufferCPU.get(), m_sceneBufferGPU.Get(), sizeof(CBufferScene));
+	context->VSSetConstantBuffers(3, 1, m_sceneBufferGPU.GetAddressOf());
+	context->PSSetConstantBuffers(3, 1, m_sceneBufferGPU.GetAddressOf());
+
+	return hr;
+}
+
+HRESULT Scene::setupLightsConstantBuffers(ID3D11DeviceContext* context,
+	ID3D11Device* device)
+{
+	// Cutoff for cone lights volumes
 	float cutOff = cos(XMConvertToRadians(45));
 	cout << "cutOff" << cutOff << endl;
-
 	// Setup light constant buffers
-	cBufferLightCPU = (CBufferLight*)_aligned_malloc(sizeof(CBufferLight) * MAX_LIGHTS, 16);
+	m_lightBufferCPU.reset((CBufferLight*)_aligned_malloc(sizeof(CBufferLight) * MAX_LIGHTS, 16));
+
+	m_numLightsActive = 0;
 
 	// Fill out light properties
-	cBufferLightCPU[0].lightVec = XMFLOAT4(-1250.0, 1000.0, 5.0, 1.0);
-	cBufferLightCPU[0].lightAmbient = XMFLOAT4(0.3, 0.3, 0.5, 1.0);
-	cBufferLightCPU[0].lightDiffuse = XMFLOAT4(1.0, 1.0, 1.0, 1.0);
-	cBufferLightCPU[0].lightSpecular = XMFLOAT4(0.9, 0.9, 0.9, 1.0);
-	cBufferLightCPU[0].lightAttenuation = XMFLOAT4(1.0, 0.0, 0.0, 10000.0);
-	cBufferLightCPU[0].lightCone = XMFLOAT4(0.0, -1.0, 0.0, 0);
+	m_lightBufferCPU[0].lightVec = XMFLOAT4(-1250.0, 1000.0, 5.0, 1.0);
+	m_lightBufferCPU[0].lightAmbient = XMFLOAT4(0.3, 0.3, 0.5, 1.0);
+	m_lightBufferCPU[0].lightDiffuse = XMFLOAT4(1.0, 1.0, 1.0, 1.0);
+	m_lightBufferCPU[0].lightSpecular = XMFLOAT4(0.9, 0.9, 0.9, 1.0);
+	m_lightBufferCPU[0].lightAttenuation = XMFLOAT4(1.0, 0.0, 0.0, 10000.0);
+	m_lightBufferCPU[0].lightCone = XMFLOAT4(0.0, -1.0, 0.0, 0);
+	m_numLightsActive++;
 
 	// Additional lights setup...
-	cBufferLightCPU[1].lightVec = XMFLOAT4(0, gLightDistance * 0.625, gLightDistance, 1.0);
-	cBufferLightCPU[1].lightAmbient = XMFLOAT4(0.0, 0.0, 0.0, gRed);
-	cBufferLightCPU[1].lightDiffuse = XMFLOAT4(2.5, 2.5, 2.5, 1.0);
-	cBufferLightCPU[1].lightSpecular = XMFLOAT4(1.0, 1.0, 1.0, 1.0);
-	cBufferLightCPU[1].lightAttenuation = XMFLOAT4(0.01, 0.0, 0.9, 10.0);
-	cBufferLightCPU[1].lightCone = XMFLOAT4(0.0, -1.0, 0.0, cutOff);
-
-	cBufferLightCPU[2].lightVec = XMFLOAT4(0, 1, 0, 1.0);
-	cBufferLightCPU[2].lightAmbient = XMFLOAT4(0.3, 0.3, 0.3, 1.0);
-	cBufferLightCPU[2].lightDiffuse = XMFLOAT4(1.0, 1.0,1.0, 1.0);
-	cBufferLightCPU[2].lightSpecular = XMFLOAT4(1.0, 1.0, 1.0, 1.0);
-	cBufferLightCPU[2].lightAttenuation = XMFLOAT4(1.0, 0.2, 0.1, 10.0);
-	cBufferLightCPU[2].lightCone = XMFLOAT4(0.0, -1.0, 0.0, 0);
-
-	cBufferLightCPU[3].lightVec = XMFLOAT4(0, 10, 15, 1.0);
-	cBufferLightCPU[3].lightAmbient = XMFLOAT4(0.3, 0.1, 0.0, 1.0);
-	cBufferLightCPU[3].lightDiffuse = XMFLOAT4(1.0, 0.3, 0.0, 1.0);
-	cBufferLightCPU[3].lightSpecular = XMFLOAT4(1.0, 0.3, 0.0, 1.0);
-	cBufferLightCPU[3].lightAttenuation = XMFLOAT4(1.0, 0.1, 0.05, 10.0);
-	cBufferLightCPU[3].lightCone = XMFLOAT4(0.0, -1.0, 0.0, cutOff);
-
-	cBufferLightCPU[4].lightVec = XMFLOAT4(0, 10, 30, 1.0);
-	cBufferLightCPU[4].lightAmbient = XMFLOAT4(0.3, 0.1, 0.0, 1.0);
-	cBufferLightCPU[4].lightDiffuse = XMFLOAT4(1.0, 0.3, 0.0, 1.0);
-	cBufferLightCPU[4].lightSpecular = XMFLOAT4(1.0, 0.3, 0.0, 1.0);
-	cBufferLightCPU[4].lightAttenuation = XMFLOAT4(1.0, 0.1, 0.05, 10.0);
-	cBufferLightCPU[4].lightCone = XMFLOAT4(0.0, -1.0, 0.0, cutOff);
-
-	cBufferLightCPU[5].lightVec = XMFLOAT4(-40, 10, 0, 1.0);
-	cBufferLightCPU[5].lightAmbient = XMFLOAT4(0.3, 0.1, 0.0, 1.0);
-	cBufferLightCPU[5].lightDiffuse = XMFLOAT4(1.0, 0.3, 0.0, 1.0);
-	cBufferLightCPU[5].lightSpecular = XMFLOAT4(1.0, 0.3, 0.0, 1.0);
-	cBufferLightCPU[5].lightAttenuation = XMFLOAT4(1.0, 0.1, 0.05, 10.0);
-	cBufferLightCPU[5].lightCone = XMFLOAT4(0.0, -1.0, 0.0, cutOff);
-
-	cBufferLightCPU[6].lightVec = XMFLOAT4(-80, 10, 0, 1.0);
-	cBufferLightCPU[6].lightAmbient = XMFLOAT4(0.3, 0.3, 0.3, 1.0);
-	cBufferLightCPU[6].lightDiffuse = XMFLOAT4(1.0, 1.0, 1.0, 1.0);
-	cBufferLightCPU[6].lightSpecular = XMFLOAT4(1.0, 1.0, 1.0, 1.0);
-	cBufferLightCPU[6].lightAttenuation = XMFLOAT4(1.0, 0.1, 0.05, 10.0);
-	cBufferLightCPU[6].lightCone = XMFLOAT4(0.0, -1.0, 0.0, cutOff);
-
-	cBufferLightCPU[7].lightVec = XMFLOAT4(40, 10, 0, 1.0);
-	cBufferLightCPU[7].lightAmbient = XMFLOAT4(0.3, 0.1, 0.0, 1.0);
-	cBufferLightCPU[7].lightDiffuse = XMFLOAT4(1.0, 0.3, 0.0, 1.0);
-	cBufferLightCPU[7].lightSpecular = XMFLOAT4(1.0, 0.3, 0.0, 1.0);
-	cBufferLightCPU[7].lightAttenuation = XMFLOAT4(1.0, 0.1, 0.05, 10.0);
-	cBufferLightCPU[7].lightCone = XMFLOAT4(0.0, -1.0, 0.0, cutOff);
-
-	cBufferLightCPU[8].lightVec = XMFLOAT4(80, 10, 0, 1.0);
-	cBufferLightCPU[8].lightAmbient = XMFLOAT4(0.3, 0.3, 0.0, 1.0);
-	cBufferLightCPU[8].lightDiffuse = XMFLOAT4(1.0, 1.0, 1.0, 1.0);
-	cBufferLightCPU[8].lightSpecular = XMFLOAT4(1.0, 1.0, 1.0, 1.0);
-	cBufferLightCPU[8].lightAttenuation = XMFLOAT4(1.0, 0.1, 0.05, 10.0);
-	cBufferLightCPU[8].lightCone = XMFLOAT4(0.0, -1.0, 0.0, cutOff);
 	
+	// This light is usesd for the skin sub surface scattering. the magnitude of subsurface scatter 
+	// is stored in the ambient w componentand can be increased with 'l' and reduced with 'k'. the light
+	// can be moved inwards towards the face model with 'i' amd outwards away from the face with 'o'.
+	m_lightBufferCPU[1].lightVec = XMFLOAT4(0, g_lightDistance * 0.625, g_lightDistance, 1.0);
+	m_lightBufferCPU[1].lightAmbient = XMFLOAT4(0.0, 0.0, 0.0, g_subsurfaceScatter);
+	m_lightBufferCPU[1].lightDiffuse = XMFLOAT4(2.5, 2.5, 2.5, 1.0);
+	m_lightBufferCPU[1].lightSpecular = XMFLOAT4(1.0, 1.0, 1.0, 1.0);
+	m_lightBufferCPU[1].lightAttenuation = XMFLOAT4(0.01, 0.0, 0.9, 10.0);
+	m_lightBufferCPU[1].lightCone = XMFLOAT4(0.0, -1.0, 0.0, cutOff);
+	m_numLightsActive++;
+
+	m_lightBufferCPU[2].lightVec = XMFLOAT4(0, 1, 0, 1.0);
+	m_lightBufferCPU[2].lightAmbient = XMFLOAT4(0.3, 0.3, 0.3, 1.0);
+	m_lightBufferCPU[2].lightDiffuse = XMFLOAT4(1.0, 1.0, 1.0, 1.0);
+	m_lightBufferCPU[2].lightSpecular = XMFLOAT4(1.0, 1.0, 1.0, 1.0);
+	m_lightBufferCPU[2].lightAttenuation = XMFLOAT4(1.0, 0.2, 0.1, 10.0);
+	m_lightBufferCPU[2].lightCone = XMFLOAT4(0.0, -1.0, 0.0, 0);
+	m_numLightsActive++;
+
+	m_lightBufferCPU[3].lightVec = XMFLOAT4(0, 10, 15, 1.0);
+	m_lightBufferCPU[3].lightAmbient = XMFLOAT4(0.3, 0.1, 0.0, 1.0);
+	m_lightBufferCPU[3].lightDiffuse = XMFLOAT4(1.0, 0.3, 0.0, 1.0);
+	m_lightBufferCPU[3].lightSpecular = XMFLOAT4(1.0, 0.3, 0.0, 1.0);
+	m_lightBufferCPU[3].lightAttenuation = XMFLOAT4(1.0, 0.1, 0.05, 10.0);
+	m_lightBufferCPU[3].lightCone = XMFLOAT4(0.0, -1.0, 0.0, cutOff);
+	m_numLightsActive++;
+
+	m_lightBufferCPU[4].lightVec = XMFLOAT4(0, 10, 30, 1.0);
+	m_lightBufferCPU[4].lightAmbient = XMFLOAT4(0.3, 0.1, 0.0, 1.0);
+	m_lightBufferCPU[4].lightDiffuse = XMFLOAT4(1.0, 0.3, 0.0, 1.0);
+	m_lightBufferCPU[4].lightSpecular = XMFLOAT4(1.0, 0.3, 0.0, 1.0);
+	m_lightBufferCPU[4].lightAttenuation = XMFLOAT4(1.0, 0.1, 0.05, 10.0);
+	m_lightBufferCPU[4].lightCone = XMFLOAT4(0.0, -1.0, 0.0, cutOff);
+	m_numLightsActive++;
+
+	m_lightBufferCPU[5].lightVec = XMFLOAT4(-40, 10, 0, 1.0);
+	m_lightBufferCPU[5].lightAmbient = XMFLOAT4(0.3, 0.1, 0.0, 1.0);
+	m_lightBufferCPU[5].lightDiffuse = XMFLOAT4(1.0, 0.3, 0.0, 1.0);
+	m_lightBufferCPU[5].lightSpecular = XMFLOAT4(1.0, 0.3, 0.0, 1.0);
+	m_lightBufferCPU[5].lightAttenuation = XMFLOAT4(1.0, 0.1, 0.05, 10.0);
+	m_lightBufferCPU[5].lightCone = XMFLOAT4(0.0, -1.0, 0.0, cutOff);
+	m_numLightsActive++;
+
+	m_lightBufferCPU[6].lightVec = XMFLOAT4(-80, 10, 0, 1.0);
+	m_lightBufferCPU[6].lightAmbient = XMFLOAT4(0.3, 0.3, 0.3, 1.0);
+	m_lightBufferCPU[6].lightDiffuse = XMFLOAT4(1.0, 1.0, 1.0, 1.0);
+	m_lightBufferCPU[6].lightSpecular = XMFLOAT4(1.0, 1.0, 1.0, 1.0);
+	m_lightBufferCPU[6].lightAttenuation = XMFLOAT4(1.0, 0.1, 0.05, 10.0);
+	m_lightBufferCPU[6].lightCone = XMFLOAT4(0.0, -1.0, 0.0, cutOff);
+	m_numLightsActive++;
+
+	m_lightBufferCPU[7].lightVec = XMFLOAT4(40, 10, 0, 1.0);
+	m_lightBufferCPU[7].lightAmbient = XMFLOAT4(0.3, 0.1, 0.0, 1.0);
+	m_lightBufferCPU[7].lightDiffuse = XMFLOAT4(1.0, 0.3, 0.0, 1.0);
+	m_lightBufferCPU[7].lightSpecular = XMFLOAT4(1.0, 0.3, 0.0, 1.0);
+	m_lightBufferCPU[7].lightAttenuation = XMFLOAT4(1.0, 0.1, 0.05, 10.0);
+	m_lightBufferCPU[7].lightCone = XMFLOAT4(0.0, -1.0, 0.0, cutOff);
+	m_numLightsActive++;
+
+	m_lightBufferCPU[8].lightVec = XMFLOAT4(80, 10, 0, 1.0);
+	m_lightBufferCPU[8].lightAmbient = XMFLOAT4(0.3, 0.3, 0.0, 1.0);
+	m_lightBufferCPU[8].lightDiffuse = XMFLOAT4(1.0, 1.0, 1.0, 1.0);
+	m_lightBufferCPU[8].lightSpecular = XMFLOAT4(1.0, 1.0, 1.0, 1.0);
+	m_lightBufferCPU[8].lightAttenuation = XMFLOAT4(1.0, 0.1, 0.05, 10.0);
+	m_lightBufferCPU[8].lightCone = XMFLOAT4(0.0, -1.0, 0.0, cutOff);
+	m_numLightsActive++;
+
 	// Create GPU constant buffer
 	D3D11_BUFFER_DESC cbufferDesc;
 	D3D11_SUBRESOURCE_DATA cbufferInitData;
 	ZeroMemory(&cbufferDesc, sizeof(D3D11_BUFFER_DESC));
 	ZeroMemory(&cbufferInitData, sizeof(D3D11_SUBRESOURCE_DATA));
 
-	cbufferDesc.ByteWidth = sizeof(CBufferLight) * numLights;
+	cbufferDesc.ByteWidth = sizeof(CBufferLight) * m_numLightsActive;
 	cbufferDesc.Usage = D3D11_USAGE_DYNAMIC;
 	cbufferDesc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
 	cbufferDesc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
-	cbufferInitData.pSysMem = cBufferLightCPU;
+	cbufferInitData.pSysMem = m_lightBufferCPU.get();
 
-	HRESULT hr = device->CreateBuffer(&cbufferDesc, &cbufferInitData, &cBufferLightGPU);
+	HRESULT hr = device->CreateBuffer(&cbufferDesc, &cbufferInitData, &m_lightBufferGPU);
 
 	// Map buffer to GPU
-	mapCbuffer(context, cBufferLightCPU, cBufferLightGPU, sizeof(CBufferLight) * numLights);
-	context->VSSetConstantBuffers(2, 1, &cBufferLightGPU);
-	context->PSSetConstantBuffers(2, 1, &cBufferLightGPU);
+	mapCbuffer(context, m_lightBufferCPU.get(), m_lightBufferGPU.Get(), sizeof(CBufferLight) * m_numLightsActive);
+	context->VSSetConstantBuffers(2, 1, m_lightBufferGPU.GetAddressOf());
+	context->PSSetConstantBuffers(2, 1, m_lightBufferGPU.GetAddressOf());
 
-	// Scene constant buffer setup
-	cBufferSceneCPU = (CBufferScene*)_aligned_malloc(sizeof(CBufferScene), 16);
-
-	// Fill out scene properties
-	cBufferSceneCPU->windDir = XMFLOAT4(1, 0, 0, 1);
-	cBufferSceneCPU->Time = 0.0;
-	cBufferSceneCPU->grassHeight = 0.2;
-	cBufferSceneCPU->USE_SHADOW_MAP = true;
-	cBufferSceneCPU->QUALITY = menu->getQuality();
-	cBufferSceneCPU->fog = 0.15f;
-	cBufferSceneCPU->numLights = numLights;
-
-	cbufferInitData.pSysMem = cBufferSceneCPU;
-	cbufferDesc.ByteWidth = sizeof(CBufferScene);
-
-	hr = device->CreateBuffer(&cbufferDesc, &cbufferInitData, &cBufferSceneGPU);
-
-	mapCbuffer(context, cBufferSceneCPU, cBufferSceneGPU, sizeof(CBufferScene));
-	context->VSSetConstantBuffers(3, 1, &cBufferSceneGPU);
-	context->PSSetConstantBuffers(3, 1, &cBufferSceneGPU);
-
-	// Enable main menu
-	MainMenuState = MainMenu;
-
-	return S_OK;
+	return hr;
 }
-
 // Lens flare rendering implementation
 void Scene::DrawFlare(ID3D11DeviceContext* context)
 {
-	if (flares) {
+	if (m_lensFlare) {
 		// Set NULL depth buffer to use Depth Buffer as shader resource
-		ID3D11RenderTargetView* tempRT = system->getBackBufferRTV();
+		ID3D11RenderTargetView* tempRT = m_system->getBackBufferRTV();
 		context->OMSetRenderTargets(1, &tempRT, NULL);
 
-		ID3D11ShaderResourceView* depthSRV = system->getDepthStencilSRV();
+		ID3D11ShaderResourceView* depthSRV = m_system->getDepthStencilSRV();
 		context->VSSetShaderResources(5, 1, &depthSRV);
 
-		flares->renderInstances(context);
+		m_lensFlare->renderInstances(context);
 
 		// Release depth shader resource
 		ID3D11ShaderResourceView* nullSRV = NULL;
 		context->VSSetShaderResources(5, 1, &nullSRV);
 
 		// Restore default depth buffer view
-		tempRT = system->getBackBufferRTV();
-		context->OMSetRenderTargets(1, &tempRT, system->getDepthStencil());
+		tempRT = m_system->getBackBufferRTV();
+		context->OMSetRenderTargets(1, &tempRT, m_system->getDepthStencil());
 	}
 }
 
-// Quality settings adjustment based on menu selection
-void Scene::UpdateRenderQuality()
+// Quality settings adjustment based on m_menu selection
+void Scene::updateRenderQuality()
 {
-	stepSize = 1.0f / 60.0f;
+	m_fixedTimeStep = 1.0f / 60.0f;
 
-	if (menu->getQuality() == LOWEST)
+	if (m_menu->getQuality() == RenderQuality::Lowest)
 	{
-		stepSize = 1.0f / 25.0f;
-		numGrassPasses = 1;
-		numPXUpdates = 1;
-		numKartPXUpdates = 2;
+		m_fixedTimeStep = 1.0f / 25.0f;
+		m_grassRenderPasses = 1;
+		m_numPhysXUpdates = 1;
+		m_numKartPhysXUpdates = 2;
 	}
-	else if (menu->getQuality() == LOW)
+	else if (m_menu->getQuality() == RenderQuality::Low)
 	{
-		stepSize = 1.0f / 30.0f;
-		numGrassPasses = 3;
-		numPXUpdates = 2;
+		m_fixedTimeStep = 1.0f / 30.0f;
+		m_grassRenderPasses = 3;
+		m_numPhysXUpdates = 2;
 	}
-	else if (menu->getQuality() == MEDIUM)
+	else if (m_menu->getQuality() == RenderQuality::Medium)
 	{
-		stepSize = 1.0f / 30.0f;
-		numGrassPasses = 5;
-		numPXUpdates = 2;
+		m_fixedTimeStep = 1.0f / 30.0f;
+		m_grassRenderPasses = 5;
+		m_numPhysXUpdates = 2;
 	}
-	else if (menu->getQuality() == HIGH)
+	else if (m_menu->getQuality() == RenderQuality::High)
 	{
-		stepSize = 1.0f / 50.0f;
-		numGrassPasses = 10;
-		numPXUpdates = 2;
+		m_fixedTimeStep = 1.0f / 50.0f;
+		m_grassRenderPasses = 10;
+		m_numPhysXUpdates = 2;
 	}
-	else if (menu->getQuality() == HIGHEST)
+	else if (m_menu->getQuality() == RenderQuality::Highest)
 	{
-		stepSize = 1.0f / 60.0f;
-		numGrassPasses = 20;
-		numPXUpdates = 2;
+		m_fixedTimeStep = 1.0f / 60.0f;
+		m_grassRenderPasses = 20;
+		m_numPhysXUpdates = 2;
 	}
 
 	// Update shadow map size based on quality
-	if (cBufferSceneCPU->QUALITY != menu->getQuality())
+	if (m_sceneBufferCPU->QUALITY != (int)m_menu->getQuality())
 	{
-		cBufferSceneCPU->QUALITY = menu->getQuality();
-		mapCbuffer(system->getDeviceContext(), cBufferSceneCPU, cBufferSceneGPU, sizeof(CBufferScene));
+		m_sceneBufferCPU->QUALITY = (int)m_menu->getQuality();
+		mapCbuffer(m_system->getDeviceContext(), m_sceneBufferCPU.get(), m_sceneBufferGPU.Get(), sizeof(CBufferScene));
 
 		int shadowMapWidth = 2048;
-		if (menu->getQuality() == MEDIUM)
+		if (m_menu->getQuality() == RenderQuality::Medium)
 			shadowMapWidth = 4096;
-		else if (menu->getQuality() > MEDIUM)
+		else if (m_menu->getQuality() > RenderQuality::Medium)
 			shadowMapWidth = 8192;
 
-		shadowMap->setMapSize(system->getDevice(), shadowMapWidth);
+		m_shadowMap->setMapSize(m_system->getDevice(), shadowMapWidth);
 	}
 }
 
 // Main scene update with physics and animation
 HRESULT Scene::updateScene(ID3D11DeviceContext* context, FirstPersonCamera* camera) {
 	// Update clock
-	mainClock->tick();
-	double dT = mainClock->gameTimeDelta();
-	double gT = mainClock->gameTimeElapsed();
-	acc += dT;
+	m_mainClock->tick();
+	double dT = m_mainClock->gameTimeDelta();
+	double gT = m_mainClock->gameTimeElapsed();
+	m_accumulator += dT;
 
 	// Fixed timestep implementation
-	if (acc < stepSize)
+	if (m_accumulator < m_fixedTimeStep)
 	{
 		return S_OK;
 	}
 
-	renderFrame = true;
-	acc = fmod(acc, stepSize);
+	m_shouldRenderFrame = true;
+	m_accumulator = fmod(m_accumulator, m_fixedTimeStep);
 
 	// Update scene time for animations
-	cBufferSceneCPU->Time = gT;
-	mapCbuffer(context, cBufferSceneCPU, cBufferSceneGPU, sizeof(CBufferScene));
+	m_sceneBufferCPU->Time = gT;
+	mapCbuffer(context, m_sceneBufferCPU.get(), m_sceneBufferGPU.Get(), sizeof(CBufferScene));
 
 	// Start AI karts with delays
 	for (int i = 0; i < NUM_AI_VEHICLES; i++)
-		if (gT > i * 8 + 5) aiKarts[i]->setStarted(true);
+		if (gT > i * 8 + 5) m_aiKarts[i]->setStarted(true);
 
 	// Update physics with multiple steps for stability
-	for (int i = 0; i < numPXUpdates; i++) {
-		for (int i = 0; i < numKartPXUpdates; i++)
-			PXKartController->stepVehicles(stepSize * 1.6f / (numPXUpdates * numKartPXUpdates), kartArray, NUM_VEHICLES);
+	for (int i = 0; i < m_numPhysXUpdates; i++) {
+		for (int i = 0; i < m_numKartPhysXUpdates; i++)
+			m_physXKartController->stepVehicles(m_fixedTimeStep * 1.6f / (m_numPhysXUpdates * m_numKartPhysXUpdates), m_allKarts.data(), NUM_VEHICLES);
 
-		for (int i = 0; i < numScenePXUpdates; i++)
-			PXScene->step(stepSize * 1.6f / (numPXUpdates * numScenePXUpdates));
+		for (int i = 0; i < m_numScenePhysXUpdates; i++)
+			m_physXScene->step(m_fixedTimeStep * 1.6f / (m_numPhysXUpdates * m_numScenePhysXUpdates));
 	}
 
 	// Update kart graphics
-	playerKart->update(context, stepSize);
+	m_playerKart->update(context, m_fixedTimeStep);
 	for (int i = 0; i < NUM_AI_VEHICLES; i++)
-		aiKarts[i]->update(context, stepSize);
+		m_aiKarts[i]->update(context, m_fixedTimeStep);
 
 	// Update PhysX boxes graphics
-	for (int i = 0; i < S; i++)
+	for (int i = 0; i < NUM_PHYSICS_BOXS; i++)
 	{
 		physx::PxTransform boxT = body[i]->getGlobalPose();
 		XMVECTOR quart = DirectX::XMLoadFloat4(&XMFLOAT4(boxT.q.x, boxT.q.y, boxT.q.z, boxT.q.w));
-		boxMatArray[i] = XMMatrixScaling(boxHalfSize, boxHalfSize, boxHalfSize) *
+		m_boxTransforms[i] = XMMatrixScaling(PHYSICS_BOX_HALF_SIZE, PHYSICS_BOX_HALF_SIZE, PHYSICS_BOX_HALF_SIZE) *
 			XMMatrixRotationQuaternion(quart) *
 			XMMatrixTranslation(boxT.p.x * 1.0, boxT.p.y + 0.2, boxT.p.z * 1.0);
 	}
 
 	// Update lap timer
 	for (int i = 0; i < NUM_VEHICLES; i++)
-		kartArray[i]->updateLapTimes(stepSize, startDist, finishDist, startFinishPos);
+		m_allKarts[i]->updateLapTimes(m_fixedTimeStep, startDist, finishDist, startFinishPos);
 
 	// Update player camera
-	if (!mainCamera->getFlying())
+	if (!m_mainCamera->getFlying())
 		updatePlayerCamera(context, camera);
 
-	// Update dragon animation and movement
+	// Update m_dragonModel animation and movement
 	float r = 0;
-	if (dragon->getCurrentAnim() == 2) r = -0.4 * stepSize;
-	else if (dragon->getCurrentAnim() == 3) r = -0.2 * stepSize;
-	else r = -0.2 * stepSize;
+	if (m_dragonModel->getCurrentAnim() == 2) r = -0.4 * m_fixedTimeStep;
+	else if (m_dragonModel->getCurrentAnim() == 3) r = -0.2 * m_fixedTimeStep;
+	else r = -0.2 * m_fixedTimeStep;
 
-	dragon->setWorldMatrix(dragon->getWorldMatrix() *
+	m_dragonModel->setWorldMatrix(m_dragonModel->getWorldMatrix() *
 		XMMatrixTranslation(20, 0, 30) *
 		XMMatrixRotationY(r) *
 		XMMatrixTranslation(-20, 0, -30));
 
 	XMVECTOR dragonPos = XMVectorZero();
-	dragonPos = XMVector3TransformCoord(dragonPos, dragon->getWorldMatrix());
-	float dragonHeight = grass->CalculateYValueWorld(DirectX::XMVectorGetX(dragonPos), DirectX::XMVectorGetZ(dragonPos));
+	dragonPos = XMVector3TransformCoord(dragonPos, m_dragonModel->getWorldMatrix());
+	float dragonHeight = m_terrain->CalculateYValueWorld(DirectX::XMVectorGetX(dragonPos), DirectX::XMVectorGetZ(dragonPos));
 
-	dragon->setWorldMatrix(dragon->getWorldMatrix() *
+	m_dragonModel->setWorldMatrix(m_dragonModel->getWorldMatrix() *
 		XMMatrixTranslation(0, dragonHeight - DirectX::XMVectorGetY(dragonPos), 0));
 
-	dragon->update(context);
-	dragon->updateBones(gT);
+	m_dragonModel->update(context);
+	m_dragonModel->updateBones(gT);
 
 	// Update Nathan animation
-	nathan->setWorldMatrix(nathan->getWorldMatrix() *
+	m_nathanModel->setWorldMatrix(m_nathanModel->getWorldMatrix() *
 		XMMatrixTranslation(0, 0, 0) *
 		XMMatrixRotationY(r) *
 		XMMatrixTranslation(0, 0, 0));
 
-	nathan->update(context);
-	nathan->updateBonesSubFrames(19, 52, gT);
+	m_nathanModel->update(context);
+	m_nathanModel->updateBonesSubFrames(19, 52, gT);
 
 	// Update Sophia animation
-	sophia->update(context);
-	sophia->updateBones(gT);
+	m_sophiaModel->update(context);
+	m_sophiaModel->updateBones(gT);
 
 	// Time of day lighting changes
-	float tod = sin(mainClock->gameTimeElapsed() / 20.0f) / 2 + 0.5f;
+	float tod = sin(m_mainClock->gameTimeElapsed() / 20.0f) / 2 + 0.5f;
 	float todBlue = tod * 0.5 + 0.5;
 
-	cBufferLightCPU[0].lightAmbient = XMFLOAT4(0.3 * tod, 0.3 * tod, 0.3 * todBlue, 1.0);
-	cBufferLightCPU[0].lightDiffuse = XMFLOAT4(0.8 * tod, 0.8 * tod, 1.0 * todBlue, 1.0);
-	cBufferLightCPU[0].lightSpecular = XMFLOAT4(0.8 * tod, 0.8 * tod, 1.0 * todBlue, 1.0);
+	m_lightBufferCPU[0].lightAmbient = XMFLOAT4(0.3 * tod, 0.3 * tod, 0.3 * todBlue, 1.0);
+	m_lightBufferCPU[0].lightDiffuse = XMFLOAT4(0.8 * tod, 0.8 * tod, 1.0 * todBlue, 1.0);
+	m_lightBufferCPU[0].lightSpecular = XMFLOAT4(0.8 * tod, 0.8 * tod, 1.0 * todBlue, 1.0);
 
 	// Animate light position
 	XMMATRIX rotM = XMMatrixRotationZ(gT) * XMMatrixTranslation(0, 5, 0);
-	cBufferLightCPU[1].lightVec.x = gLightDistance * 0.625;
-	cBufferLightCPU[1].lightVec.z = gLightDistance;
-	cBufferLightCPU[1].lightVec.y = 0;
+	m_lightBufferCPU[1].lightVec.x = g_lightDistance * 0.625;
+	m_lightBufferCPU[1].lightVec.z = g_lightDistance;
+	m_lightBufferCPU[1].lightVec.y = 0;
 
-	XMVECTOR lightVec = DirectX::XMLoadFloat4(&(cBufferLightCPU[1].lightVec));
+	XMVECTOR lightVec = DirectX::XMLoadFloat4(&(m_lightBufferCPU[1].lightVec));
 	lightVec = DirectX::XMVector3TransformCoord(lightVec, rotM);
-	DirectX::XMStoreFloat4(&(cBufferLightCPU[1].lightVec), lightVec);
+	DirectX::XMStoreFloat4(&(m_lightBufferCPU[1].lightVec), lightVec);
 
-	orb3->setWorldMatrix(XMMatrixScaling(0.5, 0.5, 0.5) *
-		XMMatrixTranslation(cBufferLightCPU[1].lightVec.x,
-			cBufferLightCPU[1].lightVec.y,
-			cBufferLightCPU[1].lightVec.z));
+	m_lightOrbTemplate->setWorldMatrix(XMMatrixScaling(0.5, 0.5, 0.5) *
+		XMMatrixTranslation(m_lightBufferCPU[1].lightVec.x,
+			m_lightBufferCPU[1].lightVec.y,
+			m_lightBufferCPU[1].lightVec.z));
 
-	orb3->update(context);
+	m_lightOrbTemplate->update(context);
 
 	// Update light positions based on kart positions
-	physx::PxTransform trans = aiKarts[NUM_AI_VEHICLES - 1]->getVehicle4W()->getRigidDynamicActor()->getGlobalPose();
+	physx::PxTransform trans = m_aiKarts[NUM_AI_VEHICLES - 1]->getVehicle4W()->getRigidDynamicActor()->getGlobalPose();
 	trans.p.y += 0.05;
 
-	cBufferLightCPU[2].lightVec.x = trans.p.x;
-	cBufferLightCPU[2].lightVec.y = trans.p.y + 1;
-	cBufferLightCPU[2].lightVec.z = trans.p.z;
+	m_lightBufferCPU[2].lightVec.x = trans.p.x;
+	m_lightBufferCPU[2].lightVec.y = trans.p.y + 1;
+	m_lightBufferCPU[2].lightVec.z = trans.p.z;
 
 	// Update GPU light buffer
-	mapCbuffer(context, cBufferLightCPU, cBufferLightGPU, sizeof(CBufferLight) * numLights);
+	mapCbuffer(context, m_lightBufferCPU.get(), m_lightBufferGPU.Get(), sizeof(CBufferLight) * m_numLightsActive);
 
 	return S_OK;
 }
@@ -1240,10 +1361,10 @@ HRESULT Scene::updateScene(ID3D11DeviceContext* context, FirstPersonCamera* came
 // Camera update following player kart
 void Scene::updatePlayerCamera(ID3D11DeviceContext* context, FirstPersonCamera* camera)
 {
-	physx::PxTransform trans = playerKart->getVehicle4W()->getRigidDynamicActor()->getGlobalPose();
+	physx::PxTransform trans = m_playerKart->getVehicle4W()->getRigidDynamicActor()->getGlobalPose();
 	trans.p.y += 0.05;
 
-	if (playerKart->camMode == 3) // Birds eye view
+	if (m_playerKart->camMode == 3) // Birds eye view
 	{
 		// Top down view
 		camera->setPos(XMVectorSet(trans.p.x, 15, trans.p.z, 1.0));
@@ -1258,9 +1379,9 @@ void Scene::updatePlayerCamera(ID3D11DeviceContext* context, FirstPersonCamera* 
 		dir = DirectX::XMVector4Transform(dir, XMMatrixRotationQuaternion(quart));
 		static XMVECTOR oldcampos = camera->getPos();
 		XMVECTOR target;
-		float timeScale = stepSize * 60.0f;
+		float timeScale = m_fixedTimeStep * 60.0f;
 
-		if (playerKart->camMode == 0) // First Person Camera
+		if (m_playerKart->camMode == 0) // First Person Camera
 		{
 			// Lerp between old and new camera positions for smooth movement
 			float currentWeightDIR = 0.5 * timeScale;
@@ -1279,7 +1400,7 @@ void Scene::updatePlayerCamera(ID3D11DeviceContext* context, FirstPersonCamera* 
 			camera->setLookAt(DirectX::XMVectorAdd(campos, DirectX::XMVectorScale(dir, 6.0)));
 			camera->setUp(XMVectorSet(0, 1, 0, 1));
 		}
-		else if (playerKart->camMode == 1) // Third Person Camera close
+		else if (m_playerKart->camMode == 1) // Third Person Camera close
 		{
 			float currentWeightDIR = 0.1 * timeScale;
 			float currentWeightPOS = 0.1 * timeScale;
@@ -1296,7 +1417,7 @@ void Scene::updatePlayerCamera(ID3D11DeviceContext* context, FirstPersonCamera* 
 			camera->setLookAt(campos);
 			camera->setUp(XMVectorSet(0, 1, 0, 1));
 		}
-		else if (playerKart->camMode == 2) // Third Person Camera far
+		else if (m_playerKart->camMode == 2) // Third Person Camera far
 		{
 			float currentWeightDIR = 0.05 * timeScale;
 			float currentWeightPOS = 0.05 * timeScale;
@@ -1319,153 +1440,153 @@ void Scene::updatePlayerCamera(ID3D11DeviceContext* context, FirstPersonCamera* 
 }
 // Main rendering routine
 HRESULT Scene::renderScene() {
-	ID3D11DeviceContext* context = system->getDeviceContext();
+	ID3D11DeviceContext* context = m_system->getDeviceContext();
 
 	// Validate window and D3D context
 	if (isMinimised() || !context)
 		return E_FAIL;
 
-	if (renderFrame == false)
+	if (m_shouldRenderFrame == false)
 		return S_OK;
 
 	// Shadow mapping pass
 	if (true)
 	{
 		// Disable shadow map for shadow pass
-		cBufferSceneCPU->USE_SHADOW_MAP = false;
-		mapCbuffer(context, cBufferSceneCPU, cBufferSceneGPU, sizeof(CBufferScene));
+		m_sceneBufferCPU.get()->USE_SHADOW_MAP = false;
+		mapCbuffer(context, m_sceneBufferCPU.get(), m_sceneBufferGPU.Get(), sizeof(CBufferScene));
 
-		shadowMap->update(context);
+		m_shadowMap->update(context);
 
 		// Disable alpha to coverage for shadow map (not multisampled)
-		tree->getEffect()->setAlphaToCoverage(system->getDevice(), FALSE);
-		models[1]->getEffect()->setAlphaToCoverage(system->getDevice(), FALSE);
+		m_treeTemplate->getEffect()->setAlphaToCoverage(m_system->getDevice(), FALSE);
+		m_sceneModels[1]->getEffect()->setAlphaToCoverage(m_system->getDevice(), FALSE);
 
 		// Render objects to shadow map
-		shadowMap->render(system, std::bind(&Scene::renderShadowObjects, this, std::placeholders::_1));
+		m_shadowMap->render(m_system.get(), std::bind(&Scene::renderShadowObjects, this, std::placeholders::_1));
 
 		// Re-enable shadow map
-		cBufferSceneCPU->USE_SHADOW_MAP = true;
-		mapCbuffer(context, cBufferSceneCPU, cBufferSceneGPU, sizeof(CBufferScene));
+		m_sceneBufferCPU->USE_SHADOW_MAP = true;
+		mapCbuffer(context, m_sceneBufferCPU.get(), m_sceneBufferGPU.Get(), sizeof(CBufferScene));
 
 		// Re-enable alpha to coverage
-		tree->getEffect()->setAlphaToCoverage(system->getDevice(), TRUE);
-		models[1]->getEffect()->setAlphaToCoverage(system->getDevice(), TRUE);
+		m_treeTemplate->getEffect()->setAlphaToCoverage(m_system->getDevice(), TRUE);
+		m_sceneModels[1]->getEffect()->setAlphaToCoverage(m_system->getDevice(), TRUE);
 
 		// Update dynamic cube map
-		dynamicCubeMap->updateCubeCameras(context,
-			XMVectorSet(XMVectorGetX(mainCamera->getPos()),
-				-XMVectorGetY(mainCamera->getPos()) + 1.8,
-				XMVectorGetZ(mainCamera->getPos()), 1));
+		m_dynamicCubeMap->updateCubeCameras(context,
+			XMVectorSet(XMVectorGetX(m_mainCamera->getPos()),
+				-XMVectorGetY(m_mainCamera->getPos()) + 1.8,
+				XMVectorGetZ(m_mainCamera->getPos()), 1));
 
-		dynamicCubeMap->render(system, std::bind(&Scene::renderDynamicObjects, this, std::placeholders::_1));
+		m_dynamicCubeMap->render(m_system.get(), std::bind(&Scene::renderDynamicObjects, this, std::placeholders::_1));
 
 		// Restore cube environment texture
-		ID3D11ShaderResourceView* cubeDayTextureSRV = cubeDayTexture->getShaderResourceView();
+		ID3D11ShaderResourceView* cubeDayTextureSRV = m_cubeDayTexture->getShaderResourceView();
 		context->PSSetShaderResources(6, 1, &cubeDayTextureSRV);
 
 		// Restore main camera
-		mainCamera->update(context);
+		m_mainCamera->update(context);
 	}
 	else
 	{
-		cBufferSceneCPU->USE_SHADOW_MAP = true;
-		mapCbuffer(context, cBufferSceneCPU, cBufferSceneGPU, sizeof(CBufferScene));
+		m_sceneBufferCPU->USE_SHADOW_MAP = true;
+		mapCbuffer(context, m_sceneBufferCPU.get(), m_sceneBufferGPU.Get(), sizeof(CBufferScene));
 	}
 
 	// Clear the back buffer
 	static const FLOAT clearColor[4] = { 0.0f, 0.0f, 1.0f, 1.0f };
-	context->ClearRenderTargetView(system->getBackBufferRTV(), clearColor);
-	context->ClearDepthStencilView(system->getDepthStencil(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
+	context->ClearRenderTargetView(m_system->getBackBufferRTV(), clearColor);
+	context->ClearDepthStencilView(m_system->getDepthStencil(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 
 	// Render scene objects
 	renderSceneObjects(context);
 
-	// Apply bloom effect to glow objects
-	bloom->blurModels(system, std::bind(&Scene::renderGlowObjects, this, std::placeholders::_1));
+	// Apply m_bloomUtility effect to glow objects
+	m_bloomUtility->blurModels(m_system.get(), std::bind(&Scene::renderGlowObjects, this, std::placeholders::_1));
 
 	// Draw lens flare
 	renderGlowObjects(context);
 
 	// Draw flare based on time of day
-	if (sin(mainClock->gameTimeElapsed() / 20.0f) > 0.5)
+	if (sin(m_mainClock->gameTimeElapsed() / 20.0f) > 0.5)
 		DrawFlare(context);
 
 	// Draw HUD
-	menu->renderGUIMenu(&MainMenuState, kartArray, NUM_VEHICLES);
+	m_menu->renderGUIMenu(&m_menuState, m_allKarts.data(), NUM_VEHICLES);
 
 	// Present to screen
-	HRESULT hr = system->presentBackBuffer();
+	HRESULT hr = m_system->presentBackBuffer();
 
 	return S_OK;
 }
 
-// Render glow objects for bloom effect
+// Render glow objects for m_bloomUtility effect
 void Scene::renderGlowObjects(ID3D11DeviceContext* context)
 {
-	orb3->renderInstances(context);
-	aiKarts[NUM_AI_VEHICLES - 1]->render(context);
+	m_lightOrbTemplate->renderInstances(context);
+	m_aiKarts[NUM_AI_VEHICLES - 1]->render(context);
 }
 
 // Render dynamic objects for cube map
 void Scene::renderDynamicObjects(ID3D11DeviceContext* context)
 {
-	ID3D11ShaderResourceView* cubeDayTextureSRV = cubeDayTexture->getShaderResourceView();
+	ID3D11ShaderResourceView* cubeDayTextureSRV = m_cubeDayTexture->getShaderResourceView();
 	context->PSSetShaderResources(6, 1, &cubeDayTextureSRV);
 
-	skyBox->render(context);
-	models[7]->renderInstances(context);//ducks
-	models[9]->renderInstances(context);//building
+	m_skyBox->render(context);
+	m_sceneModels[7]->renderInstances(context);//ducks
+	m_sceneModels[9]->renderInstances(context);//building
 
-	playerKart->render(context, playerKart->camMode);
+	m_playerKart->render(context, m_playerKart->camMode);
 
 	// Render ground base
-	cBufferSceneCPU->grassHeight = 0.0f;
-	mapCbuffer(context, cBufferSceneCPU, cBufferSceneGPU, sizeof(CBufferScene));
-	grass->getEffect()->setDepthWriteMask(system->getDevice(), D3D11_DEPTH_WRITE_MASK_ALL);
-	grass->render(context);
+	m_sceneBufferCPU->grassHeight = 0.0f;
+	mapCbuffer(context, m_sceneBufferCPU.get(), m_sceneBufferGPU.Get(), sizeof(CBufferScene));
+	m_terrain->getEffect()->setDepthWriteMask(m_system->getDevice(), D3D11_DEPTH_WRITE_MASK_ALL);
+	m_terrain->render(context);
 }
 
 // Render objects to shadow map
 void Scene::renderShadowObjects(ID3D11DeviceContext* context)
 {
-	if (cBufferSceneCPU->USE_SHADOW_MAP == false)
+	if (m_sceneBufferCPU->USE_SHADOW_MAP == false)
 	{
-		physXBox->getEffect()->setCullMode(system->getDevice(), D3D11_CULL_BACK);
-		playerKart->getFarings()->getEffect()->setCullMode(system->getDevice(), D3D11_CULL_BACK);
+		m_physXBox->getEffect()->setCullMode(m_system->getDevice(), D3D11_CULL_BACK);
+		m_playerKart->getFarings()->getEffect()->setCullMode(m_system->getDevice(), D3D11_CULL_BACK);
 	}
 
 	// Render PhysX boxes
-	if (physXBox)
-		for (int i = 0; i < S; i++)
+	if (m_physXBox)
+		for (int i = 0; i < NUM_PHYSICS_BOXS; i++)
 		{
-			physXBox->setWorldMatrix(boxMatArray[i]);
-			physXBox->update(context);
-			physXBox->render(context);
+			m_physXBox->setWorldMatrix(m_boxTransforms[i]);
+			m_physXBox->update(context);
+			m_physXBox->render(context);
 		}
 
 	// Render karts
-	playerKart->render(context, playerKart->camMode);
+	m_playerKart->render(context, m_playerKart->camMode);
 	for (int i = 0; i < NUM_AI_VEHICLES - 1; i++)
-		aiKarts[i]->render(context);
+		m_aiKarts[i]->render(context);
 
-	// Render tree instances
-	if (tree)
-		tree->renderInstances(context);
+	// Render m_treeTemplate getInstances()
+	if (m_treeTemplate)
+		m_treeTemplate->renderInstances(context);
 
-	// Render loaded models
-	for (int i = 1; i < models.size(); i++)
-		models[i]->renderInstances(context);
+	// Render loaded m_sceneModels
+	for (int i = 1; i < m_sceneModels.size(); i++)
+		m_sceneModels[i]->renderInstances(context);
 
 	// Render animated characters
-	dragon->render(context);
-	nathan->renderInstances(context);
-	sophia->renderInstances(context);
+	m_dragonModel->render(context);
+	m_nathanModel->renderInstances(context);
+	m_sophiaModel->renderInstances(context);
 
-	if (cBufferSceneCPU->USE_SHADOW_MAP == false)
+	if (m_sceneBufferCPU->USE_SHADOW_MAP == false)
 	{
-		physXBox->getEffect()->setCullMode(system->getDevice(), D3D11_CULL_BACK);
-		playerKart->getFarings()->getEffect()->setCullMode(system->getDevice(), D3D11_CULL_BACK);
+		m_physXBox->getEffect()->setCullMode(m_system->getDevice(), D3D11_CULL_BACK);
+		m_playerKart->getFarings()->getEffect()->setCullMode(m_system->getDevice(), D3D11_CULL_BACK);
 	}
 }
 
@@ -1473,159 +1594,164 @@ void Scene::renderShadowObjects(ID3D11DeviceContext* context)
 void Scene::renderSceneObjects(ID3D11DeviceContext* context)
 {
 	// Render skybox
-	if (skyBox)
-		skyBox->render(context);
+	if (m_skyBox)
+		m_skyBox->render(context);
 
 	renderShadowObjects(context);
 
 	// Render ground base
-	cBufferSceneCPU->grassHeight = 0.0f;
-	mapCbuffer(context, cBufferSceneCPU, cBufferSceneGPU, sizeof(CBufferScene));
-	grass->getEffect()->setDepthWriteMask(system->getDevice(), D3D11_DEPTH_WRITE_MASK_ALL);
-	grass->render(context);
+	m_sceneBufferCPU->grassHeight = 0.0f;
+	mapCbuffer(context, m_sceneBufferCPU.get(), m_sceneBufferGPU.Get(), sizeof(CBufferScene));
+	m_terrain->getEffect()->setDepthWriteMask(m_system->getDevice(), D3D11_DEPTH_WRITE_MASK_ALL);
+	m_terrain->render(context);
 
 	// Render racing line
-	if (models.size() > 0)
-		models[0]->renderInstances(context);
+	if (m_sceneModels.size() > 0)
+		m_sceneModels[0]->renderInstances(context);
 
-	// Render remaining grass shells with alpha blending
-	grass->getEffect()->setAlphaBlendEnable(system->getDevice(), true);
-	grass->getEffect()->setDepthWriteMask(system->getDevice(), D3D11_DEPTH_WRITE_MASK_ZERO);
+	// Render remaining m_terrain shells with alpha blending
+	m_terrain->getEffect()->setAlphaBlendEnable(m_system->getDevice(), true);
+	m_terrain->getEffect()->setDepthWriteMask(m_system->getDevice(), D3D11_DEPTH_WRITE_MASK_ZERO);
 
-	// Render grass layers from base to tip
-	for (int i = 1; i < numGrassPasses; i++)
+	// Render m_terrain layers from base to tip
+	for (int i = 1; i < m_grassRenderPasses; i++)
 	{
-		cBufferSceneCPU->grassHeight = (grassLength / numGrassPasses) * i;
-		mapCbuffer(context, cBufferSceneCPU, cBufferSceneGPU, sizeof(CBufferScene));
-		grass->render(context);
+		m_sceneBufferCPU->grassHeight = (m_grassShellHeight / m_grassRenderPasses) * i;
+		mapCbuffer(context, m_sceneBufferCPU.get(), m_sceneBufferGPU.Get(), sizeof(CBufferScene));
+		m_terrain->render(context);
 	}
 
 	//Render Face
-	if (gUseTSD > 0)
-		skinSim->blurModel(face, system->getDepthStencilSRV());
+	if (g_toggleSubsurfaceScatter > 0)
+		m_skinSimulationUtility->blurModel(m_faceModel.get(), m_system->getDepthStencilSRV());
 	else
-		face->render(context);
+		m_faceModel->render(context);
 	
-	// Render water with dynamic cube map
-	ID3D11ShaderResourceView* dunamicCubeTextureSRV = dynamicCubeMap->getSRV();
+	// Render m_water with dynamic cube map
+	ID3D11ShaderResourceView* dunamicCubeTextureSRV = m_dynamicCubeMap->getSRV();
 	context->PSSetShaderResources(6, 1, &dunamicCubeTextureSRV);
 
-	if (water)
-		water->render(context);
+	if (m_water)
+		m_water->render(context);
 
 	// Render particle effects from kart tires
-	if (playerKart->getWheelSpin())
+	if (m_playerKart->getWheelSpin())
 	{
-		if (playerKart->getOnGrass())
+		if (m_playerKart->getOnGrass())
 		{
-			dirt->setWorldMatrix(playerKart->getLSmokeMat());
-			dirt->update(context);
-			dirt->render(context);
+			m_dirtParticles->setWorldMatrix(m_playerKart->getLSmokeMat());
+			m_dirtParticles->update(context);
+			m_dirtParticles->render(context);
 
-			dirt->setWorldMatrix(playerKart->getRSmokeMat());
-			dirt->update(context);
-			dirt->render(context);
+			m_dirtParticles->setWorldMatrix(m_playerKart->getRSmokeMat());
+			m_dirtParticles->update(context);
+			m_dirtParticles->render(context);
 		}
 		else
 		{
-			smoke->setWorldMatrix(playerKart->getLSmokeMat());
-			smoke->update(context);
-			smoke->render(context);
+			m_smokeParticles->setWorldMatrix(m_playerKart->getLSmokeMat());
+			m_smokeParticles->update(context);
+			m_smokeParticles->render(context);
 
-			smoke->setWorldMatrix(playerKart->getRSmokeMat());
-			smoke->update(context);
-			smoke->render(context);
+			m_smokeParticles->setWorldMatrix(m_playerKart->getRSmokeMat());
+			m_smokeParticles->update(context);
+			m_smokeParticles->render(context);
 		}
 	}
 }
 
 // Input handling methods
 void Scene::handleMouseLDrag(const POINT& disp) {
-	if (MainMenuState != MenuDone)
+	if (m_menuState != MenuState::MenuDone)
 	{
-		menuKartRot += -disp.x * 0.01f;
+		m_menuKartRotation += -disp.x * 0.01f;
 	}
-	else if (mainCamera->getFlying())
+	else if (m_mainCamera->getFlying())
 	{
-		mainCamera->elevate((float)-disp.y * 0.01f);
-		mainCamera->turn((float)disp.x * 0.01f);
+		m_mainCamera->elevate((float)-disp.y * 0.01f);
+		m_mainCamera->turn((float)disp.x * 0.01f);
 	}
 }
 
 void Scene::handleMouseWheel(const short zDelta) {
-	if (MainMenuState >= MenuDone && mainCamera->getFlying())
-		mainCamera->move(-zDelta * 0.01);
+	if (m_menuState >= MenuState::MenuDone && m_mainCamera->getFlying())
+		m_mainCamera->move(-zDelta * 0.01);
 }
 
 void Scene::handleKeyDown(const WPARAM keyCode, const LPARAM extKeyFlags) {
+
 	if (keyCode == 'f' || keyCode == 'F')
-		mainCamera->toggleFlying();
+		m_mainCamera->toggleFlying();
 
 	if (keyCode == 'w' || keyCode == 'W')
-		if (mainCamera->getFlying())
-			mainCamera->move(0.5);
+		if (m_mainCamera->getFlying())
+			m_mainCamera->move(0.5);
 
 	if (keyCode == 's' || keyCode == 'S')
-		if (mainCamera->getFlying())
-			mainCamera->move(-0.5);
+		if (m_mainCamera->getFlying())
+			m_mainCamera->move(-0.5);
 
+
+	// Light[0] can be moved inwards towards the face model with 'i' amd outwards away from the face with 'o'.
 	if (keyCode == 'i' || keyCode == 'I')
 	{
-		if (gLightDistance > 1.28f)
-			gLightDistance = gLightDistance / 2.0;
-		cout << "LightPos: " << cBufferLightCPU->lightVec.z << endl;
+		if (g_lightDistance > 1.28f)
+			g_lightDistance = g_lightDistance / 2.0;
+		cout << "LightPos: " << m_lightBufferCPU[0].lightVec.z << endl;
+	}
+	if (keyCode == 'o' || keyCode == 'O')
+	{
+		if (g_lightDistance < 8.0f)
+			g_lightDistance = g_lightDistance * 2.0;
+		cout << "LightPos: " << m_lightBufferCPU[0].lightVec.z << endl;
 	}
 
+	// Light[1] is usesd for the skin sub surface scattering. the magnitude of subsurface scatter 
+	// is stored in the ambient w component and can be increased with 'l' and reduced with 'k'.
 	if (keyCode == 'l' || keyCode == 'L')
 	{
-		gRed += 0.4f;
-		cout << "Life: " << gRed << endl;
-		cBufferLightCPU[1].lightAmbient.w = gRed;
+		g_subsurfaceScatter += 0.4f;
+		cout << "Life: " << g_subsurfaceScatter << endl;
+		m_lightBufferCPU[1].lightAmbient.w = g_subsurfaceScatter;
 	}
 
 	if (keyCode == 'k' || keyCode == 'K')
 	{
-		if (gRed > 1.0f)
-			gRed -= 0.4f;
-		cBufferLightCPU[1].lightAmbient.w = gRed;
-		cout << "Life: " << gRed << endl;
+		if (g_subsurfaceScatter > 1.0f)
+			g_subsurfaceScatter -= 0.4f;
+		m_lightBufferCPU[1].lightAmbient.w = g_subsurfaceScatter;
+		cout << "Life: " << g_subsurfaceScatter << endl;
 	}
 
-	if (keyCode == 'o' || keyCode == 'O')
-	{
-		if (gLightDistance < 8.0f)
-			gLightDistance = gLightDistance * 2.0;
-		cout << "LightPos: " << cBufferLightCPU->lightVec.z << endl;
-	}
-
+	// Toggle subsurface scatter on/off with 't'
 	if ((keyCode == 't' || keyCode == 'T'))
-		gUseTSD *= -1;
+		g_toggleSubsurfaceScatter *= -1;
 
 	if (keyCode == VK_ESCAPE)
-		MainMenuState = MainMenu;
+		m_menuState = MenuState::MainMenu;
 
 	if (keyCode == VK_PRIOR)
-		playerKart->camMode = max(playerKart->camMode--, 0);
+		m_playerKart->camMode = max(m_playerKart->camMode--, 0);
 
 	if (keyCode == VK_NEXT)
-		playerKart->camMode = min(playerKart->camMode++, 3);
+		m_playerKart->camMode = min(m_playerKart->camMode++, 3);
 
 	if (keyCode == VK_SPACE)
 	{
-		playerKart->restart(playerKart->getPolePosition());
-		playerKart->setLapTime(0.0f);
+		m_playerKart->restart(m_playerKart->getPolePosition());
+		m_playerKart->setLapTime(0.0f);
 	}
 
 	if (keyCode == VK_HOME)
 	{
-		if (playerKart->getKartCC() < 2)
-			playerKart->setKartCC(setCC(playerKart, playerKart->getKartCC() + 1));
+		if (m_playerKart->getKartCC() < 2)
+			m_playerKart->setKartCC(setCC(m_playerKart.get(), m_playerKart->getKartCC() + 1));
 	}
 
 	if (keyCode == VK_END)
 	{
-		if (playerKart->getKartCC() > 0)
-			playerKart->setKartCC(setCC(playerKart, playerKart->getKartCC() - 1));
+		if (m_playerKart->getKartCC() > 0)
+			m_playerKart->setKartCC(setCC(m_playerKart.get(), m_playerKart->getKartCC() - 1));
 	}
 }
 
@@ -1635,22 +1761,40 @@ void Scene::handleKeyUp(const WPARAM keyCode, const LPARAM extKeyFlags) {
 
 // Clock handling methods
 void Scene::startClock() {
-	mainClock->start();
+	m_mainClock->start();
 }
 
 void Scene::stopClock() {
-	mainClock->stop();
+	m_mainClock->stop();
 }
 
 void Scene::reportTimingData() {
-	cout << "Actual time elapsed = " << mainClock->actualTimeElapsed() << endl;
-	cout << "Game time elapsed = " << mainClock->gameTimeElapsed() << endl << endl;
-	mainClock->reportTimingData();
+	cout << "Actual time elapsed = " << m_mainClock->actualTimeElapsed() << endl;
+	cout << "Game time elapsed = " << m_mainClock->gameTimeElapsed() << endl << endl;
+	m_mainClock->reportTimingData();
 }
 
 // Constructor with window creation and DirectX initialization
 Scene::Scene(const LONG _width, const LONG _height, const wchar_t* wndClassName,
-	const wchar_t* wndTitle, int nCmdShow, HINSTANCE hInstance, WNDPROC WndProc) {
+	const wchar_t* wndTitle, int nCmdShow, HINSTANCE hInstance, WNDPROC WndProc) 
+	: m_hInstance(hInstance)
+	, m_wndHandle(nullptr)
+	, m_accumulator(0.0f)
+	, m_fixedTimeStep(1.0f / 60.0f)
+	, m_numPhysXUpdates(1)
+	, m_numScenePhysXUpdates(1)
+	, m_numKartPhysXUpdates(1)
+	, m_shouldRenderFrame(false)
+	, m_audioSystem(nullptr)
+	, m_menuState(MenuState::Intro)
+	, m_numLightsActive(0)
+	, m_menuKartRotation(-0.3f)
+	, m_terrainResolution(200)
+	, m_terrainScaleXZ(1.0f)
+	, m_terrainScaleY(2.5f)
+	, m_grassRenderPasses(0)
+	, m_grassShellHeight(0.001666f / m_terrainScaleY)
+{
 	try
 	{
 		// 1. Register window class
@@ -1672,7 +1816,7 @@ Scene::Scene(const LONG _width, const LONG _height, const wchar_t* wndClassName,
 			throw exception("Cannot register window class for Scene HWND");
 
 		// 2. Store instance handle
-		hInst = hInstance;
+		m_hInstance = hInstance;
 
 		// 3. Setup window rect
 		RECT windowRect;
@@ -1687,27 +1831,31 @@ Scene::Scene(const LONG _width, const LONG _height, const wchar_t* wndClassName,
 		AdjustWindowRectEx(&windowRect, dwStyle, FALSE, dwExStyle);
 
 		// 4. Create and validate main window
-		wndHandle = CreateWindowEx(dwExStyle, wndClassName, wndTitle,
+		m_wndHandle = CreateWindowEx(dwExStyle, wndClassName, wndTitle,
 			dwStyle | WS_CLIPSIBLINGS | WS_CLIPCHILDREN,
 			50, 50, windowRect.right - windowRect.left,
 			windowRect.bottom - windowRect.top,
-			NULL, NULL, hInst, this);
+			NULL, NULL, m_hInstance, this);
 
-		if (!wndHandle)
+		if (!m_wndHandle)
 			throw exception("Cannot create main window handle");
 
-		ShowWindow(wndHandle, nCmdShow);
-		UpdateWindow(wndHandle);
-		SetFocus(wndHandle);
+		ShowWindow(m_wndHandle, nCmdShow);
+		UpdateWindow(m_wndHandle);
+		SetFocus(m_wndHandle);
 
-		// 5. Create DirectX system
-		system = System::CreateDirectXSystem(wndHandle);
-		if (!system)
+		// 5. Create DirectX m_system
+		m_system = std::unique_ptr<System>(System::CreateDirectXSystem(m_wndHandle));
+		//m_system = System::CreateDirectXSystem(m_wndHandle);
+		if (!m_system)
 			throw exception("Cannot create Direct3D device and context model");
 
 		// 6. Create main clock
-		mainClock = CGDClock::CreateClock(string("mainClock"), 3.0f);
-		if (!mainClock)
+		m_mainClock = std::unique_ptr<CGDClock>(
+			CGDClock::CreateClock("m_mainClock", 3.0f)
+		);
+		//m_mainClock = CGDClock::CreateClock(string("m_mainClock"), 3.0f);
+		if (!m_mainClock)
 			throw exception("Cannot create main clock / timer");
 
 		// 7. Setup application-specific objects
@@ -1725,28 +1873,28 @@ Scene::Scene(const LONG _width, const LONG _height, const wchar_t* wndClassName,
 // Main game loop implementation
 HRESULT Scene::updateAndRenderScene() {
 	HRESULT hr = S_OK;
-	ID3D11DeviceContext* context = system->getDeviceContext();
+	ID3D11DeviceContext* context = m_system->getDeviceContext();
 
-	if (MainMenuState < MenuDone)
+	if (m_menuState < MenuState::MenuDone)
 	{
-		// Rotate kart for menu display
-		menuKartRot += 0.01;
-		PxQuat Q(menuKartRot, PxVec3(0, 1, 0));
+		// Rotate kart for m_menu display
+		m_menuKartRotation += 0.01;
+		PxQuat Q(m_menuKartRotation, PxVec3(0, 1, 0));
 		physx::PxTransform startTransform(physx::PxVec3(0, -0.9f, 0), Q);
-		static physx::PxTransform gameTransform = playerKart->getVehicle4W()->getRigidDynamicActor()->getGlobalPose();
+		static physx::PxTransform gameTransform = m_playerKart->getVehicle4W()->getRigidDynamicActor()->getGlobalPose();
 
-		playerKart->getVehicle4W()->getRigidDynamicActor()->setGlobalPose(startTransform);
-		playerKart->update(context, stepSize);
+		m_playerKart->getVehicle4W()->getRigidDynamicActor()->setGlobalPose(startTransform);
+		m_playerKart->update(context, m_fixedTimeStep);
 
-		// Show main menu
-		menu->renderMainMenu(playerKart, &MainMenuState, stepSize);
-		UpdateRenderQuality();
+		// Show main m_menu
+		m_menu->renderMainMenu(m_playerKart.get(), &m_menuState, m_fixedTimeStep);
+		updateRenderQuality();
 
-		playerKart->getVehicle4W()->getRigidDynamicActor()->setGlobalPose(gameTransform);
+		m_playerKart->getVehicle4W()->getRigidDynamicActor()->setGlobalPose(gameTransform);
 	}
-	else if (MainMenuState >= MenuDone)
+	else if (m_menuState >= MenuState::MenuDone)
 	{
-		hr = updateScene(context, mainCamera);
+		hr = updateScene(context, m_mainCamera.get());
 		if (SUCCEEDED(hr))
 			hr = renderScene();
 	}
@@ -1755,152 +1903,131 @@ HRESULT Scene::updateAndRenderScene() {
 }
 
 // Window state check
-BOOL Scene::isMinimised() {
+BOOL Scene::isMinimised() const{
 	WINDOWPLACEMENT wp;
 	ZeroMemory(&wp, sizeof(WINDOWPLACEMENT));
 	wp.length = sizeof(WINDOWPLACEMENT);
 
-	return (GetWindowPlacement(wndHandle, &wp) != 0 && wp.showCmd == SW_SHOWMINIMIZED);
+	return (GetWindowPlacement(m_wndHandle, &wp) != 0 && wp.showCmd == SW_SHOWMINIMIZED);
 }
 
 // Factory method pattern
-Scene* Scene::CreateScene(const LONG _width, const LONG _height, const wchar_t* wndClassName,
-	const wchar_t* wndTitle, int nCmdShow, HINSTANCE hInstance, WNDPROC WndProc) {
-	static bool _scene_created = false;
-	Scene* scene = nullptr;
+Scene* Scene::CreateScene(
+	LONG width,
+	LONG height,
+	const wchar_t* wndClassName,
+	const wchar_t* wndTitle,
+	int nCmdShow,
+	HINSTANCE hInstance,
+	WNDPROC WndProc)
+{
+	static bool sceneCreated = false;
 
-	if (!_scene_created) {
-		scene = new Scene(_width, _height, wndClassName, wndTitle, nCmdShow, hInstance, WndProc);
-		if (scene)
-			_scene_created = true;
+	if (sceneCreated) {
+		std::cerr << "Error: Scene already created (singleton pattern)" << std::endl;
+		return nullptr;
 	}
 
-	return scene;
+	try {
+		auto scene = new Scene(width, height, wndClassName, wndTitle,
+			nCmdShow, hInstance, WndProc);
+		sceneCreated = true;
+		return scene;
+	}
+	catch (const std::exception& e) {
+		std::cerr << "Failed to create scene: " << e.what() << std::endl;
+		return nullptr;
+	}
 }
+
 
 // Destructor with comprehensive cleanup
 Scene::~Scene() {
 	cout << "Destroying scene" << endl;
 
-	// Clean up menu
-	delete(menu);
+	// Clean up m_menu
+	m_menu.reset();
+
+	// Clean up skin simulation
+	m_bloomUtility.reset();     ///< Bloom post-process
+	m_skinSimulationUtility.reset(); ///< Skin rendering with subsurface scattering
+	m_faceModel.reset();             ///< Face model for SSS demo
+	m_skinEffect.reset();
 
 	// Clean up shadow map
-	delete(shadowMap);
+	m_shadowMap.reset();
 
 	// Clean up constant buffers
-	if (cBufferSceneCPU)
-		_aligned_free(cBufferSceneCPU);
-
-	if (cBufferLightCPU)
-		_aligned_free(cBufferLightCPU);
-
-	if (cBufferSceneGPU)
-		cBufferSceneGPU->Release();
-
-	if (cBufferLightGPU)
-		cBufferLightGPU->Release();
+	m_sceneBufferCPU.reset();
+	m_lightBufferCPU.reset();
+	m_sceneBufferGPU.Reset();
+	m_lightBufferGPU.Reset();
 
 	// Clean up textures
-	if (cubeDayTexture)
-		delete(cubeDayTexture);
+	m_cubeDayTexture.reset();
 
 	// Clean up scene objects
-	if (navPoints)
-		delete(navPoints);
-
-	if (skyBox)
-		delete(skyBox);
-
-	if (water)
-		delete(water);
-
-	if (orb3)
-		delete(orb3);
-
-	if (grass)
-		delete(grass);
-
-	if (physXBox)
-		delete(physXBox);
-
-	if (dragon)
-		delete(dragon);
-
-	if (nathan)
-		delete(nathan);
-
-	if (sophia)
-		delete(sophia);
-
-	if (tree)
-		delete(tree);
-
-	if (dirt)
-		delete(dirt);
-
-	if (smoke)
-		delete(smoke);
-
-	if (flares)
-		delete(flares);
-
+	m_navigationPoints.reset();
+	m_skyBox.reset();
+	m_water.reset();
+	m_lightOrbTemplate.reset();
+	m_terrain.reset();
+	m_physXBox.reset();
+	m_dragonModel.reset();
+	m_nathanModel.reset();
+	m_sophiaModel.reset();
+	m_treeTemplate.reset();
+	m_dirtParticles.reset();
+	m_smokeParticles.reset();
+	m_lensFlare.reset();
+	
 	// Clean up karts
 	for (int i = 0; i < NUM_AI_VEHICLES; i++)
-		if (aiKarts[i])
-			delete(aiKarts[i]);
+		m_aiKarts[i].reset();
 
-	if (playerKart)
-		delete(playerKart);
-
-	if (PXKartController)
-		delete(PXKartController);
-
-	delete[](boxMatArray);
+	m_playerKart.reset();
+	m_physXKartController.reset();
 
 	// Clean up PhysX
-	if (PXScene != nullptr) {
-		delete PXScene;
-		PXScene = nullptr;
-	}
+	m_physXScene.reset();
 
 	// Clean up FMOD
-	if (FMSystem) {
-		FMSystem->release();
-		FMSystem = nullptr;
+	if (m_audioSystem) {
+		m_audioSystem->release();
+		m_audioSystem = nullptr;
 	}
 
 	// Clean up core systems
-	if (mainClock)
-		delete(mainClock);
+	if (m_mainClock)
+		m_mainClock.reset();
 
-	if (mainCamera)
-		delete(mainCamera);
+	if (m_mainCamera)
+		m_mainCamera.reset();
 
-	if (system)
-		delete(system);
+	if (m_system)
+		m_system.reset();
 
-	if (wndHandle)
-		DestroyWindow(wndHandle);
+	if (m_wndHandle)
+		DestroyWindow(m_wndHandle);
 }
 
 // Window destruction
-void Scene::destoryWindow() {
-	if (wndHandle != NULL) {
-		HWND hWnd = wndHandle;
-		wndHandle = NULL;
+void Scene::destroyWindow() {
+	if (m_wndHandle != NULL) {
+		HWND hWnd = m_wndHandle;
+		m_wndHandle = NULL;
 		DestroyWindow(hWnd);
 	}
 }
 
 // Resource resizing for window changes
 HRESULT Scene::resizeResources() {
-	if (system) {
-		HRESULT hr = system->resizeSwapChainBuffers(wndHandle);
+	if (m_system) {
+		HRESULT hr = m_system->resizeSwapChainBuffers(m_wndHandle);
 		rebuildViewport();
 
 		RECT clientRect;
-		GetClientRect(wndHandle, &clientRect);
+		GetClientRect(m_wndHandle, &clientRect);
 
 		if (!isMinimised())
 			renderScene();
@@ -1955,12 +2082,10 @@ BOOL CALLBACK EnumDevicesCallback(LPCDIDEVICEINSTANCE lpddi, LPVOID pvRef)
 	return DIENUM_CONTINUE;
 }
 
-void Scene::SetUpWheel()
+void Scene::setupWheelController()
 {
-	HINSTANCE hInstance = hInst;
-
 	// Initialize DirectInput
-	DirectInput8Create(hInstance, DIRECTINPUT_VERSION, IID_IDirectInput8, (void**)&di, nullptr);
+	DirectInput8Create(m_hInstance, DIRECTINPUT_VERSION, IID_IDirectInput8, (void**)&di, nullptr);
 
 	// Find wheel device
 	di->EnumDevices(DI8DEVCLASS_GAMECTRL, DeviceEnumCallback, nullptr, DIEDFL_ATTACHEDONLY);

@@ -82,22 +82,22 @@ void Model::render(ID3D11DeviceContext *context,int instanceIndex) {//, int mode
 	effect->bindPipeline(context);
 
 	// Set Model vertex and index buffers for IA
-	ID3D11Buffer* vertexBuffers[] = { vertexBuffer };
+	ID3D11Buffer* vertexBuffers[] = { vertexBuffer.Get()};
 	UINT vertexStrides[] = { sizeof(ExtendedVertexStruct) };
 	UINT vertexOffsets[] = { 0 };
 
 	context->IASetVertexBuffers(0, 1, vertexBuffers, vertexStrides, vertexOffsets);
-	context->IASetIndexBuffer(indexBuffer, DXGI_FORMAT_R32_UINT, 0);
+	context->IASetIndexBuffer(indexBuffer.Get(), DXGI_FORMAT_R32_UINT, 0);
 
 	// Set primitive topology for IA
 	context->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
 	// Bind texture resource views and texture sampler objects to the PS stage of the pipeline
 	if (sampler)
-		context->PSSetSamplers(0, 1, &sampler);
+		context->PSSetSamplers(0, 1, sampler.GetAddressOf());
 
-	context->VSSetConstantBuffers(0, 1, &cBufferModelGPU);
-	context->PSSetConstantBuffers(0, 1, &cBufferModelGPU);
+	context->VSSetConstantBuffers(0, 1, cBufferModelGPU.GetAddressOf());
+	context->PSSetConstantBuffers(0, 1, cBufferModelGPU.GetAddressOf());
 
 	// Draw Model
 	for (uint32_t indexOffset = 0, i = 0; i < numMeshes; indexOffset += indexCount[i], ++i)
